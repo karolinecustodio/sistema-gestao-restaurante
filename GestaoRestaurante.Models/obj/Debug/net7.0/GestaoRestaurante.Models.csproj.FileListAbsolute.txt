@@ -1,0 +1,12 @@
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\bin\Debug\net7.0\GestaoRestaurante.Models.deps.json
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\bin\Debug\net7.0\GestaoRestaurante.Models.dll
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\bin\Debug\net7.0\GestaoRestaurante.Models.pdb
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.csproj.AssemblyReference.cache
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.AssemblyInfoInputs.cache
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.AssemblyInfo.cs
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.csproj.CoreCompileInputs.cache
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.dll
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\refint\GestaoRestaurante.Models.dll
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\GestaoRestaurante.Models.pdb
+C:\Users\karoline.custodio\OneDrive - Anheuser-Busch InBev\My Documents\GestaoRestaurante\GestaoRestaurante.Models\obj\Debug\net7.0\ref\GestaoRestaurante.Models.dll
