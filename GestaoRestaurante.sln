@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoRestaurante.Web", "GestaoRestaurante.Web\GestaoRestaurante.Web.csproj", "{528F45BC-DC64-4AB5-930F-D5CBD3C8B917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoRestaurante.Web", "GestaoRestaurante.Web\GestaoRestaurante.Web.csproj", "{528F45BC-DC64-4AB5-930F-D5CBD3C8B917}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoRestaurante.Api", "GestaoRestaurante.Api\GestaoRestaurante.Api.csproj", "{400F9FDC-E015-4189-BD0A-7975EECE88A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoRestaurante.Api", "GestaoRestaurante.Api\GestaoRestaurante.Api.csproj", "{400F9FDC-E015-4189-BD0A-7975EECE88A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoRestaurante.Models", "GestaoRestaurante.Models\GestaoRestaurante.Models.csproj", "{790D1778-9FFF-42F9-8BB6-3C41CFA71157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoRestaurante.Models", "GestaoRestaurante.Models\GestaoRestaurante.Models.csproj", "{790D1778-9FFF-42F9-8BB6-3C41CFA71157}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
