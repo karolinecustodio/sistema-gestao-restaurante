@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\db4q63p5sa.gz",
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\phpqv6jjl5.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GestaoRestaurante.Web.styles.css",
+      "PackagePath": "staticwebassets\\GestaoRestaurante.Web.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\Imagens\\Bebidas\\guarana.png",
+      "PackagePath": "staticwebassets\\Imagens\\Bebidas\\guarana.png"
+    },
+    {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\Imagens\\Lanches\\xbacon.png",
+      "PackagePath": "staticwebassets\\Imagens\\Lanches\\xbacon.png"
     },
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\css\\app.css",
@@ -15,6 +27,10 @@
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\lanchesepizza.png",
+      "PackagePath": "staticwebassets\\lanchesepizza.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GestaoRestaurante.Web.Microsoft.AspNetCore.StaticWebAssets.props",

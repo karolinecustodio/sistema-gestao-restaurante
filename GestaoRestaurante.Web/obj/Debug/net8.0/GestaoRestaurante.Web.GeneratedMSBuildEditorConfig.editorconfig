@@ -26,10 +26,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,3 +33,11 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-m65tm3xbyh
+
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-q6fep6er4s
