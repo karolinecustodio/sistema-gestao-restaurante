@@ -1,32 +1,13 @@
 using GestaoRestaurante.Api.Context;
 using GestaoRestaurante.Api.Repository;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version = "v1",
-        Title = "ToDo API",
-        Description = "An ASP.NET Core Web API for managing ToDo items",
-        TermsOfService = new Uri("https://example.com/terms"),
-        Contact = new OpenApiContact
-        {
-            Name = "Example Contact",
-            Url = new Uri("https://example.com/contact")
-        },
-        License = new OpenApiLicense
-        {
-            Name = "Example License",
-            Url = new Uri("https://example.com/license")
-        }
-    });
-});
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors();
 
@@ -43,19 +24,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 
-    app.UseSwagger(options =>
-    {
-        options.SerializeAsV2 = true;
-    });
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestao de Restaurante v1");
-        c.RoutePrefix = string.Empty;
-    });
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
-app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+app.UseCors(policy =>
+    policy.WithOrigins("http://localhost:7289", "https://localhost:7289")
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .WithHeaders(HeaderNames.ContentType)
+);
+
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.MapControllers();
+
+app.Run();

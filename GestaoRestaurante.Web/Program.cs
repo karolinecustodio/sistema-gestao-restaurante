@@ -1,4 +1,5 @@
 using GestaoRestaurante.Web;
+using GestaoRestaurante.Web.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -12,5 +13,7 @@ builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress = new Uri(baseUrl) 
 });
+
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
 
 await builder.Build().RunAsync();
