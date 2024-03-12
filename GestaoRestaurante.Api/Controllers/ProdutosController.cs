@@ -1,12 +1,14 @@
 ﻿using GestaoRestaurante.Api.Mappings;
 using GestaoRestaurante.Api.Repository;
 using GestaoRestaurante.Models.Dto;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestaoRestaurante.Api.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[Controller]")]
+    [EnableCors("AllowSpecificOrigin")]
     public class ProdutosController: ControllerBase
     {
         private readonly IProdutoRepository _produtoRepository;

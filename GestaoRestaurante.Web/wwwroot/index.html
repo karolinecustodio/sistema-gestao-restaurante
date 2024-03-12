@@ -11,7 +11,7 @@
     <link href="GestaoRestaurante.Web.styles.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="app">Loading...</div>
+    <!--<div id="app">Loading...</div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
@@ -19,6 +19,13 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="https://kit.fontawesome.com/0be4b2f813.js" crossorigin="anonymous"></script>
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>-->
+    <output id="api"></output>
+    <script>
+        fetch('https://localhost:7294/api/produtos')
+            .then(res => res.json())
+            .then(res => document.getElementById('api').textContent = res.text)
+            .catch(error => document.getElementById('api').textContent = error.message);
+    </script>
 </body>
 </html>
