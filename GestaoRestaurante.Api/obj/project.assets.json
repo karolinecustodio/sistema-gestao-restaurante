@@ -169,13 +169,13 @@
           }
         },
         "build": {
-          "build/net8.0/Microsoft.AspNetCore.Components.WebAssembly.props": {}
+          "build/net8.0/_._": {}
         }
       },
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer/8.0.2": {
         "type": "package",
         "build": {
-          "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
+          "build/_._": {}
         }
       },
       "Microsoft.AspNetCore.Metadata/8.0.2": {
@@ -5402,8 +5402,6 @@
     "net8.0": [
       "GestaoRestaurante.Models >= 1.0.0",
       "GestaoRestaurante.Web >= 1.0.0",
-      "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.2",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
@@ -5461,14 +5459,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.WebAssembly": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -5509,7 +5499,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

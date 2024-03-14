@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "GestaoRestaurante.Web",
   "resources": {
-    "hash": "sha256-gewUp77JSR8j7KXnTIqzyabrJ3MgSTzTPfixG1tps+4=",
+    "hash": "sha256-WcPeqAKoMncN69Re30NgkTXBqKqrCrbXJ/7J5306yOA=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.53g3p4hpoc.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -251,12 +251,12 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "GestaoRestaurante.Models.wasm": "sha256-aDCUt4Rm/JJIg8lyTyilma3MB4uo8TNQeeJus1YsK64=",
-      "GestaoRestaurante.Web.wasm": "sha256-p6W7vOtZstelwMBocslK24Yy4MP8hau27E0qwX7DQ9Y="
+      "GestaoRestaurante.Models.wasm": "sha256-f7u6LrU0Cev5FigtanfyXpLQqwH11zj0D1OebKcw1Bg=",
+      "GestaoRestaurante.Web.wasm": "sha256-OnvaUZFCV70uI83FdKV9b7TbESDN/bH7p0byzIBDPDU="
     },
     "pdb": {
-      "GestaoRestaurante.Models.pdb": "sha256-oIUn+CizfYhP7QHPkLgAJt1iDAUvgS03RfP9HUcIt68=",
-      "GestaoRestaurante.Web.pdb": "sha256-w/fjlBvcsrYPnCoiTcjf2nGO/3fJm/abMhjlHbsXjtE="
+      "GestaoRestaurante.Models.pdb": "sha256-4cqGr2tFq7/EqaUbm8Tq1Io++TcgO4Y9spy8irfCQD4=",
+      "GestaoRestaurante.Web.pdb": "sha256-GLxy98dIEelCBERXgE2CLHcSv2ACSalmvmkFZb224jE="
     },
     "satelliteResources": {
       "cs": {

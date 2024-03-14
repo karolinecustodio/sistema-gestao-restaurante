@@ -1204,6 +1204,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.GestaoRestaurante.Web.props
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.GestaoRestaurante.Web.props
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\scopedcss\Pages\ExibirProdutos.razor.rz.scp.css
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\scopedcss\bundle\GestaoRestaurante.Web.styles.css
@@ -1514,3 +1515,4 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\refint\GestaoRestaurante.Web.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.pdb
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\ref\GestaoRestaurante.Web.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\scopedcss\Pages\CarrinhoCompra.razor.rz.scp.css

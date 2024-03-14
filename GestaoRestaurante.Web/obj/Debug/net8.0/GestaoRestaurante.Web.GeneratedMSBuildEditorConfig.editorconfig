@@ -34,9 +34,29 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Pages/ProdutoDetalhes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b0RldGFsaGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Shared/ExibirErro.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aWJpckVycm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Shared/ExibirSpinner.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aWJpclNwaW5uZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Pages/CarrinhoCompra.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmluaG9Db21wcmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9pcumk9rod
+
+[C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Pages/ExibirProdutos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhpYmlyUHJvZHV0b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-x3en6l7n9u
 
 [C:/Users/camila.custodio/Documents/TCC2/sistema-gestao-restaurante/GestaoRestaurante.Web/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

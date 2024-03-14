@@ -1,6 +1,6 @@
 ﻿using GestaoRestaurante.Api.Entities;
 
-namespace GestaoRestaurante.Api.Repository
+namespace GestaoRestaurante.Api.Repositories
 {
     public interface IProdutoRepository
     {

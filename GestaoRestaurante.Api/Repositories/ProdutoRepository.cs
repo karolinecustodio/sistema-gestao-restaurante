@@ -2,7 +2,7 @@
 using GestaoRestaurante.Api.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace GestaoRestaurante.Api.Repository
+namespace GestaoRestaurante.Api.Repositories
 {
     public class ProdutoRepository : IProdutoRepository
     {

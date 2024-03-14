@@ -1,5 +1,5 @@
 using GestaoRestaurante.Api.Context;
-using GestaoRestaurante.Api.Repository;
+using GestaoRestaurante.Api.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
 
@@ -9,14 +9,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddCors();
-
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddScoped<ICarrinhoCompraRepository, CarrinhoCompraRepository>();
     
 var app = builder.Build();
 
@@ -26,15 +25,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
+app.UseRouting();
+
 app.UseCors(policy =>
-    policy.WithOrigins("http://localhost:7289", "https://localhost:7289")
+    policy.AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader()
-    .WithHeaders(HeaderNames.ContentType)
 );
 
-app.UseHttpsRedirection();
 app.UseAuthentication();
 app.MapControllers();
 
 app.Run();
+
