@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q0Y5GJp1C9ELr8V1PxqbCznqh+FqaORJS7taBhjKveM=",
+  "Hash": "ilq9JTTaszG7HzbrZhzgNaaIiqHPfBfcarFeIbioLVI=",
   "Source": "GestaoRestaurante.Api",
   "BasePath": "_content/GestaoRestaurante.Api",
   "Mode": "Default",
@@ -292,7 +292,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.js"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
@@ -311,15 +311,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.js.map"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.js.map"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.53g3p4hpoc.js",
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.3.uctyl5ta44.js",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.2.53g3p4hpoc.js",
+      "RelativePath": "_framework/dotnet.native.8.0.3.uctyl5ta44.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -330,7 +330,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.native.js"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.native.js"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
@@ -349,15 +349,15 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.ekoi5m9gqm.js",
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.3.t9722odqbu.js",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.2.ekoi5m9gqm.js",
+      "RelativePath": "_framework/dotnet.runtime.8.0.3.t9722odqbu.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -368,7 +368,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
@@ -387,7 +387,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\es\\Microsoft.CodeAnalysis.CSharp.resources.wasm",
@@ -653,7 +653,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
@@ -672,7 +672,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
@@ -691,7 +691,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\it\\Microsoft.CodeAnalysis.CSharp.resources.wasm",
@@ -6090,6 +6090,25 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Permissions.wasm"
     },
     {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\2eqns7mnui.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
+    },
+    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\2qtrtdybno.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -6107,6 +6126,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "false",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\fr\\Microsoft.CodeAnalysis.CSharp.resources.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\34joc5qfeb.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\34ohnmn35q.gz",
@@ -6432,25 +6470,6 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Collections.wasm"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\53g3p4hpoc.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.2.53g3p4hpoc.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.53g3p4hpoc.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.53g3p4hpoc.js"
-    },
-    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\5n4cn0jj8y.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -6468,6 +6487,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Tokens.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\5rwe8uefdi.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\5tanmkmvgf.gz",
@@ -7230,23 +7268,23 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\9zkzj6zv0b.gz",
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\9qi7nf7ltm.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.gz",
+      "RelativePath": "_framework/dotnet.js.map.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\a62qjq8p98.gz",
@@ -7648,25 +7686,6 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Physical.wasm"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\cr18l2qe1k.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.wasm.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
-    },
-    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\cxxm4uoy3j.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -7838,25 +7857,6 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Reflection.Emit.ILGeneration.wasm"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\ekoi5m9gqm.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.2.ekoi5m9gqm.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.ekoi5m9gqm.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.ekoi5m9gqm.js"
-    },
-    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\eky9mijx9l.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -8007,6 +8007,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Csp.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\f9d9sbppsa.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\fefb33qhlk.gz",
@@ -8444,25 +8463,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "false",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\es\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\h3pxfsc435.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\h9krf1yppg.gz",
@@ -9016,6 +9016,25 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Text.Encoding.CodePages.wasm"
     },
     {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\k9mbf8vzxd.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
+    },
+    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\kejtiylvh3.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -9090,25 +9109,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "false",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\zh-Hant\\Microsoft.CodeAnalysis.Workspaces.resources.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\knkn5544rd.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\kpdxl4b2lm.gz",
@@ -10232,6 +10232,25 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Collections.Immutable.wasm"
     },
     {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\rzl49pfg1x.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
+    },
+    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\s0ln4vn4ud.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -10479,6 +10498,25 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm"
     },
     {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\t9722odqbu.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.8.0.3.t9722odqbu.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.3.t9722odqbu.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.3.t9722odqbu.js"
+    },
+    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\tb64ud8vf0.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -10517,25 +10555,6 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\it\\Microsoft.CodeAnalysis.Workspaces.resources.wasm"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\tmwub0gzmp.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
-    },
-    {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\to9c1q5qqk.gz",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
@@ -10553,25 +10572,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Runtime.Extensions.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\tt0mw3inlx.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\twguzvrae0.gz",
@@ -10667,6 +10667,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\uctyl5ta44.gz",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.8.0.3.uctyl5ta44.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.3.uctyl5ta44.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.3.uctyl5ta44.js"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\umdhln8c51.gz",
@@ -10952,25 +10971,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\wzrbdhg4ls.gz",
-      "SourceId": "GestaoRestaurante.Web",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\compressed\\x3x7w50uy1.gz",
@@ -11486,12 +11486,12 @@
       "OriginalItemSpec": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GestaoRestaurante.Web.styles.css"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\CarrinhoCompraFunctions.js",
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\brothersBuguer.png",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "CarrinhoCompraFunctions.js",
+      "RelativePath": "brothersBuguer.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11502,7 +11502,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CarrinhoCompraFunctions.js"
+      "OriginalItemSpec": "wwwroot\\brothersBuguer.png"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\css\\app.css",
@@ -11904,12 +11904,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\lanchesepizza.png",
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\js\\CarrinhoCompraFunctions.js",
       "SourceId": "GestaoRestaurante.Web",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "lanchesepizza.png",
+      "RelativePath": "js/CarrinhoCompraFunctions.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11920,7 +11920,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lanchesepizza.png"
+      "OriginalItemSpec": "wwwroot\\js\\CarrinhoCompraFunctions.js"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\spinner.gif",

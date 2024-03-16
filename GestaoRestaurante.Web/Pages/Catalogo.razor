@@ -30,7 +30,43 @@ else
 @code{
     public IEnumerable<ProdutoDto>? Produtos{ get; set; }
 
+    public string? MensagemErro { get; set; }
+
+    [Inject]
+    public ICarrinhoCompraService? CarrinhoCompraService { get; set; }
+
+    [Inject]
+    public IGerenciaProdutosLocalStorageService?
+                GerenciaProdutosLocalStorageService { get; set; }
+
+    [Inject]
+    public IGerenciaCarrinhoItensLocalStorageService?
+                 GerenciaCarrinhoItensLocalStorageService { get; set; }
+
     protected override async Task OnInitializedAsync(){
-        Produtos = await produtoService.GetItens();
+        try
+        {
+            await LimpaLocalStorage();
+
+            Produtos = await GerenciaProdutosLocalStorageService.GetCollection();
+
+            var carrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService
+                                           .GetCollection();
+
+            var totalQuantidade = carrinhoCompraItens.Sum(i => i.Quantidade);
+
+            CarrinhoCompraService.RaiseEventOnCarrinhoCompraChanged(totalQuantidade);
+
+        }
+        catch (Exception ex)
+        {
+            MensagemErro = ex.Message;
+        }
+    }
+
+    private async Task LimpaLocalStorage()
+    {
+        await GerenciaProdutosLocalStorageService.RemoveCollection();
+        await GerenciaCarrinhoItensLocalStorageService.RemoveCollection();
     }
 }

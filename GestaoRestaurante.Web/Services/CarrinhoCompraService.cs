@@ -16,6 +16,8 @@ namespace GestaoRestaurante.Web.Services
             this.httpClient = httpClient;
         }
 
+        
+
         public async Task<List<CarrinhoItemDto>> GetItens(int usuarioId)
         {
             try
@@ -108,6 +110,16 @@ namespace GestaoRestaurante.Web.Services
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        public event Action<int> OnCarrinhoCompraChanged;
+
+        public void RaiseEventOnCarrinhoCompraChanged(int totalQuantidade)
+        {
+            if (OnCarrinhoCompraChanged != null)
+            {
+                OnCarrinhoCompraChanged.Invoke(totalQuantidade);
             }
         }
     }

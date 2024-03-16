@@ -72,14 +72,17 @@ else
     protected string? PrecoTotal { get; set; }
     protected int QuantidadeTotal { get; set; }
 
-
+    [Inject]
+    public IGerenciaCarrinhoItensLocalStorageService?
+                 GerenciaCarrinhoItensLocalStorageService { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            CarrinhoCompraItens = await CarrinhoCompraService.GetItens(UsuarioLogado.UsuarioId);
-            CalculaResumoCarrinhoTotal();
+            CarrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService.GetCollection();
+
+            CarrinhoChanged();
         }
         catch (Exception ex)
         {
@@ -94,9 +97,8 @@ else
 
         //remoção do item da coleção de objetos da memoria no cliente
         await RemoveCarrinhoItem(id);
-        CalculaResumoCarrinhoTotal();
 
-       // CarrinhoChanged();
+        CarrinhoChanged();
     }
 
     protected async Task AtualizaQuantidadeCarrinhoItem_Click(int id, int quantidade)
@@ -115,7 +117,7 @@ else
                                                      .AtualizaQuantidade(atualizaItemDto);
 
                  AtualizaPrecoTotalItem(retornaItemAtualizadoDto);
-                 CalculaResumoCarrinhoTotal();
+                 CarrinhoChanged();
                 await Js.InvokeVoidAsync("TornaBotaoAtualizarQuantidadeVisivel", id, false);
             }
             else
@@ -144,7 +146,7 @@ else
         var carrinhoItemDto = GetCarrinhoItem(id);
         CarrinhoCompraItens.Remove(carrinhoItemDto);
 
-       // await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
+        await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
     }
 
     private void SetPrecoTotal()
@@ -172,7 +174,7 @@ else
             item.PrecoTotal = carrinhoItemDto.Preco * carrinhoItemDto.Quantidade;
         }
 
-    //    await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
+        await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
     }
 
     protected async Task AtualizaQuantidade_Input(int id)
@@ -180,9 +182,9 @@ else
         await Js.InvokeVoidAsync("TornaBotaoAtualizarQuantidadeVisivel", id, true);
     }
 
-    // private void CarrinhoChanged()
-    // {
-    //     CalculaResumoCarrinhoTotal();
-    //     CarrinhoCompraService.RaiseEventOnCarrinhoCompraChanged(QuantidadeTotal);
-    // }
+    private void CarrinhoChanged()
+    {
+        CalculaResumoCarrinhoTotal();
+        CarrinhoCompraService.RaiseEventOnCarrinhoCompraChanged(QuantidadeTotal);
+    }
 }

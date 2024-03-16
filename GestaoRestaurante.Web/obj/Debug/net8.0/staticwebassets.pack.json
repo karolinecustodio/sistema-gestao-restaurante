@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\GestaoRestaurante.Web.styles.css"
     },
     {
-      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\CarrinhoCompraFunctions.js",
-      "PackagePath": "staticwebassets\\CarrinhoCompraFunctions.js"
-    },
-    {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\Imagens\\Bebidas\\guarana.png",
       "PackagePath": "staticwebassets\\Imagens\\Bebidas\\guarana.png"
     },
@@ -43,6 +39,10 @@
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\Imagens\\Lanches\\xsaladaFritas.png",
       "PackagePath": "staticwebassets\\Imagens\\Lanches\\xsaladaFritas.png"
+    },
+    {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\brothersBuguer.png",
+      "PackagePath": "staticwebassets\\brothersBuguer.png"
     },
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\css\\app.css",
@@ -101,8 +101,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\lanchesepizza.png",
-      "PackagePath": "staticwebassets\\lanchesepizza.png"
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\js\\CarrinhoCompraFunctions.js",
+      "PackagePath": "staticwebassets\\js\\CarrinhoCompraFunctions.js"
     },
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\spinner.gif",
