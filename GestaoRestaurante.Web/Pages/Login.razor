@@ -1,0 +1,91 @@
+﻿@page "/login"
+@inject IUsuarioService usuarioService
+
+@if (Usuarios == null && MensagemErro is null)
+{
+    <ExibirSpinner />
+}
+else
+{
+    <div class="container bg-light">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Login</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" @bind="Usuarios.Nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone:</label>
+                                <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone" @bind="Usuarios.Telefone">
+                            </div>
+                            <button type="submit" class="btn btn-primary" @onclick:preventDefault @onclick="Entrar_Click">
+                                Entrar
+                            </button>
+                        </form>
+                        @if (MensagemErro is not null)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @MensagemErro
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@code {
+    public UsuarioDto? Usuarios { get; set; }
+
+    public string? MensagemErro { get; set; }
+
+    [Inject]
+    public IUsuarioService? UsuarioService { get; set; }
+
+    [Inject]
+    public NavigationManager? NavigationManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Usuarios = new UsuarioDto();
+    }
+
+    protected async Task Entrar_Click()
+    {
+        //var usuarioExiste = await VerificarSeUsuarioExiste(usuarioDto);
+
+        var usuarioExiste = true;
+
+        if (Usuarios.Nome == "Karoline"
+        && Usuarios.Telefone == "47997418959")
+            usuarioExiste = true;
+        else
+        {
+            usuarioExiste = false;
+        }
+
+        if (usuarioExiste)
+        {
+            NavigationManager.NavigateTo("/CarrinhoCompra");
+        }
+        else
+        {
+             MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
+        }
+    }
+
+    private async Task<bool> VerificarSeUsuarioExiste(UsuarioDto usuarioDto)
+    {
+        var usuario = await UsuarioService.GetByIdUsuario(usuarioDto.Id);
+        if (usuario != null)
+            return true;
+        else
+        {
+            return false;
+        }
+    }
+}

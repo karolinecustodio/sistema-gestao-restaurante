@@ -86,5 +86,15 @@ namespace GestaoRestaurante.Api.Mappings
                 PrecoTotal = produto.Preco * carrinhoItem.Quantidade
             };
         }
+
+        public static UsuarioDto ConverterUsuarioParaDto(
+            this Usuario usuario)
+        {
+            return new UsuarioDto
+            {
+                Id = usuario.Id,
+                Nome = usuario.NomeUsuario
+            };
+        }
     }
 }
