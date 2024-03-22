@@ -8,7 +8,22 @@ namespace GestaoRestaurante.Api.Entities
 
         [MaxLength(100)]
         public string? NomeUsuario { get; set; }
+        
+        [MaxLength(100)]
+        public string? Email { get; set; }
 
-        public Carrinho? Carrinho { get; set; }
+        [MaxLength(100)]
+        public string? Senha { get; set; }
+
+        [MaxLength(20)]
+        public string? Telefone { get; set; }
+
+        public TipoUsuario? TipoUsuario { get; set; }
+
+        public ICollection<Carrinho> Carrinho { get; set; }
+            = new List<Carrinho>();
+
+        public ICollection<UsuarioEndereco> Enderecos { get; set; }
+            = new List<UsuarioEndereco>();
     }
 }

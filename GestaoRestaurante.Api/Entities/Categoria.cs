@@ -8,8 +8,10 @@ namespace GestaoRestaurante.Api.Entities
         public int Id { get; set; }
 
         [MaxLength(100)]
-        public string Nome { get; set; } = string.Empty;
-        public string IconCss { get; set; } = string.Empty;
+        public string Nome { get; set; }
+
+        [MaxLength(100)]
+        public string IconCss { get; set; }
 
         public Collection<Produto> Produtos { get; set; }
             = new Collection<Produto>();

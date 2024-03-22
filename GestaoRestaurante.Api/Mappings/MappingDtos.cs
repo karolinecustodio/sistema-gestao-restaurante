@@ -27,7 +27,7 @@ namespace GestaoRestaurante.Api.Mappings
                         Nome = produto.Nome,
                         Descricao = produto.Descricao,
                         ImagemUrl = produto.ImagemUrl,
-                        Preco = produto.Preco,
+                        ValorProd = produto.ValorProd,
                         Quantidade = produto.Quantidade,
                         CategoriaId = produto.Categoria.Id,
                         CategoriaNome = produto.Categoria.Nome
@@ -43,7 +43,7 @@ namespace GestaoRestaurante.Api.Mappings
                 Nome = produto.Nome,
                 Descricao = produto.Descricao,
                 ImagemUrl = produto.ImagemUrl,
-                Preco = produto.Preco,
+                ValorProd = produto.ValorProd,
                 Quantidade = produto.Quantidade,
                 CategoriaId = produto.Categoria.Id,
                 CategoriaNome = produto.Categoria.Nome
@@ -63,10 +63,10 @@ namespace GestaoRestaurante.Api.Mappings
                         ProdutoNome = produto.Nome,
                         ProdutoDescricao = produto.Descricao,
                         ProdutoImagemURL = produto.ImagemUrl,
-                        Preco = produto.Preco,
+                        Preco = produto.ValorProd,
                         CarrinhoId = carrinhoItem.CarrinhoId,
                         Quantidade = carrinhoItem.Quantidade,
-                        PrecoTotal = produto.Preco * carrinhoItem.Quantidade
+                        PrecoTotal = produto.ValorProd * carrinhoItem.Quantidade
                     }).ToList();
         }
 
@@ -80,10 +80,10 @@ namespace GestaoRestaurante.Api.Mappings
                 ProdutoNome = produto.Nome,
                 ProdutoDescricao = produto.Descricao,
                 ProdutoImagemURL = produto.ImagemUrl,
-                Preco = produto.Preco,
+                Preco = produto.ValorProd,
                 CarrinhoId = carrinhoItem.CarrinhoId,
                 Quantidade = carrinhoItem.Quantidade,
-                PrecoTotal = produto.Preco * carrinhoItem.Quantidade
+                PrecoTotal = produto.ValorProd * carrinhoItem.Quantidade
             };
         }
 
