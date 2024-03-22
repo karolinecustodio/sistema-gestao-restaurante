@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ilq9JTTaszG7HzbrZhzgNaaIiqHPfBfcarFeIbioLVI=",
+  "Hash": "EZU1Kg7ad+8OgKm+u2hX7hk6RBBzBFWQFlC2jh1WaGw=",
   "Source": "GestaoRestaurante.Api",
   "BasePath": "_content/GestaoRestaurante.Api",
   "Mode": "Default",
@@ -11921,6 +11921,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\CarrinhoCompraFunctions.js"
+    },
+    {
+      "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\js\\CepFunctions.js",
+      "SourceId": "GestaoRestaurante.Web",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/CepFunctions.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CepFunctions.js"
     },
     {
       "Identity": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\spinner.gif",

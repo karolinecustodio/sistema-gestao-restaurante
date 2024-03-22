@@ -1,0 +1,66 @@
+﻿@page "/endereco"
+@inject IJSRuntime Js;
+
+<div class="container bg-light">
+    <div class="row justify-content-center">
+        <div class="card-header">Adicionar Endereço de Entrega</div>
+        <div class="form-group">
+            <label for="cep">CEP:</label><span class="text-danger">*</span>
+            <input @oninput="()=>RetornaDadosCep_Input()" class="form-control" type="text" id="cep" @bind="endereco.Cep" required>
+        </div>
+        <div class="form-group">
+            <label for="rua">Rua:</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="rua" @bind="endereco.Rua" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numero">Número:</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="numero" @bind="endereco.Numero" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bairro">Bairro:</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="bairro" @bind="endereco.Bairro" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">Cidade:</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="cidade" @bind="endereco.Cidade" required>
+        </div>
+
+        <div class="form-group">
+            <label for="estado">Estado:</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="estado" @bind="endereco.Estado" required>
+        </div>
+
+        @* <!-- Botões para selecionar o tipo de endereço -->
+        <div class="form-group">
+            <button class="btn btn-secondary mr-2" @onclick="() => FavoritarEndereco('casa')">Favoritar Casa</button>
+            <button class="btn btn-secondary" @onclick="() => FavoritarEndereco('trabalho')">Favoritar Trabalho</button>
+        </div> *@
+
+        <button class="btn btn-primary" @onclick="SalvarEndereco">Salvar</button>
+    </div>
+</div>
+
+
+@code {
+    public EnderecoDto endereco { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        endereco = new EnderecoDto();
+    }
+
+    // https://viacep.com.br/ws/89032241/json
+
+    private void SalvarEndereco()
+    {
+        Console.WriteLine($"Endereço salvo: {endereco.Rua}, {endereco.Numero}, {endereco.Bairro}, {endereco.Cidade}, {endereco.Estado}");
+    }
+
+    protected async Task RetornaDadosCep_Input()
+    {
+        await Js.InvokeVoidAsync("BuscaCep");
+    }
+}

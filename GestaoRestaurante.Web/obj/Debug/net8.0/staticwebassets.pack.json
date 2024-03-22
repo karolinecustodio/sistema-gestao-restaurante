@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\js\\CarrinhoCompraFunctions.js"
     },
     {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\js\\CepFunctions.js",
+      "PackagePath": "staticwebassets\\js\\CepFunctions.js"
+    },
+    {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\spinner.gif",
       "PackagePath": "staticwebassets\\spinner.gif"
     },

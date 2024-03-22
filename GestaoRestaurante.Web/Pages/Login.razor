@@ -25,6 +25,9 @@ else
                             <button type="submit" class="btn btn-primary" @onclick:preventDefault @onclick="Entrar_Click">
                                 Entrar
                             </button>
+                            <button type="submit" class="btn btn-danger" @onclick="LoginComGoogle_Click">
+                                Login com Google
+                            </button>
                         </form>
                         @if (MensagemErro is not null)
                         {
@@ -37,6 +40,7 @@ else
             </div>
         </div>
     </div>
+
 }
 @code {
     public UsuarioDto? Usuarios { get; set; }
@@ -70,11 +74,35 @@ else
 
         if (usuarioExiste)
         {
-            NavigationManager.NavigateTo("/CarrinhoCompra");
+            NavigationManager.NavigateTo("/produtos");
         }
         else
         {
              MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
+        }
+    }
+
+    protected async Task LoginComGoogle_Click()
+    {
+        //var usuarioExiste = await VerificarSeUsuarioExiste(usuarioDto);
+
+        var usuarioExiste = true;
+
+        if (Usuarios.Nome == "Karoline"
+        && Usuarios.Telefone == "47997418959")
+            usuarioExiste = true;
+        else
+        {
+            usuarioExiste = false;
+        }
+
+        if (usuarioExiste)
+        {
+            NavigationManager.NavigateTo("/CarrinhoCompra");
+        }
+        else
+        {
+            MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
         }
     }
 
