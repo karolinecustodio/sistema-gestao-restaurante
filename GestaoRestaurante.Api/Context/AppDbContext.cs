@@ -11,15 +11,15 @@ namespace GestaoRestaurante.Api.Context
         }
 
         // Mappendo entidade para a tabela
-        public DbSet<Carrinho>? Carrinhos { get; set; }
-        public DbSet<CarrinhoItem>? CarrinhoItens { get; set; }
-        public DbSet<Endereco>? Enderecos { get; set; }
+        public DbSet<Carrinho>? Carrinho { get; set; }
+        public DbSet<CarrinhoItem>? CarrinhoItem { get; set; }
+        public DbSet<Endereco>? Endereco { get; set; }
         public DbSet<Pedido>? Pedido { get; set; }
-        public DbSet<PedidoItem>? PedidoItens { get; set; }
-        public DbSet<Produto>? Produtos { get; set; }
-        public DbSet<Categoria>? Categorias { get; set; }
-        public DbSet<Usuario>? Usuarios { get; set; }
-        public DbSet<UsuarioEndereco>? UsuarioEnderecos { get; set; }
+        public DbSet<PedidoItem>? PedidoItem { get; set; }
+        public DbSet<Produto>? Produto { get; set; }
+        public DbSet<Categoria>? Categoria { get; set; }
+        public DbSet<Usuario>? Usuario { get; set; }
+        public DbSet<UsuarioEndereco>? UsuarioEndereco { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -18,7 +18,7 @@ namespace GestaoRestaurante.Api.Repositories
             if (await CarrinhoItemJaExiste(carrinhoItemAdicionaDto.CarrinhoId,
                 carrinhoItemAdicionaDto.ProdutoId) == false)
             {
-                var item = await (from produto in _context.Produtos
+                var item = await (from produto in _context.Produto
                                   where produto.Id == carrinhoItemAdicionaDto.ProdutoId
                                   select new CarrinhoItem
                                   {
@@ -29,7 +29,7 @@ namespace GestaoRestaurante.Api.Repositories
 
                 if (item is not null)
                 {
-                    var resultado = await _context.CarrinhoItens.AddAsync(item);
+                    var resultado = await _context.CarrinhoItem.AddAsync(item);
                     await _context.SaveChangesAsync();
                     return resultado.Entity;
                 }
@@ -40,7 +40,7 @@ namespace GestaoRestaurante.Api.Repositories
         public async Task<CarrinhoItem> AtualizaQuantidade(int id,
                    CarrinhoItemAtualizaQuantidadeDto carrinhoItemAtualizaQuantidadeDto)
         {
-            var carrinhoItem = await _context.CarrinhoItens.FindAsync(id);
+            var carrinhoItem = await _context.CarrinhoItem.FindAsync(id);
 
             if (carrinhoItem is not null)
             {
@@ -53,11 +53,11 @@ namespace GestaoRestaurante.Api.Repositories
 
         public async Task<CarrinhoItem> DeletaItem(int id)
         {
-            var item = await _context.CarrinhoItens.FindAsync(id);
+            var item = await _context.CarrinhoItem.FindAsync(id);
 
             if (item is not null)
             {
-                _context.CarrinhoItens.Remove(item);
+                _context.CarrinhoItem.Remove(item);
                 await _context.SaveChangesAsync();
             }
             return item;
@@ -65,8 +65,8 @@ namespace GestaoRestaurante.Api.Repositories
 
         public async Task<CarrinhoItem> GetItem(int id)
         {
-            return await (from carrinho in _context.Carrinhos
-                          join carrinhoItem in _context.CarrinhoItens
+            return await (from carrinho in _context.Carrinho
+                          join carrinhoItem in _context.CarrinhoItem
                           on carrinho.Id equals carrinhoItem.CarrinhoId
                           where carrinhoItem.Id == id
                           select new CarrinhoItem
@@ -80,8 +80,8 @@ namespace GestaoRestaurante.Api.Repositories
 
         public async Task<IEnumerable<CarrinhoItem>> GetItens(int usuarioId)
         {
-            return await (from carrinho in _context.Carrinhos
-                          join carrinhoItem in _context.CarrinhoItens
+            return await (from carrinho in _context.Carrinho
+                          join carrinhoItem in _context.CarrinhoItem
                           on carrinho.Id equals carrinhoItem.CarrinhoId
                           where carrinho.UsuarioId == usuarioId
                           select new CarrinhoItem
@@ -95,7 +95,7 @@ namespace GestaoRestaurante.Api.Repositories
 
         private async Task<bool> CarrinhoItemJaExiste(int carrinhoId, int produtoId)
         {
-            return await _context.CarrinhoItens.AnyAsync(c => c.CarrinhoId == carrinhoId &&
+            return await _context.CarrinhoItem.AnyAsync(c => c.CarrinhoId == carrinhoId &&
                                                               c.ProdutoId == produtoId);
         }
     }

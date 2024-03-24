@@ -1,0 +1,74 @@
+﻿@page "/cria-conta"
+
+<div class="container bg-light">
+    <div class="row justify-content-center">
+        <div class="card-header">Criar uma conta</div>
+      @*   <div class="form-group">
+            <label for="cep">Nome:</label><span class="text-danger">*</span>
+            <input class="form-control" type="text" id="nome" @bind="usuario.Nome" required>
+        </div> *@
+
+        <div class="form-group">
+            <div class="input-group">
+                 <span class="input-group-text bg-transparent border-right-0"><i class="oi oi-person"></i></span>
+                <input type="text" class="form-control border-left-0" id="nome" placeholder="Nome" @bind="usuario.NomeUsuario" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-text bg-transparent border-right-0"><i class="oi oi-envelope-closed"></i></span>
+                <input type="text" class="form-control border-left-0" id="email" placeholder="Email" @bind="usuario.Email" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-text bg-transparent border-right-0"><i class="oi oi-phone"></i></span>
+                <input type="text" class="form-control border-left-0" id="telefone" placeholder="Telefone" @bind="usuario.Telefone" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-text bg-transparent border-right-0"><i class="oi oi-lock-locked"></i></span>
+                <input type="text" class="form-control border-left-0" id="senha" placeholder="Senha" @bind="usuario.Senha" required>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" @onclick="SalvarUsuario">Salvar</button>
+    </div>
+</div>
+
+
+@code {
+    public UsuarioDto usuario { get; set; }
+
+    [Inject]
+    public IUsuarioService? UsuarioService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        usuario = new UsuarioDto();
+    }
+
+    private async Task SalvarUsuario()
+    {
+        try
+        {
+            var usuarioDto = await UsuarioService.AdicionaUsuario(usuario);
+
+            // if (usuarioDto != null)
+            // {
+            //     CarrinhoCompraItens.Add(carrinhoItemDto);
+            //     await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
+            // }
+
+            // NavigationManager.NavigateTo("/CarrinhoCompra");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+}

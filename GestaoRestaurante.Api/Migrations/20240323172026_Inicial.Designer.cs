@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestaoRestaurante.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240322204928_Second")]
-    partial class Second
+    [Migration("20240323172026_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,7 +40,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Carrinhos");
+                    b.ToTable("Carrinho");
                 });
 
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.CarrinhoItem", b =>
@@ -69,7 +69,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.ToTable("CarrinhoItens");
+                    b.ToTable("CarrinhoItem");
                 });
 
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.Categoria", b =>
@@ -92,7 +92,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categoria");
 
                     b.HasData(
                         new
@@ -160,7 +160,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Enderecos");
+                    b.ToTable("Endereco");
                 });
 
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.Pedido", b =>
@@ -214,7 +214,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.ToTable("PedidoItens");
+                    b.ToTable("PedidoItem");
                 });
 
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.Produto", b =>
@@ -253,7 +253,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasIndex("CategoriaId");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Produto");
 
                     b.HasData(
                         new
@@ -357,7 +357,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario");
 
                     b.HasData(
                         new
@@ -389,7 +389,7 @@ namespace GestaoRestaurante.Api.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("UsuarioEnderecos");
+                    b.ToTable("UsuarioEndereco");
                 });
 
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.Carrinho", b =>

@@ -16,7 +16,7 @@ else
                         <form>
                             <div class="form-group">
                                 <label for="nome">Nome:</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" @bind="Usuarios.Nome">
+                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" @bind="Usuarios.NomeUsuario">
                             </div>
                             <div class="form-group">
                                 <label for="telefone">Telefone:</label>
@@ -25,9 +25,14 @@ else
                             <button type="submit" class="btn btn-primary" @onclick:preventDefault @onclick="Entrar_Click">
                                 Entrar
                             </button>
-                            <button type="submit" class="btn btn-danger" @onclick="LoginComGoogle_Click">
-                                Login com Google
-                            </button>
+                            <div style="display: flex; justify-content: space-between;">
+                                    <span>
+                                        <a href="/cria-conta">Não tem uma conta?</a>
+                                    </span>
+                                    <span>
+                                        <a href="/forgot-password">Esqueceu a senha?</a>
+                                    </span>
+                            </div>
                         </form>
                         @if (MensagemErro is not null)
                         {
@@ -64,7 +69,7 @@ else
 
         var usuarioExiste = true;
 
-        if (Usuarios.Nome == "Karoline"
+        if (Usuarios.NomeUsuario == "Karoline"
         && Usuarios.Telefone == "47997418959")
             usuarioExiste = true;
         else
@@ -79,30 +84,6 @@ else
         else
         {
              MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
-        }
-    }
-
-    protected async Task LoginComGoogle_Click()
-    {
-        //var usuarioExiste = await VerificarSeUsuarioExiste(usuarioDto);
-
-        var usuarioExiste = true;
-
-        if (Usuarios.Nome == "Karoline"
-        && Usuarios.Telefone == "47997418959")
-            usuarioExiste = true;
-        else
-        {
-            usuarioExiste = false;
-        }
-
-        if (usuarioExiste)
-        {
-            NavigationManager.NavigateTo("/CarrinhoCompra");
-        }
-        else
-        {
-            MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
         }
     }
 

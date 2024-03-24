@@ -3,9 +3,12 @@
     public class UsuarioDto
     {
         public int Id { get; set; }
-        public string Nome { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string Senha { get; set; } = string.Empty;
-        public string Telefone { get; set; } = string.Empty;
+        public string NomeUsuario { get; set; }
+        public string Email { get; set; } 
+        public string Senha { get; set; } 
+        public string Telefone { get; set; } 
+        public TipoUsuarioDto? TipoUsuario { get; set; }
+        public ICollection<CarrinhoDto> Carrinho { get; set; } = new List<CarrinhoDto>();
+        public ICollection<UsuarioEnderecoDto> Enderecos { get; set; } = new List<UsuarioEnderecoDto>();
     }
 }

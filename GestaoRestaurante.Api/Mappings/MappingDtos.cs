@@ -1,5 +1,6 @@
 ﻿using GestaoRestaurante.Api.Entities;
 using GestaoRestaurante.Models.Dto;
+using Endereco = GestaoRestaurante.Api.Entities.Endereco;
 
 namespace GestaoRestaurante.Api.Mappings
 {
@@ -93,7 +94,52 @@ namespace GestaoRestaurante.Api.Mappings
             return new UsuarioDto
             {
                 Id = usuario.Id,
-                Nome = usuario.NomeUsuario
+                NomeUsuario = usuario.NomeUsuario,
+                Email = usuario.Email,
+                Telefone = usuario.Telefone,
+                Senha = usuario.Senha,
+                TipoUsuario = (TipoUsuarioDto)usuario.TipoUsuario,
+                Carrinho = usuario.Carrinho.Select(c => new CarrinhoDto
+                {
+                    Id = c.Id,
+                    UsuarioId = c.UsuarioId,
+                    Itens = c.Itens.Select(i => new CarrinhoItemDto
+                    {
+                        Id = i.Id,
+                        CarrinhoId = i.CarrinhoId,
+                        ProdutoId = i.ProdutoId,
+                        Quantidade = i.Quantidade,
+                        ProdutoNome = i.Produto.Nome,
+                        ProdutoDescricao = i.Produto.Descricao,
+                        ProdutoImagemURL = i.Produto.ImagemUrl,
+                        Preco = i.Produto.ValorProd,
+                        PrecoTotal = i.ValorProd * i.Quantidade
+                    }).ToList()
+                }).ToList(),
+                Enderecos = usuario.Enderecos.Select(e => new UsuarioEnderecoDto
+                {
+                    Id = e.Id,
+                    UsuarioId = e.UsuarioId,
+                    Usuario = ConverterUsuarioParaDto(e.Usuario), // Se desejar mapear Usuario para UsuarioDto
+                    EnderecoId = e.EnderecoId,
+                    Endereco = ConverterEnderecoParaDto(e.Endereco) // Se desejar mapear Endereco para EnderecoDto
+                }).ToList()
+            };
+        }
+
+        public static EnderecoDto ConverterEnderecoParaDto(
+          this Endereco endereco)
+        {
+            return new EnderecoDto
+            {
+                Id = endereco.Id,
+                Rua = endereco.Rua,
+                Numero = endereco.Numero,
+                Complemento = endereco.Complemento,
+                Cidade = endereco.Cidade,
+                Estado = endereco.Estado,
+                Bairro = endereco.Bairro,
+                Cep = endereco.Cep
             };
         }
     }

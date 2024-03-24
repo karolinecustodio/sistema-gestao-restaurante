@@ -17,7 +17,7 @@ namespace GestaoRestaurante.Api.Repositories
 
         public async Task<Usuario> GetByIdUsuario(int id)
         {
-            var usuario = await _context.Usuarios
+            var usuario = await _context.Usuario
                 .SingleOrDefaultAsync(c => c.Id == id);
 
             return usuario;
@@ -25,29 +25,19 @@ namespace GestaoRestaurante.Api.Repositories
 
         public async Task<Usuario> PostByUsuario(Usuario usuario)
         {
-            if (await UsuarioJaExiste(usuario.Id) == false)
+            if (await UsuarioJaExiste(usuario.Email) == false)
             {
-                var retornaUsuario = await (from usuarios in _context.Usuarios
-                                  where usuario.Id == usuario.Id
-                                  select new Usuario
-                                  {
-                                      Id = usuario.Id,
-                                      NomeUsuario = usuario.NomeUsuario
-                                  }).SingleOrDefaultAsync();
-
-                if (retornaUsuario is not null)
-                {
-                    var resultado = await _context.Usuarios.AddAsync(retornaUsuario);
-                    await _context.SaveChangesAsync();
-                    return resultado.Entity;
-                }
+                usuario.TipoUsuario = TipoUsuario.Cliente;
+                _context.Usuario.Add(usuario);
+                await _context.SaveChangesAsync();
+                return usuario;
             }
             return null;
         }
 
-        private async Task<bool> UsuarioJaExiste(int usuarioId)
+        private async Task<bool> UsuarioJaExiste(string email)
         {
-            return await _context.Usuarios.AnyAsync(c => c.Id == usuarioId);
+            return await _context.Usuario.AnyAsync(c => c.Email == email);
         }
     }
 }
