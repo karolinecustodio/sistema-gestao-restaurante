@@ -135,6 +135,172 @@
     ]
   },
   {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CategoriaController",
+    "Method": "GetAllCategoria",
+    "RelativePath": "api/Categoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.CategoriaDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CategoriaController",
+    "Method": "PostByCategoria",
+    "RelativePath": "api/Categoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria",
+        "Type": "GestaoRestaurante.Api.Entities.Categoria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CategoriaController",
+    "Method": "GetByIdCategoria",
+    "RelativePath": "api/Categoria/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.CategoriaDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.EnderecoController",
+    "Method": "GetAllEndereco",
+    "RelativePath": "api/Endereco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.EnderecoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.EnderecoController",
+    "Method": "PostByEndereco",
+    "RelativePath": "api/Endereco",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "endereco",
+        "Type": "GestaoRestaurante.Api.Entities.Endereco",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.EnderecoController",
+    "Method": "GetByIdEndereco",
+    "RelativePath": "api/Endereco/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.EnderecoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoController",
+    "Method": "PostByCategoria",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "GestaoRestaurante.Api.Entities.Produto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoController",
+    "Method": "GetByIdPedido",
+    "RelativePath": "api/Pedido/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.PedidoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GestaoRestaurante.Api.Controllers.ProdutosController",
     "Method": "GetItens",
     "RelativePath": "api/Produtos",
@@ -224,6 +390,32 @@
   },
   {
     "ContainingType": "GestaoRestaurante.Api.Controllers.UsuarioController",
+    "Method": "GetByEmailUsuario",
+    "RelativePath": "api/Usuario/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.UsuarioDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.UsuarioController",
     "Method": "GetByIdUsuario",
     "RelativePath": "api/Usuario/{id}",
     "HttpMethod": "GET",
@@ -233,6 +425,58 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.UsuarioDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.UsuarioController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/Usuario/altera-senha/{email}/{novaSenha}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "novaSenha",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.UsuarioController",
+    "Method": "GetByEmailAndSenhaUsuario",
+    "RelativePath": "api/Usuario/valida-login/{email}/{senha}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

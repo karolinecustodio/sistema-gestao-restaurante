@@ -1,10 +1,3 @@
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.AssemblyReference.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfoInputs.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfo.cs
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.CoreCompileInputs.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.sourcelink.json
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Azure.Core.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Azure.Identity.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
@@ -907,6 +900,13 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\icudt_no_CJK.dat
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\GestaoRestaurante.Models.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\GestaoRestaurante.Models.pdb
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.AssemblyReference.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfoInputs.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfo.cs
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.CoreCompileInputs.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.sourcelink.json
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Azure.Core.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Azure.Identity.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm

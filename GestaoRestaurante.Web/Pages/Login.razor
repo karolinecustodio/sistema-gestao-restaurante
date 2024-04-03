@@ -1,7 +1,7 @@
 ﻿@page "/login"
 @inject IUsuarioService usuarioService
 
-@if (Usuarios == null && MensagemErro is null)
+@if (usuario == null && MensagemErro is null)
 {
     <ExibirSpinner />
 }
@@ -15,12 +15,12 @@ else
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label for="nome">Nome:</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" @bind="Usuarios.NomeUsuario">
+                                <label for="email">E-mail:</label>
+                                <input type="text" class="form-control" id="email" placeholder="Digite seu email" @bind="usuario.Email">
                             </div>
                             <div class="form-group">
-                                <label for="telefone">Telefone:</label>
-                                <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone" @bind="Usuarios.Telefone">
+                                <label for="senha">Senha:</label>
+                                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" @bind="usuario.Senha">
                             </div>
                             <button type="submit" class="btn btn-primary" @onclick:preventDefault @onclick="Entrar_Click">
                                 Entrar
@@ -30,7 +30,7 @@ else
                                         <a href="/cria-conta">Não tem uma conta?</a>
                                     </span>
                                     <span>
-                                        <a href="/forgot-password">Esqueceu a senha?</a>
+                                        <a href="/altera-senha">Esqueceu a senha?</a>
                                     </span>
                             </div>
                         </form>
@@ -48,7 +48,7 @@ else
 
 }
 @code {
-    public UsuarioDto? Usuarios { get; set; }
+    public UsuarioDto usuario { get; set; }
 
     public string? MensagemErro { get; set; }
 
@@ -60,37 +60,35 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Usuarios = new UsuarioDto();
+        usuario = new UsuarioDto();
     }
 
     protected async Task Entrar_Click()
     {
-        //var usuarioExiste = await VerificarSeUsuarioExiste(usuarioDto);
-
-        var usuarioExiste = true;
-
-        if (Usuarios.NomeUsuario == "Karoline"
-        && Usuarios.Telefone == "47997418959")
-            usuarioExiste = true;
-        else
+        try
         {
-            usuarioExiste = false;
+            var usuarioExiste = await VerificarSeUsuarioExiste(usuario);
+
+            if (usuarioExiste)
+            {
+                NavigationManager.NavigateTo("/produtos");
+            }
+            else
+            {
+                MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
+            }
         }
-
-        if (usuarioExiste)
+        catch (Exception ex)
         {
-            NavigationManager.NavigateTo("/produtos");
-        }
-        else
-        {
-             MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
+            MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
+            Console.WriteLine($"Erro ao tentar fazer login: {ex.Message}");
         }
     }
 
     private async Task<bool> VerificarSeUsuarioExiste(UsuarioDto usuarioDto)
     {
-        var usuario = await UsuarioService.GetByIdUsuario(usuarioDto.Id);
-        if (usuario != null)
+        var usuarioEmailExiste = await UsuarioService.GetByEmailSenhaUsuario(usuarioDto.Email, usuarioDto.Senha);
+        if (usuarioEmailExiste != null)
             return true;
         else
         {

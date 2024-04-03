@@ -1,8 +1,6 @@
 ﻿let timeoutId;
 
 function BuscaCep() {
-    console.log("entrei aq");
-
     if (timeoutId) {
         clearTimeout(timeoutId);
     }

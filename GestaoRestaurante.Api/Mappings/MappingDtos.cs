@@ -18,6 +18,57 @@ namespace GestaoRestaurante.Api.Mappings
                     }).ToList();
         }
 
+        public static CategoriaDto ConverterCategoriaParaDto(
+            this Categoria categoria)
+        {
+            return new CategoriaDto
+            {
+                Id = categoria.Id,
+                Nome = categoria.Nome,
+                IconCss = categoria.IconCss
+            };
+        }
+
+        public static PedidoDto ConverterPedidoParaDto(
+            this Pedido pedido)
+        {
+            return new PedidoDto
+            {
+                Id = pedido.Id,
+                DataEmissao = pedido.DataEmissao,
+                ValorPedido = pedido.ValorPedido,
+                FormaPagamento = new FormaPagamentoDto
+                {
+                    Nome = pedido.FormaPagamento.ToString(),
+                    Valor = (int)pedido.FormaPagamento
+                },
+                StatusPedido = new StatusPedidoDto
+                {
+                    Nome = pedido.StatusPedido.ToString(),
+                    Valor = (int)pedido.StatusPedido
+                },
+                PedidoItem = pedido.PedidoItens.Select(item => new PedidoItemDto
+                {
+                    Id = item.Id,
+                    Produto = new ProdutoDto
+                    {
+                        Id = item.Produto.Id,
+                        Nome = item.Produto.Nome,
+                        Descricao = item.Produto.Descricao,
+                        ImagemUrl = item.Produto.ImagemUrl,
+                        ValorProd = item.Produto.ValorProd,
+                        Quantidade = item.Produto.Quantidade,
+                        CategoriaId = item.Produto.CategoriaId,
+                        CategoriaNome = item.Produto.Categoria.Nome,
+                    },
+                    PedidoId = pedido.Id,
+                    ValorProd = pedido.ValorPedido,
+                    Quantidade = item.Quantidade
+
+                }).ToList()
+            };
+        }
+
         public static IEnumerable<ProdutoDto> ConverterProdutosParaDto(
             this IEnumerable<Produto> produtos)
         {
@@ -141,6 +192,23 @@ namespace GestaoRestaurante.Api.Mappings
                 Bairro = endereco.Bairro,
                 Cep = endereco.Cep
             };
+        }
+
+        public static IEnumerable<EnderecoDto> ConverterEnderecosParaDto(
+            this IEnumerable<Endereco> enderecos)
+        {
+            return (from endereco in enderecos
+                    select new EnderecoDto
+                    {
+                        Id = endereco.Id,
+                        Rua = endereco.Rua,
+                        Numero = endereco.Numero,
+                        Complemento = endereco.Complemento,
+                        Bairro = endereco.Bairro,
+                        Cidade = endereco.Cidade,
+                        Estado = endereco.Estado,
+                        Cep = endereco.Cep
+                    }).ToList();
         }
     }
 }

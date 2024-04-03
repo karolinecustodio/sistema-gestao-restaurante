@@ -23,9 +23,25 @@ namespace GestaoRestaurante.Api.Repositories
             return usuario;
         }
 
+        public async Task<Usuario> GetByEmailAndSenhaUsuario(string email, string senha)
+        {
+            var usuario = await _context.Usuario
+                .FirstOrDefaultAsync(c => c.Email == email && c.Senha == senha );
+
+            return usuario;
+        }
+
+        public async Task<Usuario> GetByEmailUsuario(string email)
+        {
+            var usuario = await _context.Usuario
+                .FirstOrDefaultAsync(c => c.Email == email);
+
+            return usuario;
+        }
+
         public async Task<Usuario> PostByUsuario(Usuario usuario)
         {
-            if (await UsuarioJaExiste(usuario.Email) == false)
+            if (await UsuarioExiste(usuario.Email) == false)
             {
                 usuario.TipoUsuario = TipoUsuario.Cliente;
                 _context.Usuario.Add(usuario);
@@ -35,7 +51,31 @@ namespace GestaoRestaurante.Api.Repositories
             return null;
         }
 
-        private async Task<bool> UsuarioJaExiste(string email)
+        public async Task<bool> UpdateSenha(string email, string novaSenha)
+        {
+            try
+            {
+                var usuario = await _context.Usuario.FirstOrDefaultAsync(u => u.Email == email);
+
+                if (usuario != null)
+                {
+                    usuario.Senha = novaSenha;
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao atualizar a senha: {ex.Message}");
+                return false;
+            }
+        }
+
+            private async Task<bool> UsuarioExiste(string email)
         {
             return await _context.Usuario.AnyAsync(c => c.Email == email);
         }

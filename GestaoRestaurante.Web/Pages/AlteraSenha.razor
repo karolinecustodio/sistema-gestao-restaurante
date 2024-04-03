@@ -1,0 +1,100 @@
+﻿@page "/altera-senha"
+@using System.Net.Mail
+@using System.Net
+
+<div class="container bg-light">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Redefinição de Senha</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="text" class="form-control" id="email" placeholder="Digite seu email" @bind="usuario.Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Nova Senha:</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Digite sua nova senha" @bind="usuario.Senha">
+                        </div>
+                        <button type="submit" class="btn btn-primary" @onclick:preventDefault @onclick="SalvarSenha_Click">
+                            Salvar
+                        </button>
+                    </form>
+                    @if (MensagemSucesso is not null)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @MensagemSucesso
+                        </div>
+                    }
+                    else if (MensagemErro is not null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @MensagemErro
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    public UsuarioDto usuario { get; set; }
+
+    public string? MensagemSucesso { get; set; }
+    public string? MensagemErro { get; set; }
+
+    [Inject]
+    public IUsuarioService? UsuarioService { get; set; }
+
+    [Inject]
+    public NavigationManager? NavigationManager { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        usuario = new UsuarioDto();
+    }
+
+    private async Task SalvarSenha_Click()
+    {
+        var usuarioExiste = await VerificarSeUsuarioExiste(usuario);
+
+        if (usuarioExiste)
+        {
+            await AlteraSenhaUsuario(usuario.Email, usuario.Senha);
+          //  MensagemSucesso =  UsuarioService.EnviarEmail(usuario.Email);
+          //  MensagemSucesso = "Senha alterada com sucesso! Foi enviado um e-mail de alteração de senha para o e-mail informado.";
+            MensagemSucesso = "Senha alterada com sucesso! ";
+        }
+        else
+        {
+            MensagemErro = "Usuário não encontrado. Por favor, verifique suas credenciais.";
+        }
+    }
+
+    private async Task AlteraSenhaUsuario(string email, string senha)
+    {
+        try
+        {
+            await UsuarioService.AtualizarSenha(email, senha);
+
+        }
+        catch (Exception ex)
+        {
+            MensagemErro = "Erro ao atualizar a senha: " + ex.Message;
+        }
+    }
+
+    private async Task<bool> VerificarSeUsuarioExiste(UsuarioDto usuarioDto)
+    {
+        var usuarioEmailExiste = await UsuarioService.GetByEmailUsuario(usuarioDto.Email);
+        if (usuarioEmailExiste != null)
+            return true;
+        else
+        {
+            return false;
+        }
+    }
+}
