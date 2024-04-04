@@ -63,7 +63,7 @@ namespace GestaoRestaurante.Api.Controllers
                     return NotFound($"Item não encontrado");
                 }
 
-                var produto = await produtoRepo.GetItem(carrinhoItem.ProdutoId);
+                var produto = await produtoRepo.GetByIdProduto(carrinhoItem.ProdutoId);
 
                 if (produto == null)
                 {
@@ -93,7 +93,7 @@ namespace GestaoRestaurante.Api.Controllers
                     return NoContent();
                 }
 
-                var produto = await produtoRepo.GetItem(novoCarrinhoItem.ProdutoId);
+                var produto = await produtoRepo.GetByIdProduto(novoCarrinhoItem.ProdutoId);
 
                 if (produto == null)
                 {
@@ -125,7 +125,7 @@ namespace GestaoRestaurante.Api.Controllers
                     return NotFound();
                 }
 
-                var produto = await produtoRepo.GetItem(carrinhoItem.ProdutoId);
+                var produto = await produtoRepo.GetByIdProduto(carrinhoItem.ProdutoId);
 
                 if (produto is null)
                     return NotFound();
@@ -154,7 +154,7 @@ namespace GestaoRestaurante.Api.Controllers
                     return NotFound();
                 }
 
-                var produto = await produtoRepo.GetItem(carrinhoItem.ProdutoId);
+                var produto = await produtoRepo.GetByIdProduto(carrinhoItem.ProdutoId);
                 var carrinhoItemDto = carrinhoItem.ConverterCarrinhoItemParaDto(produto);
                 return Ok(carrinhoItemDto);
 

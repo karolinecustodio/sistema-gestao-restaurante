@@ -28,6 +28,7 @@ function BuscaCep() {
                 document.getElementById("bairro").value = endereco.neighborhood;
                 document.getElementById("cidade").value = endereco.city;
                 document.getElementById("estado").value = endereco.state;
+
             }
             else if (request.status == 404) {
                 alert("CEP inválido");

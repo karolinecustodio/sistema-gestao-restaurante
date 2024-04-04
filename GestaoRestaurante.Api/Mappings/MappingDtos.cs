@@ -183,7 +183,7 @@ namespace GestaoRestaurante.Api.Mappings
         {
             return new EnderecoDto
             {
-                Id = endereco.Id,
+                //Id = endereco.Id,
                 Rua = endereco.Rua,
                 Numero = endereco.Numero,
                 Complemento = endereco.Complemento,
@@ -200,7 +200,7 @@ namespace GestaoRestaurante.Api.Mappings
             return (from endereco in enderecos
                     select new EnderecoDto
                     {
-                        Id = endereco.Id,
+                       // Id = endereco.Id,
                         Rua = endereco.Rua,
                         Numero = endereco.Numero,
                         Complemento = endereco.Complemento,

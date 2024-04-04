@@ -1,4 +1,5 @@
-﻿using GestaoRestaurante.Api.Mappings;
+﻿using GestaoRestaurante.Api.Entities;
+using GestaoRestaurante.Api.Mappings;
 using GestaoRestaurante.Api.Repositories;
 using GestaoRestaurante.Models.Dto;
 using Microsoft.AspNetCore.Cors;
@@ -41,11 +42,11 @@ namespace GestaoRestaurante.Api.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<IEnumerable<ProdutoDto>>> GetItem(int id)
+        public async Task<ActionResult<IEnumerable<ProdutoDto>>> GetByIdProduto(int id)
         {
             try
             {
-                var produto = await _produtoRepository.GetItem(id);
+                var produto = await _produtoRepository.GetByIdProduto(id);
                 if (produto is null)
                 {
                     return NotFound("Produto não localizado.");
@@ -84,6 +85,22 @@ namespace GestaoRestaurante.Api.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Erro ao acessar a base de dados");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostByProduto(Produto produto)
+        {
+            var category = await _produtoRepository.GetByIdProduto(produto.Id);
+            if (category is null)
+            {
+                await _produtoRepository.PostByProduto(produto);
+                return CreatedAtAction(nameof(GetByIdProduto), new { id = produto.Id }, produto);
+            }
+            else
+            {
+                var categoriaDto = produto.ConverterProdutoParaDto();
+                return Ok(categoriaDto);
             }
         }
     }

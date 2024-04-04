@@ -28,6 +28,8 @@ else
 }
 
 @code{
+    public UsuarioLogado usuarioLogado { get; set; }
+
     public IEnumerable<ProdutoDto>? Produtos{ get; set; }
 
     public string? MensagemErro { get; set; }
@@ -51,7 +53,7 @@ else
             Produtos = await GerenciaProdutosLocalStorageService.GetCollection();
 
             var carrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService
-                                           .GetCollection();
+                                           .GetCollection(usuarioLogado);
 
             var totalQuantidade = carrinhoCompraItens.Sum(i => i.Quantidade);
 

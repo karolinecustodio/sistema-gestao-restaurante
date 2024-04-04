@@ -11,16 +11,17 @@ namespace GestaoRestaurante.Web.Services
         private readonly ICarrinhoCompraService carrinhoCompraService;
 
         public GerenciaCarrinhoItensLocalStorageService(ILocalStorageService localStorageService,
-            ICarrinhoCompraService carrinhoCompraService)
+            ICarrinhoCompraService carrinhoCompraService,
+            UsuarioLogado usuarioLogado)
         {
             this.localStorageService = localStorageService;
             this.carrinhoCompraService = carrinhoCompraService;
         }
 
-        public async Task<List<CarrinhoItemDto>> GetCollection()
+        public async Task<List<CarrinhoItemDto>> GetCollection(UsuarioLogado usuarioLogado)
         {
             return await localStorageService.GetItemAsync<List<CarrinhoItemDto>>(key)
-                   ?? await AddCollection();
+                   ?? await AddCollection(usuarioLogado);
         }
 
         public async Task RemoveCollection()
@@ -34,10 +35,10 @@ namespace GestaoRestaurante.Web.Services
         }
 
         //obtem os dados do servidor e armazena no localstorage
-        private async Task<List<CarrinhoItemDto>> AddCollection()
+        private async Task<List<CarrinhoItemDto>> AddCollection(UsuarioLogado usuarioLogado)
         {
             var carrinhoCompraCollection = await carrinhoCompraService
-                                              .GetItens(UsuarioLogado.UsuarioId);
+                                              .GetItens(usuarioLogado.UsuarioId);
 
             if (carrinhoCompraCollection != null)
             {

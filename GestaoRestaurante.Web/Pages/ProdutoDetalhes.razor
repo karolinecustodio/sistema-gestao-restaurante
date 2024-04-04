@@ -1,4 +1,5 @@
 ﻿@page "/ProdutoDetalhes/{Id:int}"
+@inject UsuarioLogado UsuarioLogado
 
 @if (Produto is null && MensagemErro is null)
 {
@@ -70,7 +71,7 @@ else
     {
         try
         {
-            CarrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService.GetCollection();
+            CarrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService.GetCollection(UsuarioLogado);
             Produto = await GetProdutoPorId(Id);
         }
         catch (Exception ex)

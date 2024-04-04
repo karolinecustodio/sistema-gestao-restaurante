@@ -10,12 +10,17 @@
         </div>
         <div class="form-group">
             <label for="rua">Rua:</label><span class="text-danger">*</span>
-            <input type="text" class="form-control" id="rua" @bind="endereco.Rua" required>
+            <input @bind="endereco.Rua" @oninput="UpdateRua" type="text" class="form-control" id="rua" required>
         </div>
 
         <div class="form-group">
             <label for="numero">Número:</label><span class="text-danger">*</span>
             <input type="text" class="form-control" id="numero" @bind="endereco.Numero" required>
+        </div>
+
+        <div class="form-group">
+            <label for="complemento">Complemento:</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="complemento" @bind="endereco.Complemento">
         </div>
 
         <div class="form-group">
@@ -33,34 +38,105 @@
             <input type="text" class="form-control" id="estado" @bind="endereco.Estado" required>
         </div>
 
-        @* <!-- Botões para selecionar o tipo de endereço -->
-        <div class="form-group">
-            <button class="btn btn-secondary mr-2" @onclick="() => FavoritarEndereco('casa')">Favoritar Casa</button>
-            <button class="btn btn-secondary" @onclick="() => FavoritarEndereco('trabalho')">Favoritar Trabalho</button>
-        </div> *@
-
-        <button class="btn btn-primary" @onclick="SalvarEndereco">Salvar</button>
+        <button class="btn btn-primary" @onclick ="SalvarEndereco">Salvar</button>
     </div>
 </div>
 
 
 @code {
     public EnderecoDto endereco { get; set; }
+    private int? userId;
+    private readonly Random _random = new Random();
+
+
+    [Inject]
+    public IGerenciaUsuarioEnderecoLocalStorageService GerenciaUsuarioEnderecoService { get; set; }
+
+    [Inject]
+    public IUsuarioEnderecoService UsuarioEnderecoService { get; set; }
+
+    [Inject]
+    public IEnderecoService EnderecoService { get; set; }
+
 
     protected override async Task OnInitializedAsync()
     {
         endereco = new EnderecoDto();
+
+        userId = await GerenciaUsuarioEnderecoService.GetUserId();
+
+        if (userId.HasValue)
+        {
+            var usuarioEndereco = await UsuarioEnderecoService.GetByIdUsuarioEndereco(userId);
+            if (usuarioEndereco != null)
+            {
+                endereco.Cep = usuarioEndereco.Endereco.Cep;
+                endereco.Rua = usuarioEndereco.Endereco.Rua;
+                endereco.Numero = usuarioEndereco.Endereco.Numero;
+                endereco.Bairro = usuarioEndereco.Endereco.Bairro;
+                endereco.Cidade = usuarioEndereco.Endereco.Cidade;
+                endereco.Estado = usuarioEndereco.Endereco.Estado;
+                endereco.Complemento = usuarioEndereco.Endereco.Complemento;
+            }
+            else
+            {
+                endereco.Cep = string.Empty;
+                endereco.Rua = string.Empty;
+                endereco.Numero = string.Empty;
+                endereco.Bairro = string.Empty;
+                endereco.Cidade = string.Empty;
+                endereco.Estado = string.Empty;
+                endereco.Complemento = string.Empty;
+            }
+        }
+
     }
 
-    // https://viacep.com.br/ws/89032241/json
-
-    private void SalvarEndereco()
+    private async void SalvarEndereco()
     {
-        Console.WriteLine($"Endereço salvo: {endereco.Rua}, {endereco.Numero}, {endereco.Bairro}, {endereco.Cidade}, {endereco.Estado}");
+        if (userId.HasValue)
+        {
+            Console.WriteLine($"CEP: {endereco.Cep}, Rua: {endereco.Rua}, Número: {endereco.Numero}, Bairro: {endereco.Bairro}, Cidade: {endereco.Cidade}, Estado: {endereco.Estado}");
+
+            int novoId = GerarIdAleatorio();
+
+            var enderecoSalvar = new EnderecoDto
+                {
+                    Id = novoId,
+                    Cep = endereco.Cep,
+                    Rua = endereco.Rua,
+                    Numero = endereco.Numero,
+                    Bairro = endereco.Bairro,
+                    Cidade = endereco.Cidade,
+                    Estado = endereco.Estado,
+                    Complemento = endereco.Complemento
+                };
+
+            var enderecoDb = await EnderecoService.PostEndereco(enderecoSalvar);
+
+            var usuarioEnd = new UsuarioEnderecoDto
+                {
+                    UsuarioId = userId.Value,
+                    EnderecoId = enderecoDb.Id.Value
+                };
+
+            await UsuarioEnderecoService.PostUsuarioEndereco(usuarioEnd);
+
+        }
     }
+
+    public int GerarIdAleatorio()
+    {
+        return _random.Next(1, 1001);
+    }
+
+    private void UpdateRua(ChangeEventArgs e)
+{
+    endereco.Rua = e.Value.ToString();
+}
 
     protected async Task RetornaDadosCep_Input()
     {
-        await Js.InvokeVoidAsync("BuscaCep");
+      //  await Js.InvokeVoidAsync("BuscaCep");
     }
 }

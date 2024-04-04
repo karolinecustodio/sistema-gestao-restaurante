@@ -18,6 +18,9 @@ builder.Services.AddScoped(sp => new HttpClient
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<ICarrinhoCompraService, CarrinhoCompraService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IUsuarioEnderecoService, UsuarioEnderecoService>();
+builder.Services.AddScoped<IEnderecoService, EnderecoService>();
+builder.Services.AddScoped<UsuarioLogado>();
 
 builder.Services.AddBlazoredLocalStorage();
 
@@ -26,5 +29,8 @@ builder.Services.AddScoped<IGerenciaProdutosLocalStorageService,
 
 builder.Services.AddScoped<IGerenciaCarrinhoItensLocalStorageService,
     GerenciaCarrinhoItensLocalStorageService>();
+
+builder.Services.AddScoped<IGerenciaUsuarioEnderecoLocalStorageService,
+    GerenciaUsuarioEnderecoLocalStorageService>();
 
 await builder.Build().RunAsync();

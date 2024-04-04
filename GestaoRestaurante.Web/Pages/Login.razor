@@ -1,5 +1,6 @@
 ﻿@page "/login"
 @inject IUsuarioService usuarioService
+@inject UsuarioLogado UsuarioLogado
 
 @if (usuario == null && MensagemErro is null)
 {
@@ -48,6 +49,8 @@ else
 
 }
 @code {
+
+    public int usuarioId { get; set; }
     public UsuarioDto usuario { get; set; }
 
     public string? MensagemErro { get; set; }
@@ -57,6 +60,9 @@ else
 
     [Inject]
     public NavigationManager? NavigationManager { get; set; }
+
+    [Inject]
+    public IGerenciaUsuarioEnderecoLocalStorageService GerenciaUsuarioEnderecoService { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -71,7 +77,9 @@ else
 
             if (usuarioExiste)
             {
-                NavigationManager.NavigateTo("/produtos");
+                await UsuarioLogado.SalvarIdUsuario(GerenciaUsuarioEnderecoService);
+
+                NavigationManager.NavigateTo("/endereco");
             }
             else
             {
@@ -88,6 +96,7 @@ else
     private async Task<bool> VerificarSeUsuarioExiste(UsuarioDto usuarioDto)
     {
         var usuarioEmailExiste = await UsuarioService.GetByEmailSenhaUsuario(usuarioDto.Email, usuarioDto.Senha);
+        usuarioId = usuarioEmailExiste.Id;
         if (usuarioEmailExiste != null)
             return true;
         else

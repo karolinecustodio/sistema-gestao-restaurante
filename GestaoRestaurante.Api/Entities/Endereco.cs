@@ -13,7 +13,7 @@ namespace GestaoRestaurante.Api.Entities
         public string Numero { get; set; } = string.Empty;
 
         [MaxLength(200)]
-        public string Complemento { get; set; } = string.Empty;
+        public string? Complemento { get; set; } = string.Empty;
 
         [MaxLength(100)]
         public string Cidade { get; set; } = string.Empty;
@@ -27,7 +27,7 @@ namespace GestaoRestaurante.Api.Entities
         [MaxLength(8)]
         public string Cep { get; set; } = string.Empty;
 
-        public ICollection<UsuarioEndereco> UsuarioEndereco { get; set; }
+        public ICollection<UsuarioEndereco>? UsuarioEndereco { get; set; }
             = new List<UsuarioEndereco>();
     }
 }

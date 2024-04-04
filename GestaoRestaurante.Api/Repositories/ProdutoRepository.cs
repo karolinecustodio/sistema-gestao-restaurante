@@ -13,7 +13,7 @@ namespace GestaoRestaurante.Api.Repositories
             _context = context;
         }
 
-        public async Task<Produto> GetItem(int id)
+        public async Task<Produto> GetByIdProduto(int id)
         {
             var produto = await _context.Produto
                 .Include(c => c.Categoria)
@@ -37,6 +37,14 @@ namespace GestaoRestaurante.Api.Repositories
                 .Include(p => p.Categoria)
                 .Where(p => p.CategoriaId == id)
                 .ToListAsync();
+
+            return produto;
+        }
+
+        public async Task<Produto> PostByProduto(Produto produto)
+        {
+            _context.Produto.Add(produto);
+            await _context.SaveChangesAsync();
 
             return produto;
         }
