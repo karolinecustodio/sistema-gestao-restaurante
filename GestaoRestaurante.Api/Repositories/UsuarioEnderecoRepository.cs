@@ -13,12 +13,12 @@ namespace GestaoRestaurante.Api.Repositories
             _context = context;
         }
 
-        public async Task<UsuarioEndereco> GetByIdUsuarioEndereco(int id)
+        public async Task<UsuarioEndereco> GetUsuarioEnderecoByUsuarioId(int usuarioId)
         {
             var usuarioEndereco = await _context.UsuarioEndereco
                 .Include(u => u.Usuario)
                 .Include(e => e.Endereco)
-                .FirstOrDefaultAsync(ue => ue.Id == id);
+                .FirstOrDefaultAsync(ue => ue.UsuarioId == usuarioId);
 
             return usuarioEndereco;
         }
@@ -45,6 +45,14 @@ namespace GestaoRestaurante.Api.Repositories
         public async Task<UsuarioEndereco> PostByUsuarioEnderecos(UsuarioEndereco usuarioEndereco)
         {
             _context.UsuarioEndereco.Add(usuarioEndereco);
+            await _context.SaveChangesAsync();
+
+            return usuarioEndereco;
+        }
+
+        public async Task<UsuarioEndereco> UpdateUsuarioEndereco(UsuarioEndereco usuarioEndereco)
+        {
+            _context.Entry(usuarioEndereco).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
             return usuarioEndereco;

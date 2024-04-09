@@ -8,7 +8,5 @@
         public string? Senha { get; set; } 
         public string? Telefone { get; set; } 
         public TipoUsuarioDto? TipoUsuario { get; set; }
-        public ICollection<CarrinhoDto>? Carrinho { get; set; } = new List<CarrinhoDto>();
-        public ICollection<UsuarioEnderecoDto>? Enderecos { get; set; } = new List<UsuarioEnderecoDto>();
     }
 }

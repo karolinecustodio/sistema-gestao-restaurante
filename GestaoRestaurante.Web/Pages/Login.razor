@@ -77,7 +77,7 @@ else
 
             if (usuarioExiste)
             {
-                await UsuarioLogado.SalvarIdUsuario(GerenciaUsuarioEnderecoService);
+                await UsuarioLogado.SalvarIdUsuario(usuarioId,GerenciaUsuarioEnderecoService);
 
                 NavigationManager.NavigateTo("/endereco");
             }

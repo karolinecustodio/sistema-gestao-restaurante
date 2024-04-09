@@ -1,5 +1,6 @@
 ﻿using GestaoRestaurante.Api.Entities;
 using GestaoRestaurante.Models.Dto;
+using GestaoRestaurante.Web.Pages;
 using Endereco = GestaoRestaurante.Api.Entities.Endereco;
 
 namespace GestaoRestaurante.Api.Mappings
@@ -12,7 +13,7 @@ namespace GestaoRestaurante.Api.Mappings
             return (from categoria in categorias
                     select new CategoriaDto
                     {
-                        Id = categoria.Id, 
+                        Id = categoria.Id,
                         Nome = categoria.Nome,
                         IconCss = categoria.IconCss
                     }).ToList();
@@ -99,7 +100,7 @@ namespace GestaoRestaurante.Api.Mappings
                 Quantidade = produto.Quantidade,
                 CategoriaId = produto.Categoria.Id,
                 CategoriaNome = produto.Categoria.Nome
-           };
+            };
         }
 
         public static IEnumerable<CarrinhoItemDto> ConverterCarrinhoItensParaDto(
@@ -149,32 +150,7 @@ namespace GestaoRestaurante.Api.Mappings
                 Email = usuario.Email,
                 Telefone = usuario.Telefone,
                 Senha = usuario.Senha,
-                TipoUsuario = (TipoUsuarioDto)usuario.TipoUsuario,
-                Carrinho = usuario.Carrinho.Select(c => new CarrinhoDto
-                {
-                    Id = c.Id,
-                    UsuarioId = c.UsuarioId,
-                    Itens = c.Itens.Select(i => new CarrinhoItemDto
-                    {
-                        Id = i.Id,
-                        CarrinhoId = i.CarrinhoId,
-                        ProdutoId = i.ProdutoId,
-                        Quantidade = i.Quantidade,
-                        ProdutoNome = i.Produto.Nome,
-                        ProdutoDescricao = i.Produto.Descricao,
-                        ProdutoImagemURL = i.Produto.ImagemUrl,
-                        Preco = i.Produto.ValorProd,
-                        PrecoTotal = i.ValorProd * i.Quantidade
-                    }).ToList()
-                }).ToList(),
-                Enderecos = usuario.Enderecos.Select(e => new UsuarioEnderecoDto
-                {
-                    Id = e.Id,
-                    UsuarioId = e.UsuarioId,
-                    Usuario = ConverterUsuarioParaDto(e.Usuario), // Se desejar mapear Usuario para UsuarioDto
-                    EnderecoId = e.EnderecoId,
-                    Endereco = ConverterEnderecoParaDto(e.Endereco) // Se desejar mapear Endereco para EnderecoDto
-                }).ToList()
+                TipoUsuario = (TipoUsuarioDto)usuario.TipoUsuario
             };
         }
 
@@ -183,7 +159,6 @@ namespace GestaoRestaurante.Api.Mappings
         {
             return new EnderecoDto
             {
-                //Id = endereco.Id,
                 Rua = endereco.Rua,
                 Numero = endereco.Numero,
                 Complemento = endereco.Complemento,
@@ -200,7 +175,6 @@ namespace GestaoRestaurante.Api.Mappings
             return (from endereco in enderecos
                     select new EnderecoDto
                     {
-                       // Id = endereco.Id,
                         Rua = endereco.Rua,
                         Numero = endereco.Numero,
                         Complemento = endereco.Complemento,
@@ -209,6 +183,36 @@ namespace GestaoRestaurante.Api.Mappings
                         Estado = endereco.Estado,
                         Cep = endereco.Cep
                     }).ToList();
+        }
+
+        public static UsuarioEnderecoDto ConverterUsuarioEnderecoParaDto(
+            this UsuarioEndereco usuarioEndereco)
+        {
+            return new UsuarioEnderecoDto
+            {
+                Id = usuarioEndereco.Id,
+                UsuarioId = usuarioEndereco.UsuarioId,
+                Usuario = new UsuarioDto
+                {
+                    Id = usuarioEndereco.Usuario.Id,
+                    NomeUsuario = usuarioEndereco.Usuario.NomeUsuario,
+                    Email = usuarioEndereco.Usuario.Email,
+                    Telefone = usuarioEndereco.Usuario.Telefone,
+                    Senha = usuarioEndereco.Usuario.Senha,
+                    TipoUsuario = (TipoUsuarioDto)usuarioEndereco.Usuario.TipoUsuario
+                },
+                EnderecoId = usuarioEndereco.EnderecoId,
+                Endereco = new EnderecoDto
+                {
+                    Rua = usuarioEndereco.Endereco.Rua,
+                    Numero = usuarioEndereco.Endereco.Numero,
+                    Complemento = usuarioEndereco.Endereco.Complemento,
+                    Cidade = usuarioEndereco.Endereco.Cidade,
+                    Estado = usuarioEndereco.Endereco.Estado,
+                    Bairro = usuarioEndereco.Endereco.Bairro,
+                    Cep = usuarioEndereco.Endereco.Cep
+                }
+            };
         }
     }
 }

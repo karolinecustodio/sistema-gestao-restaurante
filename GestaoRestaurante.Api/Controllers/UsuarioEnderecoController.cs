@@ -1,6 +1,10 @@
 ﻿using GestaoRestaurante.Api.Entities;
+using GestaoRestaurante.Api.Mappings;
 using GestaoRestaurante.Api.Repositories;
+using GestaoRestaurante.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace GestaoRestaurante.Api.Controllers
 {
@@ -16,32 +20,60 @@ namespace GestaoRestaurante.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UsuarioEndereco>>> GetUsuarioEnderecos()
+        public async Task<ActionResult<IEnumerable<UsuarioEnderecoDto>>> GetUsuarioEnderecos()
         {
             var usuarioEnderecos = await _repository.GetAllUsuarioEnderecos();
             return Ok(usuarioEnderecos);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<UsuarioEndereco>> GetUsuarioEnderecoById(int id)
-        {
-            var usuarioEndereco = await _repository.GetByIdUsuarioEndereco(id);
-
-            if (usuarioEndereco == null)
-            {
-                return NotFound();
-            }
-
-            return usuarioEndereco;
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<UsuarioEndereco>> PostUsuarioEndereco(UsuarioEndereco usuarioEndereco)
+        [HttpGet("{usuarioId}")]
+        public async Task<ActionResult<UsuarioEnderecoDto>> GetUsuarioEnderecoByUsuarioId(int usuarioId)
         {
             try
             {
-                var createdUsuarioEndereco = await _repository.PostByUsuarioEnderecos(usuarioEndereco);
-                return CreatedAtAction(nameof(GetUsuarioEnderecoById), new { id = createdUsuarioEndereco.Id }, createdUsuarioEndereco);
+                var usuarioEndereco = await _repository.GetUsuarioEnderecoByUsuarioId(usuarioId);
+                if (usuarioEndereco is null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    var usuarioEnderecoDto = usuarioEndereco.ConverterUsuarioEnderecoParaDto();
+                    return Ok(usuarioEnderecoDto);
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Erro ao acessar a base de dados");
+            }
+
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<UsuarioEnderecoDto>> PostUsuarioEndereco(UsuarioEndereco usuarioEndereco)
+        {
+            try
+            {
+                var existingUsuarioEndereco = await _repository.GetUsuarioEnderecoByUsuarioId(usuarioEndereco.UsuarioId);
+                if (existingUsuarioEndereco != null)
+                {
+                    existingUsuarioEndereco.EnderecoId = usuarioEndereco.EnderecoId;
+
+                    await _repository.UpdateUsuarioEndereco(existingUsuarioEndereco);
+
+                    var options = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve
+                    };
+
+                    return Ok(JsonSerializer.Serialize(existingUsuarioEndereco, options));
+                }
+                else
+                {
+                    var createdUsuarioEndereco = await _repository.PostByUsuarioEnderecos(usuarioEndereco);
+                    return CreatedAtAction(nameof(GetUsuarioEnderecoByUsuarioId), new { id = createdUsuarioEndereco.Id }, createdUsuarioEndereco);
+                }
             }
             catch (Exception ex)
             {

@@ -31,11 +31,11 @@ namespace GestaoRestaurante.Web.Services
             }
         }
 
-        public async Task<UsuarioEnderecoDto> GetByIdUsuarioEndereco(int? id)
+        public async Task<UsuarioEnderecoDto> GetUsuarioEnderecoByUsuarioId(int? usuarioId)
         {
             try
             {
-                var response = await _httpClient.GetAsync($"api/usuarioEndereco/{id}");
+                var response = await _httpClient.GetAsync($"api/usuarioEndereco/{usuarioId}");
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -52,7 +52,7 @@ namespace GestaoRestaurante.Web.Services
             }
             catch (Exception)
             {
-                _logger.LogError($"Erro a obter produto pelo id={id}");
+                _logger.LogError($"Erro a obter usuarioEndereco pelo id={usuarioId}");
                 throw;
             }
         }
@@ -79,9 +79,9 @@ namespace GestaoRestaurante.Web.Services
                     throw new Exception($"{response.StatusCode} Message -{message}");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception($"Erro ao processar a resposta: {ex.Message}");
             }
         }
     }

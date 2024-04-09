@@ -15,8 +15,9 @@ namespace GestaoRestaurante.Web
             return Task.FromResult(UsuarioId);
         }
 
-        public async Task SalvarIdUsuario(IGerenciaUsuarioEnderecoLocalStorageService gerenciaUsuarioEnderecoService)
+        public async Task SalvarIdUsuario(int usuarioId, IGerenciaUsuarioEnderecoLocalStorageService gerenciaUsuarioEnderecoService)
         {
+            UsuarioId = usuarioId;
             await gerenciaUsuarioEnderecoService.SaveUserId(UsuarioId);
         }
     }
