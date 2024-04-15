@@ -38,35 +38,54 @@ namespace GestaoRestaurante.Api.Mappings
                 Id = pedido.Id,
                 DataEmissao = pedido.DataEmissao,
                 ValorPedido = pedido.ValorPedido,
-                FormaPagamento = new FormaPagamentoDto
-                {
-                    Nome = pedido.FormaPagamento.ToString(),
-                    Valor = (int)pedido.FormaPagamento
-                },
-                StatusPedido = new StatusPedidoDto
-                {
-                    Nome = pedido.StatusPedido.ToString(),
-                    Valor = (int)pedido.StatusPedido
-                },
-                PedidoItem = pedido.PedidoItens.Select(item => new PedidoItemDto
-                {
-                    Id = item.Id,
-                    Produto = new ProdutoDto
-                    {
-                        Id = item.Produto.Id,
-                        Nome = item.Produto.Nome,
-                        Descricao = item.Produto.Descricao,
-                        ImagemUrl = item.Produto.ImagemUrl,
-                        ValorProd = item.Produto.ValorProd,
-                        Quantidade = item.Produto.Quantidade,
-                        CategoriaId = item.Produto.CategoriaId,
-                        CategoriaNome = item.Produto.Categoria.Nome,
-                    },
-                    PedidoId = pedido.Id,
-                    ValorProd = pedido.ValorPedido,
-                    Quantidade = item.Quantidade
+                FormaPagamento = (FormaPagamentoDto)pedido.FormaPagamento,
+                StatusPedido = (StatusPedidoDto)pedido.StatusPedido
+            };
+        }
 
-                }).ToList()
+        public static IEnumerable<PedidoDto> ConverterPedidosParaDto(
+           this IEnumerable<Pedido> pedidos)
+        {
+            return (from pedido in pedidos
+                    select new PedidoDto
+                    {
+                        Id = pedido.Id,
+                        DataEmissao = pedido.DataEmissao,
+                        ValorPedido = pedido.ValorPedido,
+                        FormaPagamento = (FormaPagamentoDto)pedido.FormaPagamento,
+                        StatusPedido = (StatusPedidoDto)pedido.StatusPedido
+                    });
+        }
+
+        public static PedidoItemDto ConverterPedidoItemParaDto(
+            this PedidoItem pedidoItem)
+        {
+            return new PedidoItemDto
+            {
+                Id = pedidoItem.Id,
+                ProdutoId = pedidoItem.ProdutoId,
+                Produto = new ProdutoDto
+                {
+                    Id = pedidoItem.Produto.Id,
+                    Nome = pedidoItem.Produto.Nome,
+                    Descricao = pedidoItem.Produto.Descricao,
+                    ImagemUrl = pedidoItem.Produto.ImagemUrl,
+                    ValorProd = pedidoItem.Produto.ValorProd,
+                    Quantidade = pedidoItem.Produto.Quantidade,
+                    CategoriaId = pedidoItem.Produto.CategoriaId,
+                    CategoriaNome = pedidoItem.Produto.Categoria.Nome
+                },
+                PedidoId = pedidoItem.PedidoId,
+                Pedido = new PedidoDto
+                {
+                    Id = pedidoItem.Pedido.Id,
+                    DataEmissao = pedidoItem.Pedido.DataEmissao,
+                    ValorPedido = pedidoItem.Pedido.ValorPedido,
+                    FormaPagamento = (FormaPagamentoDto)pedidoItem.Pedido.FormaPagamento,
+                    StatusPedido = (StatusPedidoDto)pedidoItem.Pedido.StatusPedido
+                },
+                ValorProd = pedidoItem.ValorProd,
+                Quantidade = pedidoItem.Quantidade
             };
         }
 

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace GestaoRestaurante.Models.Dto
 {
-    public class FormaPagamentoDto
+    public enum FormaPagamentoDto
     {
-        public string Nome { get; set; }
-        public int Valor { get; set; }
+        Dinheiro,
+        Cartao,
+        Pix
     }
 }

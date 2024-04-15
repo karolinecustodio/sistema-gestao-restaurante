@@ -18,8 +18,5 @@ namespace GestaoRestaurante.Models.Dto
         public FormaPagamentoDto FormaPagamento { get; set; }
 
         public StatusPedidoDto StatusPedido { get; set; }
-
-        public ICollection<PedidoItemDto> PedidoItem { get; set; }
-            = new List<PedidoItemDto>();
     }
 }

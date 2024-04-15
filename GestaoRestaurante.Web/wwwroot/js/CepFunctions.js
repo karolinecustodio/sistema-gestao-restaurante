@@ -22,18 +22,19 @@ function BuscaCep() {
         // tratar a resposta da requisição
         request.onload = function () {
             if (request.status == 200) {
-                console.log("entrei aqui")
-
                 let endereco = JSON.parse(request.response);
-                console.log(endereco)
 
+                console.log('aq')
+                console.log(endereco);
                 document.getElementById("rua").value = endereco.street;
                 document.getElementById("bairro").value = endereco.neighborhood;
                 document.getElementById("cidade").value = endereco.city;
                 document.getElementById("estado").value = endereco.state;
 
-                console.log(endereco.street);
-                DotNet.invokeMethodAsync('Endereco.razor', 'AtualizarEndereco', endereco.street, endereco.neighborhood, endereco.city, endereco.state);
+               DotNet.invokeMethodAsync('Endereco.razor', 'AtualizarEndereco', endereco.street, endereco.neighborhood, endereco.city, endereco.state);
+
+                // Atualizar os dados do endereço no objeto C#
+                //window.enderecoDotNet.invokeMethodAsync('AtualizarEndereco', endereco.street, endereco.neighborhood, endereco.city, endereco.state);
             }
             else if (request.status == 404) {
                 alert("CEP inválido");

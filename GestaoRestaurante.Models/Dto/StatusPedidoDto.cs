@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace GestaoRestaurante.Models.Dto
 {
-    public class StatusPedidoDto
+    public enum StatusPedidoDto
     {
-        public string Nome { get; set; }
-        public int Valor { get; set; }
+       Novo, 
+       EmPreparo,
+       AguardandoRetirada,
+       Entregue,
+       Cancelado
     }
 }

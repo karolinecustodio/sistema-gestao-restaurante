@@ -27,7 +27,7 @@ else
             <div>
                 <button class="btn btn-success"
                     @onclick="() => AdicionarAoCarrinho_Click(new CarrinhoItemAdicionaDto{
-                    CarrinhoId = UsuarioLogado.CarrinhoId,
+                    CarrinhoId = UsuarioLogado.UsuarioId,
                     ProdutoId = Produto.Id,
                     Quantidade = 1
                     })">
@@ -57,7 +57,10 @@ else
     [Inject]
     public IGerenciaCarrinhoItensLocalStorageService?
                   GerenciaCarrinhoItensLocalStorageService { get; set; }
-    
+
+    [Inject]
+    public IGerenciaUsuarioEnderecoLocalStorageService GerenciaUsuarioEnderecoService { get; set; }
+
     [Parameter]
     public int Id { get; set; }
 
@@ -72,6 +75,8 @@ else
         try
         {
             CarrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService.GetCollection(UsuarioLogado);
+            var userId = await GerenciaUsuarioEnderecoService.GetUserId();
+            UsuarioLogado.UsuarioId = (int)userId;
             Produto = await GetProdutoPorId(Id);
         }
         catch (Exception ex)

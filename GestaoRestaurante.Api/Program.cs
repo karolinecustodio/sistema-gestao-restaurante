@@ -19,6 +19,7 @@ builder.Services.AddScoped<ICarrinhoCompraRepository, CarrinhoCompraRepository>(
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioEnderecoRepository, UsuarioEnderecoRepository>();
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
     
 var app = builder.Build();
 

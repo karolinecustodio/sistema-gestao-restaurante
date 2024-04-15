@@ -11,54 +11,70 @@ else if (MensagemErro is not null)
 }
 else
 {
-    <h3 class="mb-5">Carrinho</h3>
-    @if (CarrinhoCompraItens.Count() > 0)
-    {
-        <div class="row mb-5">
-            <div class="col-md-9">
-                @foreach (var item in CarrinhoCompraItens)
-                {
-                    <div class="row mb-3">
-                        <div class="col-md-3">
-                            <img src="@item.ProdutoImagemURL" width="250" class="img-thumbnail">
-                        </div>
-                        <div class="col-md-9">
-                            <h5>@item.ProdutoNome</h5>
-                            <div class="mb-4">
-                                @item.ProdutoDescricao
-                            </div>
-                            <span>
-                                Preço: <b>@item.Preco.ToString("C")</b>
-                                <input @oninput="()=>AtualizaQuantidade_Input(item.Id)" type="number" @bind="@item.Quantidade" />
-                                <button data-itemId="@item.Id" class="btn btn-info btn-sm atualizaquantidade" @onclick="(()=> AtualizaQuantidadeCarrinhoItem_Click(item.Id, item.Quantidade))">
-                                    <i class="oi oi-check"></i>
-                                </button>
-                                <br>
-                                <button @onclick="(()=> DeletaCarrinhoItem_Click(item.Id))" class="btn btn-danger sm">
-                                    <span class="oi oi-trash"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                }
+      <div class="container bg-light p-4">
+        <div class="row justify-content-center align-items-center mb-4">
+            <div class="col-md-6 text-center">
+                <h3><strong>CARRINHO</strong></h3>
             </div>
-            <div class="col-md-3">
-                <h5>Carrinho - Resumo</h5>
-                <div class="mt-2">
-                    <div>Total - (@QuantidadeTotal items)&nbsp;<br /><b>@PrecoTotal</b></div>
-                    <a href="#" class="btn btn-primary">
-                        <span class="oi oi-arrow-right" @onclick="Continuar_Click"></span>&nbsp; Continuar
-                    </a>
+            @if (CarrinhoCompraItens.Count() > 0)
+            {
+                <div class="row mb-5">
+                    <div class="col-md-9">
+                        @foreach (var item in CarrinhoCompraItens)
+                        {
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <img src="@item.ProdutoImagemURL" width="250" class="img-thumbnail">
+                                </div>
+                                <div class="col-md-9">
+                                    <h5>@item.ProdutoNome</h5>
+                                    <div class="mb-4">
+                                        @item.ProdutoDescricao
+                                    </div>
+                                    <span>
+                                        Preço: <b>@item.Preco.ToString("C")</b>
+                                        <input @oninput="()=>AtualizaQuantidade_Input(item.Id)" type="number" @bind="@item.Quantidade" />
+                                        <button data-itemId="@item.Id" class="btn btn-info btn-sm atualizaquantidade" @onclick="(()=> AtualizaQuantidadeCarrinhoItem_Click(item.Id, item.Quantidade))">
+                                            <i class="oi oi-check"></i>
+                                        </button>
+                                        <br>
+                                        <button @onclick="(()=> DeletaCarrinhoItem_Click(item.Id))" class="btn btn-danger sm">
+                                            <span class="oi oi-trash"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        }
+                </div>
+                <div class="col-md-3">
+                    <h5>Carrinho - Resumo</h5>
+                    <div class="mt-2">
+                        <div>Total - (@QuantidadeTotal items)&nbsp;<br /><b>@PrecoTotal</b></div>
+                        <button type="submit" class="btn btn-primary" @onclick:preventDefault @onclick="Continuar_Click">
+                            Continuar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div>
+                <h3><b>Seu carrinho está vazio</b></h3>
+            </div>
+        }
+            <div class="row justify-content-end mt-3">
+                <div class="col-auto">
+                    <button class="btn btn-primary ml-2" @onclick="()=>BotaoVoltar_Click()" title="Voltar">
+                        <i class="oi oi-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-danger" @onclick="()=>BotaoLimpar_Click()" title="Limpar">
+                        <i class="oi oi-trash"></i>
+                    </button>
                 </div>
             </div>
         </div>
-    }
-    else
-    {
-        <div>
-            <h3><b>Seu carrinho está vazio</b></h3>
-        </div>
-    }
+    </div>
 }
 
 @code {
@@ -78,6 +94,9 @@ else
     [Inject]
     public IGerenciaCarrinhoItensLocalStorageService?
                  GerenciaCarrinhoItensLocalStorageService { get; set; }
+
+    [Inject]
+    public NavigationManager? NavigationManager { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -139,8 +158,19 @@ else
         }
     }
 
-    protected async Task Continuar_Click()
+    protected void Continuar_Click()
     {
+        NavigationManager.NavigateTo($"/finalizarPedido/{PrecoTotal}");
+    }
+
+    protected void BotaoLimpar_Click()
+    {
+        NavigationManager.NavigateTo($"/finalizarPedido/{PrecoTotal}");
+    }
+
+    protected void BotaoVoltar_Click()
+    {
+        NavigationManager.NavigateTo("/produtos");
     }
 
     private CarrinhoItemDto GetCarrinhoItem(int id)

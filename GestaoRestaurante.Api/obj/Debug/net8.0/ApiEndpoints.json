@@ -260,15 +260,35 @@
   },
   {
     "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoController",
-    "Method": "PostByCategoria",
+    "Method": "GetAllUsuarioEndereco",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.PedidoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoController",
+    "Method": "PostByPedido",
     "RelativePath": "api/Pedido",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "produto",
-        "Type": "GestaoRestaurante.Api.Entities.Produto",
+        "Name": "pedido",
+        "Type": "GestaoRestaurante.Api.Entities.Pedido",
         "IsRequired": true
       }
     ],

@@ -30,8 +30,31 @@ namespace GestaoRestaurante.Api.Controllers
                 }
                 else
                 {
-                    var categoriaDto = pedido.ConverterPedidoParaDto();
-                    return Ok(categoriaDto);
+                    var pedidoDto = pedido.ConverterPedidoParaDto();
+                    return Ok(pedidoDto);
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Erro ao acessar a base de dados");
+            }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PedidoDto>>> GetAllUsuarioEndereco()
+        {
+            try
+            {
+                var pedidos = await _pedidoRepository.GetAllPedido();
+                if (pedidos is null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    var enderecoDto = pedidos.ConverterPedidosParaDto();
+                    return Ok(enderecoDto);
                 }
             }
             catch (Exception)
@@ -42,18 +65,18 @@ namespace GestaoRestaurante.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostByCategoria(Produto produto)
+        public async Task<IActionResult> PostByPedido(Pedido pedido)
         {
-            var prod = await _pedidoRepository.GetByIdPedido(produto.Id);
-            if (prod is null)
+            var user = await _pedidoRepository.GetByIdPedido(pedido.Id);
+            if (user is null)
             {
-                await _pedidoRepository.PostByPedido(prod);
-                return CreatedAtAction(nameof(GetByIdPedido), new { id = produto.Id }, produto);
+                await _pedidoRepository.PostByPedido(pedido);
+                return CreatedAtAction(nameof(GetByIdPedido), new { id = pedido.Id }, pedido);
             }
             else
             {
-                var produtoDto = prod.ConverterPedidoParaDto();
-                return Ok(produtoDto);
+                var pedidoDto = pedido.ConverterPedidoParaDto();
+                return Ok(pedidoDto);
             }
         }
     }

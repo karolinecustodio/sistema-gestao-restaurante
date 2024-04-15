@@ -86,7 +86,6 @@
                 endereco.Cidade = usuarioEndereco.Endereco.Cidade;
                 endereco.Estado = usuarioEndereco.Endereco.Estado;
                 endereco.Complemento = usuarioEndereco.Endereco.Complemento;
-                // AdicionarCamposPreenchidos();
             }
             else
             {
@@ -98,6 +97,7 @@
                 endereco.Estado = string.Empty;
                 endereco.Complemento = string.Empty;
             }
+
         }
 
     }
@@ -131,7 +131,7 @@
         }
     }
 
-    private void AtualizarEndereco(string rua, string bairro, string cidade, string estado)
+    public void AtualizarEndereco(string rua, string bairro, string cidade, string estado)
     {
         Console.WriteLine(rua);
         endereco.Rua = rua;

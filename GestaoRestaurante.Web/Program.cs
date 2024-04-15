@@ -20,6 +20,8 @@ builder.Services.AddScoped<ICarrinhoCompraService, CarrinhoCompraService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IUsuarioEnderecoService, UsuarioEnderecoService>();
 builder.Services.AddScoped<IEnderecoService, EnderecoService>();
+builder.Services.AddScoped<IPedidoService, PedidoService>();
+builder.Services.AddScoped<IPedidoItemService, PedidoItemService>();
 builder.Services.AddScoped<UsuarioLogado>();
 
 builder.Services.AddBlazoredLocalStorage();
