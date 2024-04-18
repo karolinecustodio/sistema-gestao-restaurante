@@ -30,11 +30,13 @@ namespace GestaoRestaurante.Api.Repositories
             return pedidoItem;
         }
 
-        public async Task<List<PedidoItem>> GetPedidoItemByPedidoId(int pedidoId)
+        public async Task<PedidoItem> GetPedidoItemByPedidoId(int pedidoId)
         {
-            return await _context.PedidoItem
-                .Where(ped => ped.PedidoId == pedidoId)
-                .ToListAsync();
+            var pedidoItem = await _context.PedidoItem
+               .Include(ped => ped.Pedido)
+               .FirstOrDefaultAsync(ped => ped.PedidoId == pedidoId);
+
+            return pedidoItem;
         }
 
         public async Task<List<PedidoItem>> GetAllPedidoItem()

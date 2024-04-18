@@ -79,5 +79,19 @@ namespace GestaoRestaurante.Api.Controllers
                 return Ok(pedidoDto);
             }
         }
+
+        [HttpGet("porIntervaloDeData/{dataInicial}/{dataFinal}")]
+        public async Task<ActionResult<IEnumerable<Pedido>>> GetPedidosPorIntervaloDeData( DateTime dataInicial, DateTime dataFinal)
+        {
+            try
+            {
+                var pedidos = await _pedidoRepository.GetPedidosPorIntervaloDeData(dataInicial, dataFinal);
+                return Ok(pedidos);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao obter pedidos: {ex.Message}");
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using GestaoRestaurante.Models.Dto;
 using System.Net;
+using System.Net.Http;
 using System.Net.Http.Json;
 
 namespace GestaoRestaurante.Web.Services
@@ -81,6 +82,35 @@ namespace GestaoRestaurante.Web.Services
             catch (Exception ex)
             {
                 throw new Exception($"Erro ao processar a resposta: {ex.Message}");
+            }
+        }
+
+        public async Task<IEnumerable<PedidoDto>> GetPedidosPorIntervaloDeData(DateTime dataInicial, DateTime dataFinal)
+        {
+            try
+            {
+                string dataInicialFormatada = dataInicial.ToString("yyyy-MM-dd");
+                string dataFinalFormatada = dataFinal.ToString("yyyy-MM-dd");
+
+                var url = $"api/pedido/porIntervaloDeData/{Uri.EscapeDataString(dataInicialFormatada)}/{Uri.EscapeDataString(dataFinalFormatada)}";
+
+                var response = await _httpClient.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<IEnumerable<PedidoDto>>();
+                }
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    _logger.LogError($"Erro ao buscar pedidos por intervalo de data: {response.StatusCode} - {message}");
+                    return Enumerable.Empty<PedidoDto>();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao processar a resposta: {ex.Message}");
+                throw;
             }
         }
     }

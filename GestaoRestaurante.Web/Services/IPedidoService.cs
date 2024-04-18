@@ -7,5 +7,6 @@ namespace GestaoRestaurante.Web.Services
         Task<IEnumerable<PedidoDto>> GetAllPedidos();
         Task<PedidoDto> GetByIdPedido(int? id);
         Task<PedidoDto> PostPedido(PedidoDto pedidoDto);
+        Task<IEnumerable<PedidoDto>> GetPedidosPorIntervaloDeData(DateTime dataInicial, DateTime dataFinal);
     }
 }

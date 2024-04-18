@@ -321,6 +321,161 @@
     ]
   },
   {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoController",
+    "Method": "GetPedidosPorIntervaloDeData",
+    "RelativePath": "api/Pedido/porIntervaloDeData/{dataInicial}/{dataFinal}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataInicial",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "dataFinal",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Api.Entities.Pedido, GestaoRestaurante.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
+    "Method": "GetAllPedidoItem",
+    "RelativePath": "api/PedidoItem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.PedidoItemDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
+    "Method": "PostPedidoItem",
+    "RelativePath": "api/PedidoItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedidoItem",
+        "Type": "GestaoRestaurante.Api.Entities.PedidoItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoRestaurante.Models.Dto.PedidoItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
+    "Method": "GetPedidoItemById",
+    "RelativePath": "api/PedidoItem/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoRestaurante.Models.Dto.PedidoItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
+    "Method": "GetPedidoItemByPedidoId",
+    "RelativePath": "api/PedidoItem/{pedidoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedidoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoRestaurante.Models.Dto.PedidoItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
+    "Method": "GetPedidoItemByProdutoId",
+    "RelativePath": "api/PedidoItem/{produtoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produtoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoRestaurante.Models.Dto.PedidoItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GestaoRestaurante.Api.Controllers.ProdutosController",
     "Method": "GetItens",
     "RelativePath": "api/Produtos",

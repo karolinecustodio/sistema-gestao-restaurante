@@ -37,5 +37,14 @@ namespace GestaoRestaurante.Api.Repositories
 
             return pedido;
         }
+
+        public async Task<IEnumerable<Pedido>> GetPedidosPorIntervaloDeData(DateTime dataInicial, DateTime dataFinal)
+        {
+            var pedidos = await _context.Pedido
+                .Where(pedido => pedido.DataEmissao.Date >= dataInicial.Date && pedido.DataEmissao.Date <= dataFinal.Date && pedido.StatusPedido == StatusPedido.Entregue)
+                .ToListAsync();
+
+            return pedidos;
+        }
     }
 }

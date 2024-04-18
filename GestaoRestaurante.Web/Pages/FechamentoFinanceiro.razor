@@ -1,0 +1,155 @@
+﻿@page "/fechamentoFinanceiro"
+
+<div class="container bg-light p-4">
+    <div class="row justify-content-center align-items-center mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                <h3><strong>FECHAMENTO FINANCEIRO</strong></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4">
+                <label for="dataInicial">Data Inicial:</label>
+                <input type="date" class="form-control" @bind="dataInicial" />
+            </div>
+
+            <div class="col-md-4">
+                <label for="dataFinal">Data Final:</label>
+                <input type="date" class="form-control" @bind="dataFinal" />
+            </div>
+
+            <div class="col-md-4 mt-4">
+                <button class="btn btn-primary btn-block" @onclick="BuscarPedidos">Buscar</button>
+            </div>
+        </div>
+
+        <div class="mb-4"></div>
+
+        <hr class="mb-2" />
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <h4 class="text-center">Total Pedidos em Cartão</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@(totalPedidosEmCartao.HasValue ? totalPedidosEmCartao.Value.ToString("c") : "0,00")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <h4 class="text-center">Total Pedidos em Dinheiro</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@(totalPedidosEmDinheiro.HasValue ? totalPedidosEmDinheiro.Value.ToString("c") : "0,00")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <h4 class="text-center">Total Pedidos em Pix</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@(totalPedidosEmPix.HasValue ? totalPedidosEmPix.Value.ToString("c") : "0,00")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="table-responsive">
+                    <h4 class="text-center">Total de Pedidos</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@(totalPedidos.HasValue ? totalPedidos.Value.ToString("c") : "0,00")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    private DateTime dataInicial;
+    private DateTime dataFinal;
+    private decimal? totalPedidos;
+    private decimal? totalPedidosEmCartao;
+    private decimal? totalPedidosEmDinheiro;
+    private decimal? totalPedidosEmPix;
+
+    public string? MensagemErro { get; set; }
+
+    public IEnumerable<PedidoDto>? PedidosUsuario { get; set; }
+
+    [Inject]
+    public IPedidoService PedidoService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DateTime dataAtual = DateTime.Now;
+        
+        dataInicial = dataAtual.AddDays(-30);
+        dataFinal = DateTime.Now;
+
+        await BuscarPedidos();
+    }
+
+    private async Task BuscarPedidos()
+    {
+        PedidosUsuario = await PedidoService.GetPedidosPorIntervaloDeData(dataInicial, dataFinal);
+        CalcularTotalPedidos();
+        CalcularTotalPedidosPorFormaDePagamento();
+    }
+
+    private void CalcularTotalPedidos()
+    {
+        totalPedidos = PedidosUsuario?.Sum(pedido => pedido.ValorPedido);
+    }
+
+    private void CalcularTotalPedidosPorFormaDePagamento()
+    {
+        totalPedidosEmCartao = PedidosUsuario?.Where(pedido => pedido.FormaPagamento == FormaPagamentoDto.Cartao)
+                                             .Sum(pedido => pedido.ValorPedido);
+
+        totalPedidosEmDinheiro = PedidosUsuario?.Where(pedido => pedido.FormaPagamento == FormaPagamentoDto.Dinheiro)
+                                                .Sum(pedido => pedido.ValorPedido);
+
+        totalPedidosEmPix = PedidosUsuario?.Where(pedido => pedido.FormaPagamento == FormaPagamentoDto.Pix)
+                                           .Sum(pedido => pedido.ValorPedido);
+    }
+}
