@@ -11,6 +11,12 @@ namespace GestaoRestaurante.Api.Entities
         [Column(TypeName = "decimal(10,2)")]
         public decimal ValorPedido { get; set; }
 
+        public int EnderecoId { get; set; }
+
+        public int UsuarioId { get; set; }
+
+        public int TaxaId { get; set; }
+
         public FormaPagamento FormaPagamento { get; set; }
 
         public StatusPedido StatusPedido { get; set; }

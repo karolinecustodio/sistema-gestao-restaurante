@@ -171,16 +171,27 @@ namespace GestaoRestaurante.Api.Migrations
                     b.Property<DateTime>("DataEmissao")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("FormaPagamento")
                         .HasColumnType("int");
 
                     b.Property<int>("StatusPedido")
                         .HasColumnType("int");
 
+                    b.Property<int>("TaxaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("ValorPedido")
                         .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Pedido");
                 });
@@ -325,6 +336,39 @@ namespace GestaoRestaurante.Api.Migrations
                         });
                 });
 
+            modelBuilder.Entity("GestaoRestaurante.Api.Entities.TaxaEntrega", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("NomeBairro")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("TempoEntrega")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ValorEntrega")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TaxaEntrega");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            NomeBairro = "Centro",
+                            TempoEntrega = 35,
+                            ValorEntrega = 10m
+                        });
+                });
+
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -417,6 +461,15 @@ namespace GestaoRestaurante.Api.Migrations
                     b.Navigation("Produto");
                 });
 
+            modelBuilder.Entity("GestaoRestaurante.Api.Entities.Pedido", b =>
+                {
+                    b.HasOne("GestaoRestaurante.Api.Entities.Usuario", null)
+                        .WithMany("Pedido")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("GestaoRestaurante.Api.Entities.PedidoItem", b =>
                 {
                     b.HasOne("GestaoRestaurante.Api.Entities.Pedido", "Pedido")
@@ -498,6 +551,8 @@ namespace GestaoRestaurante.Api.Migrations
                     b.Navigation("Carrinho");
 
                     b.Navigation("Enderecos");
+
+                    b.Navigation("Pedido");
                 });
 #pragma warning restore 612, 618
         }

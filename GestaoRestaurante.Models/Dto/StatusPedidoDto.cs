@@ -8,10 +8,11 @@ namespace GestaoRestaurante.Models.Dto
 {
     public enum StatusPedidoDto
     {
-       Novo, 
-       EmPreparo,
-       AguardandoRetirada,
-       Entregue,
-       Cancelado
+        Novo,
+        EmPreparo,
+        AguardandoRetirada,
+        Entregue,
+        Cancelado,
+        ACaminho
     }
 }

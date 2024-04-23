@@ -15,6 +15,12 @@ namespace GestaoRestaurante.Models.Dto
 
         public decimal ValorPedido { get; set; }
 
+        public int EnderecoId { get; set; }
+
+        public int UsuarioId { get; set; }
+
+        public int TaxaId { get; set; }
+
         public FormaPagamentoDto FormaPagamento { get; set; }
 
         public StatusPedidoDto StatusPedido { get; set; }

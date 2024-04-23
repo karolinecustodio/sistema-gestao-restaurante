@@ -1,0 +1,75 @@
+﻿@page "/analiseDados"
+
+@if (analiseDados != null)
+{
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h3><strong>ANÁLISE DE DADOS</strong></h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div>
+            <h4>Produtos Mais Vendidos</h4>
+            <p>Produto: @produtos.FirstOrDefault(p => p.Id == analiseDados.ProdutoMaisVendidoId)?.Nome</p>
+            <p>Quantidade Vendida: @analiseDados.QuantidadeProdutoMaisVendido</p>
+            <hr />
+            <h4>Produtos Menos Vendidos</h4>
+            <p>Produto: @produtos.FirstOrDefault(p => p.Id == analiseDados.ProdutoMenosVendidoId)?.Nome</p>
+            <p>Quantidade Vendida: @analiseDados.QuantidadeProdutoMenosVendido</p>
+            <hr />
+            <h4>Média de Ticket Médio</h4>
+            <p>@analiseDados.TicketMedio.ToString("C")</p>
+        </div>
+    </div>
+}
+else
+{
+    <ExibirSpinner />
+}
+
+@code {
+
+    private AnaliseDadosDto analiseDados;
+
+    private IEnumerable<ProdutoDto> produtos;
+
+    public int TotalPedidos { get; set; } = 0;
+
+    public string? MensagemErro { get; set; }
+
+    public IEnumerable<PedidoDto>? PedidosUsuario { get; set; }
+
+    [Inject]
+    public IPedidoItemService? PedidoItemService { get; set; }
+
+    [Inject]
+    public IProdutoService? ProdutoService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var pedidoItens = await PedidoItemService.GetAllPedidoItem();
+
+        var vendasPorProduto = pedidoItens.GroupBy(pi => pi.ProdutoId)
+                                           .Select(g => new { ProdutoId = g.Key, Quantidade = g.Sum(x => x.Quantidade) })
+                                           .ToList();
+
+        if (vendasPorProduto.Any())
+        {
+            int produtoMaisVendidoId = vendasPorProduto.OrderByDescending(x => x.Quantidade).First().ProdutoId;
+            int produtoMenosVendidoId = vendasPorProduto.OrderBy(x => x.Quantidade).First().ProdutoId;
+            decimal ticketMedio = pedidoItens.Any() ? pedidoItens.Average(pi => pi.ValorProd) : 0;
+
+            analiseDados = new AnaliseDadosDto
+                {
+                    ProdutoMaisVendidoId = produtoMaisVendidoId,
+                    ProdutoMenosVendidoId = produtoMenosVendidoId,
+                    QuantidadeProdutoMaisVendido = vendasPorProduto.First(p => p.ProdutoId == produtoMaisVendidoId).Quantidade,
+                    QuantidadeProdutoMenosVendido = vendasPorProduto.First(p => p.ProdutoId == produtoMenosVendidoId).Quantidade,
+                    TicketMedio = ticketMedio
+                };
+
+            produtos = await ProdutoService.GetItens();
+        }
+    }
+}

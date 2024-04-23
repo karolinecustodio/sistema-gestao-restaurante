@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GestaoRestaurante.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,19 +47,18 @@ namespace GestaoRestaurante.Api.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Pedido",
+                name: "TaxaEntrega",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DataEmissao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ValorPedido = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    FormaPagamento = table.Column<int>(type: "int", nullable: false),
-                    StatusPedido = table.Column<int>(type: "int", nullable: false)
+                    NomeBairro = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    ValorEntrega = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    TempoEntrega = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pedido", x => x.Id);
+                    table.PrimaryKey("PK_TaxaEntrega", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -123,6 +122,31 @@ namespace GestaoRestaurante.Api.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Pedido",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DataEmissao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ValorPedido = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    EnderecoId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<int>(type: "int", nullable: false),
+                    TaxaId = table.Column<int>(type: "int", nullable: false),
+                    FormaPagamento = table.Column<int>(type: "int", nullable: false),
+                    StatusPedido = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pedido", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Pedido_Usuario_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuario",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UsuarioEndereco",
                 columns: table => new
                 {
@@ -144,34 +168,6 @@ namespace GestaoRestaurante.Api.Migrations
                         name: "FK_UsuarioEndereco_Usuario_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "Usuario",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PedidoItem",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProdutoId = table.Column<int>(type: "int", nullable: false),
-                    PedidoId = table.Column<int>(type: "int", nullable: false),
-                    ValorProd = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Quantidade = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PedidoItem", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PedidoItem_Pedido_PedidoId",
-                        column: x => x.PedidoId,
-                        principalTable: "Pedido",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PedidoItem_Produto_ProdutoId",
-                        column: x => x.ProdutoId,
-                        principalTable: "Produto",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -204,6 +200,34 @@ namespace GestaoRestaurante.Api.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "PedidoItem",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProdutoId = table.Column<int>(type: "int", nullable: false),
+                    PedidoId = table.Column<int>(type: "int", nullable: false),
+                    ValorProd = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    Quantidade = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PedidoItem", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PedidoItem_Pedido_PedidoId",
+                        column: x => x.PedidoId,
+                        principalTable: "Pedido",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PedidoItem_Produto_ProdutoId",
+                        column: x => x.ProdutoId,
+                        principalTable: "Produto",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "Categoria",
                 columns: new[] { "Id", "IconCss", "Nome" },
@@ -213,6 +237,11 @@ namespace GestaoRestaurante.Api.Migrations
                     { 2, "fas fa-spa", "Bebidas" },
                     { 3, "fas fa-spa", "Sobremesas" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "TaxaEntrega",
+                columns: new[] { "Id", "NomeBairro", "TempoEntrega", "ValorEntrega" },
+                values: new object[] { 1, "Centro", 35, 10m });
 
             migrationBuilder.InsertData(
                 table: "Usuario",
@@ -249,6 +278,11 @@ namespace GestaoRestaurante.Api.Migrations
                 column: "ProdutoId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Pedido_UsuarioId",
+                table: "Pedido",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PedidoItem_PedidoId",
                 table: "PedidoItem",
                 column: "PedidoId");
@@ -282,6 +316,9 @@ namespace GestaoRestaurante.Api.Migrations
 
             migrationBuilder.DropTable(
                 name: "PedidoItem");
+
+            migrationBuilder.DropTable(
+                name: "TaxaEntrega");
 
             migrationBuilder.DropTable(
                 name: "UsuarioEndereco");

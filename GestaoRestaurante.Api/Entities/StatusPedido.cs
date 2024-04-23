@@ -6,6 +6,7 @@
        EmPreparo,
        AguardandoRetirada,
        Entregue,
-       Cancelado
+       Cancelado,
+       ACaminho
     }
 }

@@ -24,8 +24,4 @@
     <ProjectReference Include="..\GestaoRestaurante.Web\GestaoRestaurante.Web.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

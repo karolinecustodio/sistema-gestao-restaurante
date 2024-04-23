@@ -19,6 +19,7 @@ namespace GestaoRestaurante.Api.Context
         public DbSet<Produto>? Produto { get; set; }
         public DbSet<Categoria>? Categoria { get; set; }
         public DbSet<Usuario>? Usuario { get; set; }
+        public DbSet<TaxaEntrega>? TaxaEntrega { get; set; }
         public DbSet<UsuarioEndereco>? UsuarioEndereco { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -129,6 +130,14 @@ namespace GestaoRestaurante.Api.Context
                 NomeUsuario = "admin",
                 Email = "karolinecustodio7@gmail.com",
                 Telefone = "47997418959"
+            });
+
+            modelBuilder.Entity<TaxaEntrega>().HasData(new TaxaEntrega
+            {
+                Id = 1,
+                NomeBairro = "Centro",
+                ValorEntrega = 10,
+                TempoEntrega = 35
             });
         }
     }

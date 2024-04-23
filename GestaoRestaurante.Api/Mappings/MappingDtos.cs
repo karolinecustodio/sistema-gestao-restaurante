@@ -38,6 +38,9 @@ namespace GestaoRestaurante.Api.Mappings
                 Id = pedido.Id,
                 DataEmissao = pedido.DataEmissao,
                 ValorPedido = pedido.ValorPedido,
+                EnderecoId = pedido.EnderecoId,
+                TaxaId = pedido.TaxaId,
+                UsuarioId = pedido.UsuarioId,
                 FormaPagamento = (FormaPagamentoDto)pedido.FormaPagamento,
                 StatusPedido = (StatusPedidoDto)pedido.StatusPedido
             };
@@ -52,6 +55,9 @@ namespace GestaoRestaurante.Api.Mappings
                         Id = pedido.Id,
                         DataEmissao = pedido.DataEmissao,
                         ValorPedido = pedido.ValorPedido,
+                        EnderecoId = pedido.EnderecoId,
+                        TaxaId = pedido.TaxaId,
+                        UsuarioId = pedido.UsuarioId,
                         FormaPagamento = (FormaPagamentoDto)pedido.FormaPagamento,
                         StatusPedido = (StatusPedidoDto)pedido.StatusPedido
                     });
@@ -81,6 +87,9 @@ namespace GestaoRestaurante.Api.Mappings
                     Id = pedidoItem.Pedido.Id,
                     DataEmissao = pedidoItem.Pedido.DataEmissao,
                     ValorPedido = pedidoItem.Pedido.ValorPedido,
+                    EnderecoId = pedidoItem.Pedido.EnderecoId,
+                    TaxaId = pedidoItem.Pedido.TaxaId,
+                    UsuarioId = pedidoItem.Pedido.UsuarioId,
                     FormaPagamento = (FormaPagamentoDto)pedidoItem.Pedido.FormaPagamento,
                     StatusPedido = (StatusPedidoDto)pedidoItem.Pedido.StatusPedido
                 },
@@ -170,6 +179,18 @@ namespace GestaoRestaurante.Api.Mappings
                 Telefone = usuario.Telefone,
                 Senha = usuario.Senha,
                 TipoUsuario = (TipoUsuarioDto)usuario.TipoUsuario
+            };
+        }
+
+        public static TaxaEntregaDto ConverterTaxaEntregaParaDto(
+            this TaxaEntrega taxaEntrega)
+        {
+            return new TaxaEntregaDto
+            {
+                Id = taxaEntrega.Id,
+                NomeBairro = taxaEntrega.NomeBairro,
+                ValorEntrega = taxaEntrega.ValorEntrega,
+                TempoEntrega = taxaEntrega.TempoEntrega
             };
         }
 

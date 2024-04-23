@@ -23,6 +23,9 @@ namespace GestaoRestaurante.Api.Entities
         public ICollection<Carrinho> Carrinho { get; set; }
             = new List<Carrinho>();
 
+        public ICollection<Pedido> Pedido { get; set; }
+            = new List<Pedido>();
+
         public ICollection<UsuarioEndereco> Enderecos { get; set; }
             = new List<UsuarioEndereco>();
     }
