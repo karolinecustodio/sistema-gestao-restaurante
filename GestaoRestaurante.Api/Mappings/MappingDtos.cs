@@ -70,17 +70,6 @@ namespace GestaoRestaurante.Api.Mappings
             {
                 Id = pedidoItem.Id,
                 ProdutoId = pedidoItem.ProdutoId,
-                Produto = new ProdutoDto
-                {
-                    Id = pedidoItem.Produto.Id,
-                    Nome = pedidoItem.Produto.Nome,
-                    Descricao = pedidoItem.Produto.Descricao,
-                    ImagemUrl = pedidoItem.Produto.ImagemUrl,
-                    ValorProd = pedidoItem.Produto.ValorProd,
-                    Quantidade = pedidoItem.Produto.Quantidade,
-                    CategoriaId = pedidoItem.Produto.CategoriaId,
-                    CategoriaNome = pedidoItem.Produto.Categoria.Nome
-                },
                 PedidoId = pedidoItem.PedidoId,
                 Pedido = new PedidoDto
                 {
@@ -194,6 +183,18 @@ namespace GestaoRestaurante.Api.Mappings
             };
         }
 
+        public static IEnumerable<TaxaEntregaDto> ConverterTaxaEntregasParaDto(
+           this IEnumerable<TaxaEntrega> taxas)
+        {
+            return (from taxa in taxas
+                    select new TaxaEntregaDto
+                    {
+                        Id = taxa.Id,
+                        NomeBairro = taxa.NomeBairro,
+                        ValorEntrega = taxa.ValorEntrega,
+                        TempoEntrega = taxa.TempoEntrega
+                    });
+        }
         public static EnderecoDto ConverterEnderecoParaDto(
           this Endereco endereco)
         {

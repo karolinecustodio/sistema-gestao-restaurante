@@ -12,7 +12,7 @@ namespace GestaoRestaurante.Models.Dto
     {
         public int Id { get; set; }
 
-        public string NomeBairro { get; set; } = string.Empty;
+        public string NomeBairro { get; set; }
 
         public decimal ValorEntrega { get; set; }
 

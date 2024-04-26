@@ -1,0 +1,118 @@
+﻿@page "/taxaEntrega"
+
+<div class="container bg-light p-4">
+    <div class="row justify-content-center align-items-center mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h3><strong>Taxa de Entrega</strong></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4">
+                <form id="formTaxaEntrega">
+                    <div class="form-group">
+                        <label for="nomeBairro">Nome do Bairro:</label>
+                        <input type="text" class="form-control" id="nomeBairro" @bind="taxaEntregaDto.NomeBairro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valorEntrega">Valor de Entrega:</label>
+                        <input type="text" class="form-control" id="valorEntrega" @bind="taxaEntregaDto.ValorEntrega" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tempoEntrega">Tempo de Entrega (minutos):</label>
+                        <input type="text" class="form-control" id="tempoEntrega" @bind="taxaEntregaDto.TempoEntrega" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" @onclick=" SalvarTaxaEntrega">CADASTRAR</button>
+                </form>
+            </div>
+        </div>
+        @if (MensagemSucesso is not null)
+        {
+            <div class="alert alert-success" role="alert">
+                @MensagemSucesso
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container bg-light p-4">
+    <div class="row justify-content-center align-items-center mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h3><strong>Tabela de Taxa de Entrega</strong></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome do Bairro</th>
+                            <th scope="col">Valor da Entrega</th>
+                            <th scope="col">Tempo de Entrega</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var taxa in taxasDeEntrega)
+                        {
+                            <tr>
+                                <td>@taxa.NomeBairro</td>
+                                <td>R$ @taxa.ValorEntrega</td>
+                                <td>@taxa.TempoEntrega minutos</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    public TaxaEntregaDto taxaEntregaDto { get; set; }
+    public string? MensagemSucesso { get; set; }
+    public List<TaxaEntregaDto> taxasDeEntrega { get; set; } = new List<TaxaEntregaDto>();
+
+    [Inject]
+    public ITaxaEntregaService TaxaEntregaService { get; set; }
+
+    [Inject]
+    public NavigationManager? NavigationManager { get; set; }
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        taxaEntregaDto = new TaxaEntregaDto();
+        await LoadTaxasEntrega();
+    }
+
+    private async Task LoadTaxasEntrega()
+    {
+        try
+        {
+            var taxas = await TaxaEntregaService.GetAllTaxaDeEntrega();
+            taxasDeEntrega = taxas.OrderBy(t => t.NomeBairro).ToList();
+        }
+        catch (Exception)
+        {
+            // Trate o erro aqui
+        }
+    }
+
+    private async Task SalvarTaxaEntrega()
+    {
+
+            var taxaEntregaSalvar = new TaxaEntregaDto
+                {
+                    NomeBairro = taxaEntregaDto.NomeBairro,
+                    ValorEntrega = taxaEntregaDto.ValorEntrega,
+                    TempoEntrega = taxaEntregaDto.TempoEntrega
+                };
+
+            await TaxaEntregaService.PostTaxaEntrega(taxaEntregaSalvar);
+            await LoadTaxasEntrega();
+            MensagemSucesso = "Taxa de Entrega criado!";
+    }
+}

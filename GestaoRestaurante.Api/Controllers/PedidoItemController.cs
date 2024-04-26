@@ -74,20 +74,20 @@ namespace GestaoRestaurante.Api.Controllers
 
         }
 
-        [HttpGet("{pedidoId}")]
-        public async Task<ActionResult<PedidoItemDto>> GetPedidoItemByPedidoId(int pedidoId)
+        [HttpGet("pedido/{pedidoId}")]
+        public async Task<ActionResult<IEnumerable<PedidoItemDto>>> GetPedidoItemByPedidoId(int pedidoId)
         {
             try
             {
-                var pedidoItem = await _repository.GetPedidoItemByPedidoId(pedidoId);
-                if (pedidoItem is null)
+                var pedidoItens = await _repository.GetPedidoItemByPedidoId(pedidoId);
+                if (pedidoItens == null || !pedidoItens.Any())
                 {
                     return NotFound();
                 }
                 else
                 {
-                    var pedidoItemDto = pedidoItem.ConverterPedidoItemParaDto();
-                    return Ok(pedidoItemDto);
+                   var pedidoItemDtos = pedidoItens.Select(pedidoItem => pedidoItem.ConverterPedidoItemParaDto()).ToList();
+                   return Ok(pedidoItemDtos);
                 }
             }
             catch (Exception)
@@ -95,7 +95,6 @@ namespace GestaoRestaurante.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Erro ao acessar a base de dados");
             }
-
         }
 
         [HttpPost]

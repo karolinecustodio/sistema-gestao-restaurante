@@ -13,5 +13,9 @@ namespace GestaoRestaurante.Models.Dto
         public int QuantidadeProdutoMaisVendido { get; set; }
         public int QuantidadeProdutoMenosVendido { get; set; }
         public decimal TicketMedio { get; set; }
+        public int QuantidadePedidos { get; set; }
+        public decimal ValorTotalPedidos { get; set; }
+        public decimal TotalProdutoMaisVendido { get; set; }
+        public decimal TotalProdutoMenosVendido { get; set; }
     }
 }

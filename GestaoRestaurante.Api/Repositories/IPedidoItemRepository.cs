@@ -6,7 +6,7 @@ namespace GestaoRestaurante.Api.Repositories
     {
         Task<PedidoItem> GetPedidoItemById(int id);
         Task<PedidoItem> GetPedidoItemByProdutoId(int produtoId);
-        Task<PedidoItem> GetPedidoItemByPedidoId(int pedidoId);
+        Task<List<PedidoItem>> GetPedidoItemByPedidoId(int pedidoId);
         Task<List<PedidoItem>> GetAllPedidoItem();
         Task<PedidoItem> PostPedidoItem(PedidoItem pedidoItem);
         Task<PedidoItem> UpdatePedidoItem(PedidoItem pedidoItem);

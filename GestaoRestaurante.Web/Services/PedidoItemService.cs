@@ -83,5 +83,32 @@ namespace GestaoRestaurante.Web.Services
                 throw new Exception($"Erro ao processar a resposta: {ex.Message}");
             }
         }
+
+        public async Task<IEnumerable<PedidoItemDto>> GetItensPorPedidoId(int pedidoId)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"api/pedidoItem/pedido/{pedidoId}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<IEnumerable<PedidoItemDto>>();
+                }
+                else if (response.StatusCode == HttpStatusCode.NoContent)
+                {
+                    return Enumerable.Empty<PedidoItemDto>();
+                }
+                else
+                {
+                    _logger.LogError($"Erro ao obter itens do pedido ID={pedidoId}. StatusCode={response.StatusCode}");
+                    return Enumerable.Empty<PedidoItemDto>();
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError($"Erro ao obter itens do pedido ID={pedidoId}", ex);
+                throw;
+            }
+        }
     }
 }

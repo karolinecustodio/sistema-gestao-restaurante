@@ -21,6 +21,7 @@ builder.Services.AddScoped<IUsuarioEnderecoRepository, UsuarioEnderecoRepository
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<IPedidoItemRepository, PedidoItemRepository>();
+builder.Services.AddScoped<ITaxaDeEntregaRepository, TaxaDeEntregaRepository>();
     
 var app = builder.Build();
 

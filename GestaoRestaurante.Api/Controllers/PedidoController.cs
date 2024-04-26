@@ -42,7 +42,7 @@ namespace GestaoRestaurante.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PedidoDto>>> GetAllUsuarioEndereco()
+        public async Task<ActionResult<IEnumerable<PedidoDto>>> GetAllPedido()
         {
             try
             {

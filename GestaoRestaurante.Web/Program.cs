@@ -22,6 +22,7 @@ builder.Services.AddScoped<IUsuarioEnderecoService, UsuarioEnderecoService>();
 builder.Services.AddScoped<IEnderecoService, EnderecoService>();
 builder.Services.AddScoped<IPedidoService, PedidoService>();
 builder.Services.AddScoped<IPedidoItemService, PedidoItemService>();
+builder.Services.AddScoped<ITaxaEntregaService, TaxaEntregaService>();
 builder.Services.AddScoped<UsuarioLogado>();
 
 builder.Services.AddBlazoredLocalStorage();

@@ -260,7 +260,7 @@
   },
   {
     "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoController",
-    "Method": "GetAllUsuarioEndereco",
+    "Method": "GetAllPedido",
     "RelativePath": "api/Pedido",
     "HttpMethod": "GET",
     "IsController": true,
@@ -425,14 +425,14 @@
   },
   {
     "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
-    "Method": "GetPedidoItemByPedidoId",
-    "RelativePath": "api/PedidoItem/{pedidoId}",
+    "Method": "GetPedidoItemByProdutoId",
+    "RelativePath": "api/PedidoItem/{produtoId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pedidoId",
+        "Name": "produtoId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -451,21 +451,21 @@
   },
   {
     "ContainingType": "GestaoRestaurante.Api.Controllers.PedidoItemController",
-    "Method": "GetPedidoItemByProdutoId",
-    "RelativePath": "api/PedidoItem/{produtoId}",
+    "Method": "GetPedidoItemByPedidoId",
+    "RelativePath": "api/PedidoItem/pedido/{pedidoId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "produtoId",
+        "Name": "pedidoId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GestaoRestaurante.Models.Dto.PedidoItemDto",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.PedidoItemDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -562,6 +562,84 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.TaxaDeEntregaController",
+    "Method": "GetAllTaxaEntrega",
+    "RelativePath": "api/TaxaDeEntrega",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.TaxaEntregaDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.TaxaDeEntregaController",
+    "Method": "PostTaxaEntrega",
+    "RelativePath": "api/TaxaDeEntrega",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taxaEntrega",
+        "Type": "GestaoRestaurante.Api.Entities.TaxaEntrega",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.TaxaDeEntregaController",
+    "Method": "GetByIdTaxaEntrega",
+    "RelativePath": "api/TaxaDeEntrega/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.TaxaEntregaDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.TaxaDeEntregaController",
+    "Method": "UpdateTaxaEntrega",
+    "RelativePath": "api/TaxaDeEntrega/altera-taxaEntrega/{nomeBairro}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nomeBairro",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "GestaoRestaurante.Api.Controllers.UsuarioController",
