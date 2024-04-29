@@ -1,5 +1,119 @@
 [
   {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CarrinhoController",
+    "Method": "GetAllCarrinho",
+    "RelativePath": "api/Carrinho",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.CarrinhoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CarrinhoController",
+    "Method": "PostCarrinho",
+    "RelativePath": "api/Carrinho",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrinho",
+        "Type": "GestaoRestaurante.Api.Entities.Carrinho",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CarrinhoController",
+    "Method": "GetByIdCarrinho",
+    "RelativePath": "api/Carrinho/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.CarrinhoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CarrinhoController",
+    "Method": "DeleteCarrinho",
+    "RelativePath": "api/Carrinho/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoRestaurante.Models.Dto.CarrinhoDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.CarrinhoController",
+    "Method": "GetCarrinhoByUsuarioId",
+    "RelativePath": "api/Carrinho/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GestaoRestaurante.Models.Dto.CarrinhoDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GestaoRestaurante.Api.Controllers.CarrinhoCompraController",
     "Method": "PostItem",
     "RelativePath": "api/CarrinhoCompra",
@@ -610,6 +724,32 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoRestaurante.Models.Dto.TaxaEntregaDto, GestaoRestaurante.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoRestaurante.Api.Controllers.TaxaDeEntregaController",
+    "Method": "GetTaxaEntregaByNomeBairro",
+    "RelativePath": "api/TaxaDeEntrega/{nomeBairro}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nomeBairro",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

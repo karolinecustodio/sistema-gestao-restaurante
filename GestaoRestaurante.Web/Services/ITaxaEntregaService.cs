@@ -6,6 +6,7 @@ namespace GestaoRestaurante.Web.Services
     {
         Task<IEnumerable<TaxaEntregaDto>> GetAllTaxaDeEntrega();
         Task<TaxaEntregaDto> GetByIdTaxaEntrega(int id);
+        Task<TaxaEntregaDto> GetTaxaEntregaByNomeBairro(string nomeBairro);
         Task<TaxaEntregaDto> PostTaxaEntrega(TaxaEntregaDto taxaEntregaDto);
         Task AtualizaTaxaEntrega(string nomeBairro);
     }

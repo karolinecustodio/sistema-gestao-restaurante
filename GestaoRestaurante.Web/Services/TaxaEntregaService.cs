@@ -55,6 +55,28 @@ namespace GestaoRestaurante.Web.Services
             }
         }
 
+        public async Task<TaxaEntregaDto> GetTaxaEntregaByNomeBairro(string nomeBairro)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"api/TaxaDeEntrega/{nomeBairro}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<TaxaEntregaDto>();
+                }
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception($"Http Status Code: {response.StatusCode} Mensagem: {message}");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<TaxaEntregaDto> PostTaxaEntrega(TaxaEntregaDto taxaEntregaDto)
         {
             try

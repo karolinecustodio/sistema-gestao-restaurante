@@ -22,6 +22,14 @@ namespace GestaoRestaurante.Api.Repositories
             return taxa;
         }
 
+        public async Task<TaxaEntrega> GetTaxaEntregaByNomeBairro(string bairro)
+        {
+            var taxa = await _context.TaxaEntrega
+                .SingleOrDefaultAsync(c => c.NomeBairro == bairro);
+
+            return taxa;
+        }
+
         public async Task<TaxaEntrega> GetByIdTaxaEntrega(int id)
         {
             var taxa = await _context.TaxaEntrega

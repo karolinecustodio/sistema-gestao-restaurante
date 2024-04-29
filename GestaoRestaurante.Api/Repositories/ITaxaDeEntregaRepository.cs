@@ -8,6 +8,7 @@ namespace GestaoRestaurante.Api.Repositories
     {
         Task<IEnumerable<TaxaEntrega>> GetAllTaxaEntrega();
         Task<TaxaEntrega> GetByIdTaxaEntrega(int id);
+        Task<TaxaEntrega> GetTaxaEntregaByNomeBairro(string bairro);
         Task<TaxaEntrega> PostTaxaEntrega(TaxaEntrega taxaEntrega);
         Task<bool> UpdateTaxaEntrega(string nomeBairro);
     }

@@ -16,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ICarrinhoCompraRepository, CarrinhoCompraRepository>();
+builder.Services.AddScoped<ICarrinhoRepository, CarrinhoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioEnderecoRepository, UsuarioEnderecoRepository>();
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();

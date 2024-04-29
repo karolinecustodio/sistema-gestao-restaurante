@@ -26,11 +26,7 @@ else
             </p>
             <div>
                 <button class="btn btn-success"
-                    @onclick="() => AdicionarAoCarrinho_Click(new CarrinhoItemAdicionaDto{
-                    CarrinhoId = UsuarioLogado.UsuarioId,
-                    ProdutoId = Produto.Id,
-                    Quantidade = 1
-                    })">
+                    @onclick="() => AdicionarAoCarrinho_Click()">
                     Incluir no Carrinho
                 </button>
             </div>
@@ -46,6 +42,9 @@ else
 
     [Inject]
     public ICarrinhoCompraService? CarrinhoCompraService { get; set; }
+
+    [Inject]
+    public ICarrinhoService? CarrinhoService { get; set; }
 
     [Inject]
     public NavigationManager? NavigationManager { get; set; }
@@ -85,10 +84,30 @@ else
         }
     }
 
-    protected async Task AdicionarAoCarrinho_Click(CarrinhoItemAdicionaDto carrinhoItemAdicionaDto)
+    protected async Task AdicionarAoCarrinho_Click()
     {
+        var userId = await GerenciaUsuarioEnderecoService.GetUserId();
+
         try
         {
+            var carrinho = new CarrinhoDto
+                {
+                    UsuarioId = (int)userId
+                };
+
+            var carrinhoUsuario = await CarrinhoService.GetCarrinhoByUsuarioId(userId);
+
+            if (carrinhoUsuario == null) { 
+                await CarrinhoService.PostCarrinho(carrinho);
+            }
+
+            var carrinhoItemAdicionaDto = new CarrinhoItemAdicionaDto
+            {
+                CarrinhoId = carrinhoUsuario.Id,
+                ProdutoId = Produto.Id,
+                Quantidade = 1
+            };
+
             var carrinhoItemDto = await CarrinhoCompraService.AdicionaItem(carrinhoItemAdicionaDto);
 
             if (carrinhoItemDto != null)

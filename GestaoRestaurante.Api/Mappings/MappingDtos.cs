@@ -157,6 +157,27 @@ namespace GestaoRestaurante.Api.Mappings
             };
         }
 
+        public static CarrinhoDto ConverterCarrinhoParaDto(
+          this Carrinho carrinho)
+        {
+            return new CarrinhoDto
+            {
+                Id = carrinho.Id,
+                UsuarioId = carrinho.UsuarioId,
+            };
+        }
+
+        public static IEnumerable<CarrinhoDto> ConverterCarrinhosParaDto(
+            this IEnumerable<Carrinho> carrinhos)
+        {
+            return (from carrinho in carrinhos
+                    select new CarrinhoDto
+                    {
+                        Id = carrinho.Id,
+                        UsuarioId = carrinho.UsuarioId
+                    }).ToList();
+        }
+
         public static UsuarioDto ConverterUsuarioParaDto(
             this Usuario usuario)
         {

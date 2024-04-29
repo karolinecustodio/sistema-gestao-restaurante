@@ -45,14 +45,38 @@ namespace GestaoRestaurante.Api.Controllers
         {
             try
             {
-                var usuario = await _taxaDeEntregaRepository.GetByIdTaxaEntrega(id);
-                if (usuario is null)
+                var taxa = await _taxaDeEntregaRepository.GetByIdTaxaEntrega(id);
+                if (taxa is null)
                 {
                     return Ok();
                 }
                 else
                 {
-                    var usuarioDto = usuario.ConverterTaxaEntregaParaDto();
+                    var taxaDto = taxa.ConverterTaxaEntregaParaDto();
+                    return Ok(taxaDto);
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Erro ao acessar a base de dados");
+            }
+        }
+
+
+        [HttpGet("{nomeBairro:string}")]
+        public async Task<ActionResult<IEnumerable<TaxaEntregaDto>>> GetTaxaEntregaByNomeBairro(string nomeBairro)
+        {
+            try
+            {
+                var taxa = await _taxaDeEntregaRepository.GetTaxaEntregaByNomeBairro(nomeBairro);
+                if (taxa is null)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    var usuarioDto = taxa.ConverterTaxaEntregaParaDto();
                     return Ok(usuarioDto);
                 }
             }
@@ -84,9 +108,9 @@ namespace GestaoRestaurante.Api.Controllers
         {
             try
             {
-                var usuarioAtualizado = await _taxaDeEntregaRepository.UpdateTaxaEntrega(nomeBairro);
+                var taxaAtualizada = await _taxaDeEntregaRepository.UpdateTaxaEntrega(nomeBairro);
 
-                if (usuarioAtualizado)
+                if (taxaAtualizada)
                 {
                     return Ok("Taxa de Entrega atualizada com sucesso.");
                 }
