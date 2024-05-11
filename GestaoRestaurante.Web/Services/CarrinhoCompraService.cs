@@ -90,6 +90,24 @@ namespace GestaoRestaurante.Web.Services
             }
         }
 
+        public async Task<CarrinhoItemDto> DeletaItens(int carrinhoId)
+        {
+            try
+            {
+                var response = await httpClient.DeleteAsync($"api/CarrinhoCompra/itens/{carrinhoId}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<CarrinhoItemDto>();
+                }
+                return default(CarrinhoItemDto);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<CarrinhoItemDto> AtualizaQuantidade(CarrinhoItemAtualizaQuantidadeDto
                                                    carrinhoItemAtualizaQuantidadeDto)
         {

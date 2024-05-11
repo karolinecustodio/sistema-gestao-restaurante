@@ -43,7 +43,8 @@ namespace GestaoRestaurante.Web.Services
         {
             try
             {
-                string url = $"api/usuario/valida-login/{Uri.EscapeDataString(email)}/{Uri.EscapeDataString(senha)}";
+                string baseUrl = "api/usuario/valida-login/";
+                string url = new Uri(baseUrl + $"{email}/{senha}", UriKind.Relative).ToString();
 
                 var response = await httpClient.GetAsync(url);
 
@@ -134,49 +135,6 @@ namespace GestaoRestaurante.Web.Services
                 // Tratar o erro conforme necessário
                 Console.WriteLine($"Erro ao atualizar a senha: {ex.Message}");
             }
-        }
-
-        public string EnviarEmail(string email)
-        {
-            var emailDestinatario = email;
-            var assunto = "Teste envio de email";
-            var mensagem = "Essa é uma mensagem para testar se esta enviando o email";
-            string dominio = email.Split('@')[1];
-
-            using (MailMessage mail = new MailMessage())
-            {
-                mail.From = new MailAddress("karolinecustodio7@gmail.com"); // DE
-                mail.To.Add(emailDestinatario); // PARA
-                mail.Subject = assunto;
-                mail.Body = mensagem;
-
-                if (dominio.Contains("gmail.com"))
-                {
-                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
-                    {
-                        smtp.UseDefaultCredentials = false;
-                        smtp.EnableSsl = true;
-                        smtp.Credentials = new NetworkCredential("karolinecustodio7@gmail.com", "12345");
-
-                        smtp.Send(mail);
-                        return "Email Sent";
-                    }
-                }
-
-                else if (dominio.Contains("hotmail.com") || dominio.Contains("outlook.com"))
-                {
-                    using SmtpClient smtp = new SmtpClient("smtp.live.com", 587);
-                    smtp.UseDefaultCredentials = false;
-                    smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential("seuemail@hotmail.com", "suasenha");
-                    return "Email Sent";
-                }
-                else
-                {
-                    throw new ArgumentException("Domínio de e-mail não suportado.");
-                }
-            }
-
         }
     }
 }

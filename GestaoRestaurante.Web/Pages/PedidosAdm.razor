@@ -1,0 +1,161 @@
+﻿@page "/admin/pedidos"
+
+@if (Pedidos == null)
+{
+    <ExibirSpinner />
+}
+else
+{
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h3><strong>PEDIDOS DO ADMINISTRADOR</strong></h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-between">
+        <div class="col-md-6">
+            <h3 class="mb-5">Histórico</h3>
+        </div>
+    </div>
+
+    <hr class="mb-3" />
+    
+    var pedidos = Pedidos.OrderByDescending(p => p.DataEmissao)
+                     .GroupBy(p => p.StatusPedido);
+
+    @foreach (var pedidosPorStatus in pedidos)
+    {
+        var status = pedidosPorStatus.Key;
+
+        <div class="mb-5">
+            <h4>Pedidos: @status.GetDescription()</h4>
+            @foreach (var pedido in pedidosPorStatus)
+{
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Pedido ID: @pedido.Id
+                        Pedido feito em: @pedido.DataEmissao.ToString("dd 'de' MMMM 'de' yyyy")
+                    </div>
+
+                    <div class="card-body">
+
+                        <div>
+                            <h4 class="mb-4"><strong>Detalhes do Pedido</strong></h4>
+                        </div>
+
+                        @foreach (var pedidoItem in pedido.PedidoItens) 
+                        {
+                            <div class="mb-4">
+                                <p>
+                                    <span>@pedidoItem.Quantidade</span> unid -
+                                    <span>@pedidoItem.Produto.Nome</span> -
+                                    <span>R$ @pedidoItem.Produto.ValorProd</span>
+                                </p>
+                            </div>
+                        }
+
+                        <div class="mb-4">
+                            <div class="mb-4">
+                                <h4 class="mb-2"><strong>Resumo de Valores</strong></h4>
+                            </div>
+                            <p class="mb-4"><strong>Valor do Pedido: R$ </strong> @(pedido.ValorPedido - @pedido.ValorTaxaEntrega)</p>
+                            <p class="mb-4"><strong>Valor da Taxa de Entrega:</strong> @pedido.ValorTaxaEntrega.ToString("c") </p>
+                            <p class="mb-4"><strong>Valor Total do Pedido:</strong> @pedido.ValorPedido.ToString("c")</p>
+                            <p class="mb-4"><strong>Forma de Pagamento:</strong> @pedido.FormaPagamento</p>
+                            <p class="mb-4"><strong>Status do Pedido:</strong> @pedido.StatusPedido.GetDescription()</p>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="statusPedido">Status do Pedido:</label>
+                        <select class="form-control" @bind="pedido.StatusPedido">
+                            <option value="Novo">Novo</option>
+                            <option value="EmPreparo">Em Preparo</option>
+                            <option value="AguardandoRetirada">Aguardando Retirada</option>
+                            <option value="Entregue">Entregue</option>
+                            <option value="Cancelado">Cancelado</option>
+                            <option value="ACaminho">A Caminho</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="card-footer">
+                    <button class="btn btn-primary" @onclick="() => SalvarStatusPedido(pedido)">Salvar Status</button>
+                        @if (MensagemSucesso is not null && PedidoAtualizadoId == pedido.Id)
+                        {
+                            <div class="alert alert-success" role="alert">
+                                @MensagemSucesso
+                            </div>
+                        }
+                </div>
+                </div>
+            }
+        </div>
+    }
+}
+
+@code {
+    private IEnumerable<PedidoDto> Pedidos;
+    private int statusSelecionado;
+    private int PedidoAtualizadoId;
+    public TaxaEntregaDto taxaEntrega { get; set; }
+
+    [Inject]
+    public IPedidoService PedidoService { get; set; }
+
+    [Inject]
+    public IPedidoItemService PedidoItemService { get; set; }
+
+    [Inject]
+    public IProdutoService? ProdutoService { get; set; }
+
+    [Inject]
+    public ITaxaEntregaService TaxaEntregaService { get; set; }
+    
+    public string? MensagemSucesso { get; set; }
+   
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarPedidos();
+
+    }
+
+    private async Task CarregarPedidos()
+    {
+        Pedidos = await PedidoService.GetAllPedidos();
+        await LoadProdutosAsync();
+    }
+
+    private async Task SalvarStatusPedido(PedidoDto pedido)
+    {
+        await PedidoService.PostPedido(pedido);
+        MensagemSucesso = "Status do pedido " + pedido.Id + " alterado com sucesso!";
+        PedidoAtualizadoId = pedido.Id;
+    }
+
+    private async Task LoadProdutosAsync()
+    {
+        foreach (var pedido in Pedidos)
+        {
+            var pedidoItens = await PedidoItemService.GetItensPorPedidoId(pedido.Id);
+
+            decimal valorEntrega = pedido.TaxaId == 0 ? 0 : (await TaxaEntregaService.GetByIdTaxaEntrega(pedido.TaxaId)).ValorEntrega;
+
+            foreach (var pedidoItem in pedidoItens)
+            {
+                var produtoDto = await ProdutoService.GetItem(pedidoItem.ProdutoId);
+                pedidoItem.Produto = produtoDto;
+            }
+
+            pedido.PedidoItens = pedidoItens.ToList();
+
+            pedido.ValorPedido = await CalcularValorPedido(pedido);
+            pedido.ValorTaxaEntrega = valorEntrega;
+        }
+    }
+
+    private async Task<decimal> CalcularValorPedido(PedidoDto pedido)
+    {
+        var pedidoDb = await PedidoService.GetByIdPedido(pedido.Id);
+        return pedidoDb.ValorPedido;
+    }
+}

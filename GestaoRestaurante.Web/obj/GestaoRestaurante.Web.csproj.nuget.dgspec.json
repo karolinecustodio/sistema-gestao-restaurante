@@ -68,6 +68,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.9, )"
             }
           },
           "imports": [
@@ -163,6 +167,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.9, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",

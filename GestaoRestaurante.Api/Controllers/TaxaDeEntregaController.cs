@@ -64,7 +64,7 @@ namespace GestaoRestaurante.Api.Controllers
         }
 
 
-        [HttpGet("{nomeBairro:string}")]
+        [HttpGet("{nomeBairro}")]
         public async Task<ActionResult<IEnumerable<TaxaEntregaDto>>> GetTaxaEntregaByNomeBairro(string nomeBairro)
         {
             try

@@ -6,7 +6,9 @@
         <div class="card-header">Adicionar Endereço de Entrega</div>
         <div class="form-group">
             <label for="cep">CEP:</label><span class="text-danger">*</span>
-            <input @oninput="()=>RetornaDadosCep_Input()" class="form-control" type="text" id="cep" @bind="endereco.Cep" required>
+            <input class="form-control" type="text" id="cep" @bind="endereco.Cep" required>
+            <button class="btn btn-primary" @onclick="PesquisarCep">Pesquisar</button>
+            <button class="btn btn-primary" @onclick="Limpar">Limpar</button>
         </div>
         <div class="form-group">
             <label for="rua">Rua:</label><span class="text-danger">*</span>
@@ -45,6 +47,7 @@
         </div>
 
         <button class="btn btn-primary" @onclick="SalvarEndereco">Salvar</button>
+
         @if (MensagemSucesso is not null)
         {
             <div class="alert alert-success" role="alert">
@@ -62,6 +65,8 @@
 
     private int? userId;
 
+    private CepDto cepDto = new CepDto();
+
     private List<string> camposPreenchidos = new List<string>();
 
     private List<BairroDto> bairros = new List<BairroDto>();
@@ -77,6 +82,9 @@
 
     [Inject]
     public ITaxaEntregaService TaxaEntregaService { get; set; }
+
+    [Inject]
+    public ICepService CepService { get; set; }
 
 
     protected override async Task OnInitializedAsync()
@@ -114,18 +122,18 @@
     }
 
     private async Task LoadBairros()
-{
-    try
     {
-        var taxas = await TaxaEntregaService.GetAllTaxaDeEntrega();
-        var bairrosUnicos = taxas.Select(taxa => taxa.NomeBairro).Distinct().ToList();
-        bairros = bairrosUnicos.Select(bairro => new BairroDto { Id = bairro, Nome = bairro }).ToList();
+        try
+        {
+            var taxas = await TaxaEntregaService.GetAllTaxaDeEntrega();
+            var bairrosUnicos = taxas.Select(taxa => taxa.NomeBairro).Distinct().ToList();
+            bairros = bairrosUnicos.Select(bairro => new BairroDto { Id = bairro, Nome = bairro }).ToList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar bairros: {ex.Message}");
+        }
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Erro ao carregar bairros: {ex.Message}");
-    }
-}
 
     private async Task SalvarEndereco()
     {
@@ -156,17 +164,32 @@
         }
     }
 
-    public void AtualizarEndereco(string rua, string bairro, string cidade, string estado)
+    private async Task PesquisarCep()
     {
-        Console.WriteLine(rua);
-        endereco.Rua = rua;
-        endereco.Bairro = bairro;
-        endereco.Cidade = cidade;
-        endereco.Estado = estado;
+        try
+        {
+            string cep = endereco.Cep.ToString();
+            cepDto = await CepService.GetCep(cep);
+
+            endereco.Cidade = cepDto.City;
+            endereco.Rua = cepDto.Street;
+            endereco.Estado = cepDto.State;
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao pesquisar CEP: {ex.Message}");
+        }
     }
 
-    protected async Task RetornaDadosCep_Input()
+    private async Task Limpar()
     {
-        await Js.InvokeVoidAsync("BuscaCep");
+        endereco.Cep = string.Empty;
+        endereco.Rua = string.Empty;
+        endereco.Numero = string.Empty;
+        endereco.Bairro = string.Empty;
+        endereco.Cidade = string.Empty;
+        endereco.Estado = string.Empty;
+        endereco.Complemento = string.Empty;
     }
 }

@@ -14,6 +14,7 @@ namespace GestaoRestaurante.Models.Dto
         public DateTime DataEmissao { get; set; }
 
         public decimal ValorPedido { get; set; }
+        public decimal ValorTaxaEntrega { get; set; }
 
         public int EnderecoId { get; set; }
 
@@ -24,5 +25,8 @@ namespace GestaoRestaurante.Models.Dto
         public FormaPagamentoDto FormaPagamento { get; set; }
 
         public StatusPedidoDto StatusPedido { get; set; }
+
+        public ICollection<PedidoItemDto> PedidoItens { get; set; }
+          = new List<PedidoItemDto>();
     }
 }

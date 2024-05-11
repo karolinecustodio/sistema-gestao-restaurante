@@ -9,6 +9,5 @@ namespace GestaoRestaurante.Web.Services
         Task<UsuarioDto> GetByEmailSenhaUsuario(string email, string senha);
         Task<UsuarioDto> GetByEmailUsuario(string email);
         Task AtualizarSenha(string email, string novaSenha);
-        string EnviarEmail(string email);
     }
 }

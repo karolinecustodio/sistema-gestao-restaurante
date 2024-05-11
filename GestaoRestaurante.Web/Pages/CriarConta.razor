@@ -5,7 +5,7 @@
         <div class="card-header">Criar uma conta</div>
         <div class="form-group">
             <div class="input-group">
-                 <span class="input-group-text bg-transparent border-right-0"><i class="oi oi-person"></i></span>
+                <span class="input-group-text bg-transparent border-right-0"><i class="oi oi-person"></i></span>
                 <input type="text" class="form-control border-left-0" id="nome" placeholder="Nome" @bind="usuario.NomeUsuario" required>
             </div>
         </div>
@@ -43,6 +43,7 @@
 
 
 @code {
+
     public UsuarioDto usuario { get; set; }
 
     public string? MensagemSucesso { get; set; }
@@ -63,9 +64,10 @@
         try
         {
             var usuarioDto = await UsuarioService.AdicionaUsuario(usuario);
+    
             MensagemSucesso = "Usuario criado!";
 
-         //   NavigationManager.NavigateTo("/produtos");
+            NavigationManager.NavigateTo("/menu");
         }
         catch (Exception)
         {

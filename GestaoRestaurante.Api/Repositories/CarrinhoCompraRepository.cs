@@ -24,7 +24,7 @@ namespace GestaoRestaurante.Api.Repositories
                                   {
                                       CarrinhoId = carrinhoItemAdicionaDto.CarrinhoId,
                                       ProdutoId = produto.Id,
-                                      Quantidade = carrinhoItemAdicionaDto.Quantidade
+                                      Quantidade = carrinhoItemAdicionaDto.Quantidade,
                                   }).SingleOrDefaultAsync();
 
                 if (item is not null)
@@ -61,6 +61,21 @@ namespace GestaoRestaurante.Api.Repositories
                 await _context.SaveChangesAsync();
             }
             return item;
+        }
+
+        public async Task<List<CarrinhoItem>> DeletaItens(int carrinhoId)
+        {
+            var itens = await _context.CarrinhoItem
+                                        .Where(item => item.CarrinhoId == carrinhoId)
+                                        .ToListAsync();
+
+            if (itens.Count > 0)
+            {
+                _context.CarrinhoItem.RemoveRange(itens);
+                await _context.SaveChangesAsync();
+            }
+
+            return itens;
         }
 
         public async Task<CarrinhoItem> GetItem(int id)

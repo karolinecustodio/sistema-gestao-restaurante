@@ -68,16 +68,39 @@ else
                     <button class="btn btn-primary ml-2" @onclick="()=>BotaoVoltar_Click()" title="Voltar">
                         <i class="oi oi-chevron-left"></i>
                     </button>
-                    <button class="btn btn-danger" @onclick="()=>BotaoLimpar_Click()" title="Limpar">
+                        <button class="btn btn-danger" @onclick="()=>MostrarModalLimpar()" title="Limpar">
                         <i class="oi oi-trash"></i>
                     </button>
                 </div>
             </div>
+
+               <div id="confirmacaoModal" class="modal" style="display: @modalDisplay">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Carrinho</h5>
+                    <button type="button" class="close" @onclick="Cancelar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Você tem certeza que deseja apagar todos os itens do carrinho?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="Cancelar">Não</button>
+                    <button type="button" class="btn btn-danger" @onclick="Confirmar">Sim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
         </div>
     </div>
 }
 
 @code {
+
+    string modalDisplay = "none";
 
     public UsuarioLogado usuarioLogado { get; set; }
 
@@ -104,6 +127,11 @@ else
         {
             CarrinhoCompraItens = await GerenciaCarrinhoItensLocalStorageService.GetCollection(usuarioLogado);
 
+            if (CarrinhoCompraItens == null)
+            {
+                MensagemErro = "Carrinho vazio";
+            }
+
             CarrinhoChanged();
         }
         catch (Exception ex)
@@ -112,12 +140,41 @@ else
         }
     }
 
+    void MostrarModalLimpar()
+    {
+        modalDisplay = "block";
+    }
+
+    void Confirmar()
+    {
+        LimparCarrinho();
+        modalDisplay = "none"; 
+    }
+
+    void Cancelar()
+    {
+        modalDisplay = "none"; 
+    }
+
+    void LimparCarrinho()
+    {
+        if (CarrinhoCompraItens != null && CarrinhoCompraItens.Any())
+        {
+            var carrinhoIds = CarrinhoCompraItens.Select(item => item.CarrinhoId).ToList();
+
+            foreach (var carrinhoId in carrinhoIds)
+            {
+                CarrinhoCompraService.DeletaItens(carrinhoId);
+            }
+
+            CarrinhoCompraItens.Clear();
+        }
+    }
+
     protected async Task DeletaCarrinhoItem_Click(int id)
     {
-        //exclui o item do banco de dados
         var carrinhoItemDto = await CarrinhoCompraService.DeletaItem(id);
 
-        //remoção do item da coleção de objetos da memoria no cliente
         await RemoveCarrinhoItem(id);
 
         CarrinhoChanged();

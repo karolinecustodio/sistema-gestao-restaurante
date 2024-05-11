@@ -140,6 +140,40 @@ namespace GestaoRestaurante.Api.Controllers
             }
         }
 
+        [HttpDelete("itens/{carrinhoId:int}")]
+        public async Task<ActionResult<CarrinhoItemDto>> DeleteItens(int carrinhoId)
+        {
+            try
+            {
+                var carrinhoItens = await carrinhoCompraRepo.DeletaItens(carrinhoId);
+
+                if (carrinhoItens == null || carrinhoItens.Count == 0)
+                {
+                    return NotFound();
+                }
+
+                var carrinhoItensDto = new List<CarrinhoItemDto>();
+
+                foreach (var carrinhoItem in carrinhoItens)
+                {
+                    var produto = await produtoRepo.GetByIdProduto(carrinhoItem.ProdutoId);
+
+                    if (produto is null)
+                        return NotFound();
+
+                    var carrinhoItemDto = carrinhoItem.ConverterCarrinhoItemParaDto(produto);
+                    carrinhoItensDto.Add(carrinhoItemDto);
+                }
+
+                return Ok(carrinhoItensDto);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
         [HttpPatch("{id:int}")]
         public async Task<ActionResult<CarrinhoItemDto>> AtualizaQuantidade(int id,
             CarrinhoItemAtualizaQuantidadeDto carrinhoItemAtualizaQuantidadeDto)

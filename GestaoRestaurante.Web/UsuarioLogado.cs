@@ -9,15 +9,17 @@ namespace GestaoRestaurante.Web
         public int EnderecoId { get; set; }
         public string Nome { get; set; }
         public int Telefone { get; set; }
+        public int TipoUsuario { get; set; }
 
         public Task<int> GetLoggedUserId()
         {
             return Task.FromResult(UsuarioId);
         }
 
-        public async Task SalvarIdUsuario(int usuarioId, IGerenciaUsuarioEnderecoLocalStorageService gerenciaUsuarioEnderecoService)
+        public async Task SalvarIdUsuario(int usuarioId, IGerenciaUsuarioEnderecoLocalStorageService gerenciaUsuarioEnderecoService, int tipoUsuario)
         {
             UsuarioId = usuarioId;
+            TipoUsuario = tipoUsuario;
             await gerenciaUsuarioEnderecoService.SaveUserId(UsuarioId);
         }
     }

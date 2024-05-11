@@ -77,9 +77,11 @@ else
 
             if (usuarioExiste)
             {
-                await UsuarioLogado.SalvarIdUsuario(usuarioId,GerenciaUsuarioEnderecoService);
+                var user = await UsuarioService.GetByIdUsuario(usuarioId);
+                int tipo = (int)user.TipoUsuario;
+                await UsuarioLogado.SalvarIdUsuario(usuarioId, GerenciaUsuarioEnderecoService, tipo);
 
-                NavigationManager.NavigateTo("/produtos");
+                NavigationManager.NavigateTo("/menu");
             }
             else
             {

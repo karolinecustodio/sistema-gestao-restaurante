@@ -1,0 +1,1 @@
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Release\net8.0\browser-wasm\PubTmp\Out\web.config

@@ -43,24 +43,58 @@ else
     {
         var pedidos = from pedido in PedidosUsuario
                       group pedido by pedido.DataEmissao into pedidosUser
-                      orderby pedidosUser.Key
+                      orderby pedidosUser.Key descending 
                       select pedidosUser;
 
         @foreach (var pedidoGroup in pedidos)
         {
             var pedido = pedidoGroup.FirstOrDefault();
 
-            <h4>@pedido.DataEmissao</h4>
+            <h4>Pedido feito em: @pedido.DataEmissao.ToString("dd 'de' MMMM 'de' yyyy")</h4>
 
             <div class="row mt-3">
                 @foreach (var item in pedidoGroup)
                 {
                     <div class="col-md-3 mb-2">
                         <div class="card">
+                            <div class="text-center">
+                                <h3 class="mb-15"><strong>Detalhes do Pedido</strong></h3>
+                            </div>
                             <div class="card-body">
-                                <p class="mb-4">Valor do Pedido: @item.ValorPedido.ToString("c")</p>
-                                <p class="mb-4">Forma de Pagamento: @item.FormaPagamento</p>
-                                <p class="mb-4">Status do Pedido: @item.StatusPedido</p>
+                                @foreach (var pedidoItem in pedido.PedidoItens)
+                                {
+                                    <div class="mb-4">
+                                        <p>
+                                            <span>@pedidoItem.Quantidade</span> unid -
+                                            <span>@pedidoItem.Produto.Nome</span> -
+                                            <span>R$ @pedidoItem.Produto.ValorProd</span>
+                                        </p>
+                                    </div>
+                                }
+
+                                    <div class="mb-4">
+                                        <div class="mb-4">
+                                            <h4 class="text-center mb-2"><strong>Resumo de Valores</strong></h4>
+                                        </div>
+                                        <p class="mb-4"><strong>Valor do Pedido: R$ </strong> @(item.ValorPedido - @item.ValorTaxaEntrega)</p>
+                                        <p class="mb-4"><strong>Valor da Taxa de Entrega:</strong> @item.ValorTaxaEntrega.ToString("c")</p>
+                                        <p class="mb-4"><strong>Valor Total do Pedido:</strong> @item.ValorPedido.ToString("c")</p>
+                                        <p class="mb-4"><strong>Forma de Pagamento:</strong> @item.FormaPagamento</p>
+                                        <p class="mb-4"><strong>Status do Pedido:</strong> @item.StatusPedido.GetDescription()</p>
+                                    </div>
+
+                                @if (pedido.ValorTaxaEntrega == 0 )
+                                {
+                                    <strong>Endereço de Entrega:</strong>
+                                    <span>No estabelecimento</span>
+                                }
+                                else
+                                {
+                                    <p class="mb-4">
+                                        <strong>Endereço de Entrega:</strong>
+                                        @endereco.Rua, @endereco.Numero, @endereco.Complemento, @endereco.Bairro, @endereco.Cidade - @endereco.Estado
+                                    </p>
+                                }
                             </div>
                         </div>
                     </div>
@@ -77,6 +111,14 @@ else
 
     private int periodoSelecionado;
 
+    private int? userId;
+
+    public EnderecoDto endereco { get; set; }
+    public UsuarioEnderecoDto usuarioEndereco { get; set; }
+    public TaxaEntregaDto taxaEntrega { get; set; }
+    public IEnumerable<PedidoItemDto> pedidoItemDto { get; set; }
+    List<ProdutoDto> produtos = new List<ProdutoDto>();
+
     public UsuarioLogado usuarioLogado { get; set; }
 
     public string? MensagemErro { get; set; }
@@ -87,14 +129,57 @@ else
     public IPedidoService?
                 PedidoService { get; set; }
 
+    [Inject]
+    public IPedidoItemService PedidoItemService { get; set; }
+
+    [Inject]
+    public IProdutoService? ProdutoService { get; set; }
+
+
+    [Inject]
+    public IEnderecoService EnderecoService { get; set; }
+
+    [Inject]
+    public IUsuarioEnderecoService UsuarioEnderecoService { get; set; }
+
+    [Inject]
+    public ITaxaEntregaService TaxaEntregaService { get; set; }
+
+    [Inject]
+    public IGerenciaUsuarioEnderecoLocalStorageService GerenciaUsuarioEnderecoService { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         DateTime dataFinal = DateTime.Today;
         dataInicial = dataFinal.AddMonths(-3);
 
+        userId = await GerenciaUsuarioEnderecoService.GetUserId();
+
         try
         {
-            PedidosUsuario = await PedidoService.GetPedidosPorIntervaloDeData(dataInicial, dataFinal);
+            PedidosUsuario = await PedidoService.GetPedidosPorIntervaloDeDataEId((int)userId, dataInicial, dataFinal);
+            await LoadProdutosAsync();
+
+            if (PedidosUsuario != null && PedidosUsuario.Any())
+            {
+                PedidosUsuario = PedidosUsuario.OrderByDescending(pedido => pedido.DataEmissao).ToList();
+            }
+
+            foreach (var pedido in PedidosUsuario)
+            {
+                if (pedido.TaxaId != 0)
+                {
+                    taxaEntrega = await TaxaEntregaService.GetByIdTaxaEntrega(pedido.TaxaId);
+
+                    usuarioEndereco = await UsuarioEnderecoService.GetUsuarioEnderecoByUsuarioId(pedido.UsuarioId);
+                    endereco = await EnderecoService.GetByIdEndereco(usuarioEndereco.EnderecoId);
+                }
+
+                decimal valorEntrega = pedido.TaxaId == 0 ? 0 : (await TaxaEntregaService.GetByIdTaxaEntrega(pedido.TaxaId)).ValorEntrega;
+
+                pedido.ValorPedido = await CalcularValorPedido(pedido);
+                pedido.ValorTaxaEntrega = valorEntrega;
+            }
         }
         catch (Exception ex)
         {
@@ -131,6 +216,45 @@ else
                 break;
         }
 
-        PedidosUsuario = await PedidoService.GetPedidosPorIntervaloDeData(dataInicial, dataFinal);
+        PedidosUsuario = await PedidoService.GetPedidosPorIntervaloDeDataEId((int)userId, dataInicial, dataFinal);
+
+        await LoadProdutosAsync();
+
+        foreach (var pedido in PedidosUsuario)
+        {
+            usuarioEndereco = await UsuarioEnderecoService.GetUsuarioEnderecoByUsuarioId(pedido.UsuarioId);
+             
+            if (pedido.TaxaId == 0)
+            {
+                pedido.ValorTaxaEntrega = 0;
+            }
+            else
+            {
+                taxaEntrega = await TaxaEntregaService.GetByIdTaxaEntrega(pedido.TaxaId);
+                endereco = await EnderecoService.GetByIdEndereco(usuarioEndereco.EnderecoId);
+                pedido.ValorTaxaEntrega = taxaEntrega.ValorEntrega;
+            }
+        }
+
+    }
+
+    private async Task LoadProdutosAsync()
+    {
+        foreach (var pedido in PedidosUsuario)
+        {
+            var pedidoItens = await PedidoItemService.GetItensPorPedidoId(pedido.Id);
+            foreach (var pedidoItem in pedidoItens)
+            {
+                var produtoDto = await ProdutoService.GetItem(pedidoItem.ProdutoId);
+                pedidoItem.Produto = produtoDto;
+            }
+            pedido.PedidoItens = pedidoItens.ToList();
+        }
+    }
+
+    private async Task<decimal> CalcularValorPedido(PedidoDto pedido)
+    {
+        var pedidoDb = await PedidoService.GetByIdPedido(pedido.Id);
+        return pedidoDb.ValorPedido;
     }
 }

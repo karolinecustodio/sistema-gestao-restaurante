@@ -11,6 +11,7 @@ namespace GestaoRestaurante.Api.Repositories
             carrinhoItemAtualizaQuantidadeDto);
 
         Task<CarrinhoItem> DeletaItem(int id);
+        Task<List<CarrinhoItem>> DeletaItens(int carrinhoId);
 
         Task<CarrinhoItem> GetItem(int id);
 

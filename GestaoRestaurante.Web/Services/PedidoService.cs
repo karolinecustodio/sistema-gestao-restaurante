@@ -113,5 +113,34 @@ namespace GestaoRestaurante.Web.Services
                 throw;
             }
         }
+
+        public async Task<IEnumerable<PedidoDto>> GetPedidosPorIntervaloDeDataEId(int id, DateTime dataInicial, DateTime dataFinal)
+        {
+            try
+            {
+                string dataInicialFormatada = dataInicial.ToString("yyyy-MM-dd");
+                string dataFinalFormatada = dataFinal.ToString("yyyy-MM-dd");
+
+                var url = $"api/pedido/porIntervaloDeDataEId/{Uri.EscapeDataString(dataInicialFormatada)}/{Uri.EscapeDataString(dataFinalFormatada)}/{id}";
+
+                var response = await _httpClient.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<IEnumerable<PedidoDto>>();
+                }
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    _logger.LogError($"Erro ao buscar pedidos por intervalo de data: {response.StatusCode} - {message}");
+                    return Enumerable.Empty<PedidoDto>();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao processar a resposta: {ex.Message}");
+                throw;
+            }
+        }
     }
 }

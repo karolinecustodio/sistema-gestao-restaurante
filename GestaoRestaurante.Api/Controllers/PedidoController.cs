@@ -67,15 +67,26 @@ namespace GestaoRestaurante.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> PostByPedido(Pedido pedido)
         {
-            var user = await _pedidoRepository.GetByIdPedido(pedido.Id);
-            if (user is null)
+            var existingPedido = await _pedidoRepository.GetByIdPedido(pedido.Id);
+
+            if (existingPedido == null)
             {
                 await _pedidoRepository.PostByPedido(pedido);
                 return CreatedAtAction(nameof(GetByIdPedido), new { id = pedido.Id }, pedido);
             }
             else
             {
-                var pedidoDto = pedido.ConverterPedidoParaDto();
+                existingPedido.DataEmissao = pedido.DataEmissao;
+                existingPedido.ValorPedido = pedido.ValorPedido;
+                existingPedido.EnderecoId = pedido.EnderecoId;
+                existingPedido.UsuarioId = pedido.UsuarioId;
+                existingPedido.TaxaId = pedido.TaxaId;
+                existingPedido.FormaPagamento = pedido.FormaPagamento;
+                existingPedido.StatusPedido = pedido.StatusPedido;
+
+                await _pedidoRepository.Update(existingPedido);
+
+                var pedidoDto = existingPedido.ConverterPedidoParaDto();
                 return Ok(pedidoDto);
             }
         }
@@ -86,6 +97,20 @@ namespace GestaoRestaurante.Api.Controllers
             try
             {
                 var pedidos = await _pedidoRepository.GetPedidosPorIntervaloDeData(dataInicial, dataFinal);
+                return Ok(pedidos);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao obter pedidos: {ex.Message}");
+            }
+        }
+
+        [HttpGet("porIntervaloDeDataEId/{dataInicial}/{dataFinal}/{id}")]
+        public async Task<ActionResult<IEnumerable<Pedido>>> GetPedidosPorIntervaloDeDataEId(int id, DateTime dataInicial, DateTime dataFinal)
+        {
+            try
+            {
+                var pedidos = await _pedidoRepository.GetPedidosPorIntervaloDeDataEId(id, dataInicial, dataFinal);
                 return Ok(pedidos);
             }
             catch (Exception ex)

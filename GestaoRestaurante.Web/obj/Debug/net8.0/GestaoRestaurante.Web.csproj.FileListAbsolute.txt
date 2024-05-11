@@ -1,3 +1,10 @@
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.AssemblyReference.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfoInputs.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfo.cs
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.CoreCompileInputs.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.sourcelink.json
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Azure.Core.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Azure.Identity.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
@@ -73,11 +80,15 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.DependencyModel.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.Abstractions.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Http.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Options.ConfigurationExtensions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Options.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Identity.Client.Extensions.Msal.wasm
@@ -395,6 +406,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Humanizer.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\GestaoRestaurante.Models.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Http.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.SystemEvents.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm.gz
@@ -477,6 +489,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Data.DataSetExtensions.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.IO.MemoryMappedFiles.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.wasm.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.Abstractions.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebProxy.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Private.Xml.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.wasm.gz
@@ -538,6 +551,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.VisualBasic.Core.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Immutable.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.Local.wasm.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Diagnostics.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm.gz
@@ -553,6 +567,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Bcl.AsyncInterfaces.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\it\Microsoft.CodeAnalysis.Workspaces.resources.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Extensions.wasm.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Options.ConfigurationExtensions.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\fr\Microsoft.CodeAnalysis.resources.wasm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Channels.wasm.gz
@@ -634,12 +649,16 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
@@ -661,6 +680,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.IO.Pipelines.dll
@@ -668,6 +688,8 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -747,7 +769,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Data.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.Contracts.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.Debug.dll
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.FileVersionInfo.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.Process.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Diagnostics.StackTrace.dll
@@ -856,8 +877,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Encoding.CodePages.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Encoding.Extensions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Encoding.dll
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Text.RegularExpressions.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Threading.Channels.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\System.Threading.Overlapped.dll
@@ -900,13 +919,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\icudt_no_CJK.dat
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\GestaoRestaurante.Models.dll
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\bin\Debug\net8.0\GestaoRestaurante.Models.pdb
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.AssemblyReference.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfoInputs.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.AssemblyInfo.cs
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.csproj.CoreCompileInputs.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\GestaoRestaurante.Web.sourcelink.json
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Azure.Core.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Azure.Identity.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
@@ -938,12 +950,16 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.DependencyInjection.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.DependencyInjection.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.DependencyModel.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Diagnostics.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Diagnostics.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.FileProviders.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.FileProviders.Physical.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.FileSystemGlobbing.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Http.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Logging.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Logging.Abstractions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Options.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Options.ConfigurationExtensions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Extensions.Primitives.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Identity.Client.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\Microsoft.Identity.Client.Extensions.Msal.wasm
@@ -965,6 +981,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Composition.Runtime.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Composition.TypedParts.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Configuration.ConfigurationManager.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.DiagnosticSource.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Drawing.Common.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.IdentityModel.Tokens.Jwt.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.IO.Pipelines.wasm
@@ -972,6 +989,8 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Runtime.Caching.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Security.Cryptography.ProtectedData.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Security.Permissions.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Encodings.Web.wasm
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Json.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Windows.Extensions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\cs\Microsoft.CodeAnalysis.resources.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\de\Microsoft.CodeAnalysis.resources.wasm
@@ -1051,7 +1070,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Data.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.Contracts.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.Debug.wasm
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.DiagnosticSource.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.FileVersionInfo.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.Process.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Diagnostics.StackTrace.wasm
@@ -1160,8 +1178,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Encoding.CodePages.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Encoding.Extensions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Encoding.wasm
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Encodings.Web.wasm
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.Json.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Text.RegularExpressions.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Threading.Channels.wasm
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\webcil\System.Threading.Overlapped.wasm
@@ -1242,12 +1258,16 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\lxy5gcwtie.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\ysrtdycd15.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\vvduy4degm.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\s3cu804qla.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\kopcojqtzb.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\9lxwsnx7j5.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\cqdqgxb5yq.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\fs4jjiu2d8.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\cbnuqy5ugf.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\g1w6mlkyel.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\fls9m7126x.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\p4d8b4lo8y.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\tt3u6xxegh.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\qos8wm47rb.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\d60izyivrg.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\zb6s72kvq2.gz
@@ -1269,6 +1289,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\rgnhbi5qxp.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\eky9mijx9l.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\zwiv8426lc.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\t6w6e9yqfc.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\hb4r19j1qm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\nlk9g9h5cp.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\jyoaku6adj.gz
@@ -1276,6 +1297,8 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\pejijj6q61.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\j9fzljbbq4.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\2dw9m87ycl.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\i7veut3428.gz
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\6sz0nqm9o0.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\on15hrrzg1.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\8axn10211l.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\16sxdz3lkj.gz
@@ -1355,7 +1378,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\j4o5sbo7xm.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\exogmwgqvi.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\0no2xmssvf.gz
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\t6w6e9yqfc.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\pptllwluix.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\19tq5ds4jz.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\1semkonge0.gz
@@ -1464,8 +1486,6 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\k3t97457oi.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\n28hl6olfe.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\gkt1nlfith.gz
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\i7veut3428.gz
-C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\6sz0nqm9o0.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\wsqebtqzes.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\u537m11ot2.gz
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Web\obj\Debug\net8.0\compressed\nf0ipgqu4k.gz
