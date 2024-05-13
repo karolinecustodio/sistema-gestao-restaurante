@@ -172,3 +172,7 @@ C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaur
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\obj\Debug\net8.0\GestaoRestaurante.Api.pdb
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\obj\Debug\net8.0\GestaoRestaurante.Api.genruntimeconfig.cache
 C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\obj\Debug\net8.0\ref\GestaoRestaurante.Api.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\bin\Debug\net8.0\Npgsql.dll
+C:\Users\camila.custodio\Documents\TCC2\sistema-gestao-restaurante\GestaoRestaurante.Api\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

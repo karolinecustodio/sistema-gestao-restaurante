@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -8,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GestaoRestaurante.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Inicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,10 +18,10 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "Categoria",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    IconCss = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nome = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    IconCss = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,15 +32,15 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "Endereco",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Rua = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Numero = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Complemento = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Cidade = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Estado = table.Column<string>(type: "nvarchar(2)", maxLength: 2, nullable: false),
-                    Bairro = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Cep = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Rua = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Numero = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: false),
+                    Complemento = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    Cidade = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Estado = table.Column<string>(type: "character varying(2)", maxLength: 2, nullable: false),
+                    Bairro = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Cep = table.Column<string>(type: "character varying(8)", maxLength: 8, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -50,11 +51,11 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "TaxaEntrega",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NomeBairro = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    ValorEntrega = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    TempoEntrega = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    NomeBairro = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    ValorEntrega = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    TempoEntrega = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,13 +66,13 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "Usuario",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NomeUsuario = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Senha = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Telefone = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    TipoUsuario = table.Column<int>(type: "int", nullable: true)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    NomeUsuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Email = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Senha = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Telefone = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
+                    TipoUsuario = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -82,14 +83,14 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "Produto",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    ImagemUrl = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    ValorProd = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Quantidade = table.Column<int>(type: "int", nullable: false),
-                    CategoriaId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nome = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Descricao = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    ImagemUrl = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    ValorProd = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    Quantidade = table.Column<int>(type: "integer", nullable: false),
+                    CategoriaId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -106,9 +107,9 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "Carrinho",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UsuarioId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,15 +126,15 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "Pedido",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DataEmissao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ValorPedido = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    EnderecoId = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    TaxaId = table.Column<int>(type: "int", nullable: false),
-                    FormaPagamento = table.Column<int>(type: "int", nullable: false),
-                    StatusPedido = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    DataEmissao = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ValorPedido = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    EnderecoId = table.Column<int>(type: "integer", nullable: false),
+                    UsuarioId = table.Column<int>(type: "integer", nullable: false),
+                    TaxaId = table.Column<int>(type: "integer", nullable: false),
+                    FormaPagamento = table.Column<int>(type: "integer", nullable: false),
+                    StatusPedido = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -150,10 +151,10 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "UsuarioEndereco",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    EnderecoId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UsuarioId = table.Column<int>(type: "integer", nullable: false),
+                    EnderecoId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -176,12 +177,12 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "CarrinhoItem",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CarrinhoId = table.Column<int>(type: "int", nullable: false),
-                    ProdutoId = table.Column<int>(type: "int", nullable: false),
-                    ValorProd = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Quantidade = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    CarrinhoId = table.Column<int>(type: "integer", nullable: false),
+                    ProdutoId = table.Column<int>(type: "integer", nullable: false),
+                    ValorProd = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    Quantidade = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -204,12 +205,12 @@ namespace GestaoRestaurante.Api.Migrations
                 name: "PedidoItem",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProdutoId = table.Column<int>(type: "int", nullable: false),
-                    PedidoId = table.Column<int>(type: "int", nullable: false),
-                    ValorProd = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Quantidade = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ProdutoId = table.Column<int>(type: "integer", nullable: false),
+                    PedidoId = table.Column<int>(type: "integer", nullable: false),
+                    ValorProd = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    Quantidade = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "GestaoRestaurante.Web",
   "resources": {
-    "hash": "sha256-piYmh1w4ortJP95/PIFss1WoLui/8/hDxSk0LRqjc0M=",
+    "hash": "sha256-Vr+e3v3bumN3L7ckhJZohkSWNfNvCxCUqKDjNjLgQrA=",
     "jsModuleNative": {
-      "dotnet.native.8.0.4.ebkft4c9ue.js": "sha256-ju0+XWE0ihz554eKEj0HQ8Opa61xpbUIaX5/MNo8we4="
+      "dotnet.native.8.0.0.2upat90ah4.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.4.d7hh63nexf.js": "sha256-JeVsECOqOie/Pe89n9PJNJaMmb5vJsAAxfXY8INN64A="
+      "dotnet.runtime.8.0.0.pqztsmo5kr.js": "sha256-WdSX3HQvnBYF0KJLZoOyHvTzMHetaob6PV0Kn2K+QXw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-U1JSgnum2OTerSq8i5Y9L17deHEWJmae0djinSPLyJM="
+      "dotnet.native.wasm": "sha256-Vr6ZXKoP77zgabrMIxQ1GbOkrxfx5XGqHO0odLhUIMY="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -72,6 +72,8 @@
       "Microsoft.SqlServer.Server.wasm": "sha256-Fig+5hq00gGQlXAgSnyFlUlWyhlx9f+yPJb4INt3gNc=",
       "Microsoft.Win32.SystemEvents.wasm": "sha256-1kUoFxSGzlbndQM4zal3G/YBdouUTf444lDjqhuWALU=",
       "Mono.TextTemplating.wasm": "sha256-7QALsAd1aPqJcMOmMeb5rR069c58graCXhDCadJIhoE=",
+      "Npgsql.wasm": "sha256-xECjRvvegO9+3hFyhwJqEn6VbiXfzu6rgbNUD2KBtqs=",
+      "Npgsql.EntityFrameworkCore.PostgreSQL.wasm": "sha256-3sHUTT18REUhaWqVMzf6+jvBzVZJy3QtIc1bIQpOzng=",
       "System.CodeDom.wasm": "sha256-AhGB+QX9g4JW3PgS/4tQoG2De0vrOhtsNU5hYnniKj0=",
       "System.Composition.AttributedModel.wasm": "sha256-bQEHGV2MLXgOHm/+7pinmkxbO5kluprl9Afqez10IZ0=",
       "System.Composition.Convention.wasm": "sha256-Twq0yTkL1uwXMJ7+401C7kPnt211MZMRop4tctp6IuM=",
@@ -255,12 +257,12 @@
       "mscorlib.wasm": "sha256-VCfYgt1mcjITabSTosCDVZ+68ea3Z7kakTFaLNLG+18=",
       "netstandard.wasm": "sha256-YOZxxR9PM3Dltcijfb0Q4FD39DkWZbZ1e2ScbZDvWJ4=",
       "System.Private.CoreLib.wasm": "sha256-NrT1QkAzVU//2wgK9vXdq77lCGvLJ4IOZ+Aegesyanc=",
-      "GestaoRestaurante.Models.wasm": "sha256-bN/itZB5IX1bYFsk1c5h5BsDHdkKj42burzIP+WIr2E=",
-      "GestaoRestaurante.Web.wasm": "sha256-dpy0QIrozoJeP1PAgKFeSwAOi24MqeuYg7+ECOuRA2o="
+      "GestaoRestaurante.Models.wasm": "sha256-MxDBuAu5TQxRt4MyPzQm+TUNkHG4/4k9YEpcNJvyNrw=",
+      "GestaoRestaurante.Web.wasm": "sha256-KpJeMXc6wuU0aiH0ori/Ue5RI9P6UwIFwxhZ2obhoBU="
     },
     "pdb": {
-      "GestaoRestaurante.Models.pdb": "sha256-vuZgev+AL1ZXE+vHCETBP+xf2+YNOl+EeJLjfM3or/0=",
-      "GestaoRestaurante.Web.pdb": "sha256-WHLlR/PhcOSRfTAfsvZQF/HoTeCFMmEGKs7O5V3e21o="
+      "GestaoRestaurante.Models.pdb": "sha256-7WT7KIS3moQPAWp4WgZZb5/MSSuOOPu26+T/d3y8Rks=",
+      "GestaoRestaurante.Web.pdb": "sha256-BB50oPBotwyjweI+4cVo3PrH1tLS9vwXUjxkY/3u0FA="
     },
     "satelliteResources": {
       "cs": {
