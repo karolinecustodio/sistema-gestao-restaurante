@@ -97,16 +97,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\js\\CarrinhoCompraFunctions.js",
       "PackagePath": "staticwebassets\\js\\CarrinhoCompraFunctions.js"
-    },
-    {
-      "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\js\\CepFunctions.js",
-      "PackagePath": "staticwebassets\\js\\CepFunctions.js"
     },
     {
       "Id": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Web\\wwwroot\\spinner.gif",

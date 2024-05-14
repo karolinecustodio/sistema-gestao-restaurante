@@ -1268,7 +1268,8 @@
           "GestaoRestaurante.Models": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
-          "Microsoft.Extensions.Http": "9.0.0-preview.3.24172.9"
+          "Microsoft.Extensions.Http": "9.0.0-preview.3.24172.9",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.0-preview.3"
         },
         "runtime": {
           "GestaoRestaurante.Web.dll": {}

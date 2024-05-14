@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Fw6tLl6gXPvManjtlaeqhuITqtV8fqnWPzn+N3bBZUNT1DXThHkoWD09+C9lCBYvE87LpJj0ylU4QTza3BOjJQ==",
+  "dgSpecHash": "pzy/agd8MkvYhS7lIWLFMqBEak5IJj1LadzAxjixEnl7MC+l/Jtek8DRBgUNEgeMKofQ4OcwIXxzXWXAvIF32Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\camila.custodio\\Documents\\TCC2\\sistema-gestao-restaurante\\GestaoRestaurante.Models\\GestaoRestaurante.Models.csproj",
   "expectedPackageFiles": [
@@ -59,10 +59,7 @@
     "C:\\Users\\camila.custodio\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\camila.custodio\\.nuget\\packages\\system.text.encodings.web\\9.0.0-preview.3.24172.9\\system.text.encodings.web.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\camila.custodio\\.nuget\\packages\\system.text.json\\9.0.0-preview.3.24172.9\\system.text.json.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\camila.custodio\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.1\\microsoft.netcore.app.ref.8.0.1.nupkg.sha512",
-    "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.1\\microsoft.windowsdesktop.app.ref.8.0.1.nupkg.sha512",
-    "C:\\Users\\camila.custodio\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.1\\microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+    "C:\\Users\\camila.custodio\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
