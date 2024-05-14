@@ -8,7 +8,8 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-var baseUrl = "https://app-gestao-restaurante-7305536bb4b1.herokuapp.com/";
+var port = Environment.GetEnvironmentVariable("PORT");
+var baseUrl = string.IsNullOrEmpty(port) ? "https://localhost:7294" : $"https://localhost:{port}";
 
 builder.Services.AddScoped(sp => new HttpClient 
 {
