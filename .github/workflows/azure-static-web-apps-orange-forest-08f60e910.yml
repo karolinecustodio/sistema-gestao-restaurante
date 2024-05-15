@@ -28,7 +28,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_FOREST_08F60E910 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Usado para integrações do Github (comentários de PR, etc.)
           action: "upload"
-          app_location: "." # Caminho do código-fonte do aplicativo
+          app_location: "sistema-gestao-restaurante" # Caminho do código-fonte do aplicativo
           api_location: "GestaoRestaurante.Api" # Caminho do código-fonte da API - opcional
           output_location: "wwwroot" # Diretório de conteúdo do aplicativo construído - opcional
 
