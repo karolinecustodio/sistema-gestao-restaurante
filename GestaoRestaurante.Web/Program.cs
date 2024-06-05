@@ -3,13 +3,14 @@ using GestaoRestaurante.Web;
 using GestaoRestaurante.Web.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using static System.Net.WebRequestMethods;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 var port = Environment.GetEnvironmentVariable("PORT");
-var baseUrl = string.IsNullOrEmpty(port) ? "https://localhost:7294" : $"https://localhost:{port}";
+var baseUrl = "https://localhost:7294";
 
 builder.Services.AddScoped(sp => new HttpClient 
 {

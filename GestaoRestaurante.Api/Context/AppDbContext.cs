@@ -127,9 +127,21 @@ namespace GestaoRestaurante.Api.Context
             modelBuilder.Entity<Usuario>().HasData(new Usuario
             {
                 Id = 1,
-                NomeUsuario = "admin",
-                Email = "karolinecustodio7@gmail.com",
-                Telefone = "47997418959"
+                NomeUsuario = "admin1",
+                Email = "administrador1@gmail.com",
+                Senha = "admin1",
+                Telefone = "47997418959",
+                TipoUsuario = TipoUsuario.Admin
+            });
+
+            modelBuilder.Entity<Usuario>().HasData(new Usuario
+            {
+                Id = 2,
+                NomeUsuario = "admin2",
+                Email = "administrador2@gmail.com",
+                Senha = "admin2",
+                Telefone = "47997418959",
+                TipoUsuario = TipoUsuario.Admin
             });
 
             modelBuilder.Entity<TaxaEntrega>().HasData(new TaxaEntrega

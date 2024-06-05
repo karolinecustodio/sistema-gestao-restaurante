@@ -190,7 +190,7 @@ namespace GestaoRestaurante.Api.Mappings
                 NomeUsuario = usuario.NomeUsuario,
                 Email = usuario.Email,
                 Telefone = usuario.Telefone,
-                Senha = usuario.Senha,
+                Senha = usuario.Senha ?? null,
                 TipoUsuario = (TipoUsuarioDto)usuario.TipoUsuario
             };
         }
