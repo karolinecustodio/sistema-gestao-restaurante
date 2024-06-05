@@ -5,7 +5,1260 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\camila.custodio\Documents\publish</_PublishTargetUrl>
-    <History>True|2024-05-14T22:04:36.8287199Z;True|2024-05-08T21:50:57.4917098-03:00;</History>
+    <History>False|2024-06-05T23:17:44.3457491Z;False|2024-06-05T20:17:04.5943810-03:00;False|2024-06-05T20:16:30.2447807-03:00;True|2024-05-14T19:04:36.8287199-03:00;True|2024-05-08T21:50:57.4917098-03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="wwwroot/brothersBuguer.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/app.css">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap/bootstrap.min.css">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap/bootstrap.min.css.css">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/FONT-LICENSE">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.eot">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.otf">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.svg">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.ttf">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.woff">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/ICON-LICENSE">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/README.md">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/icon-192.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Bebidas/guarana.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Bebidas/h2o.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Bebidas/pepsi.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Bebidas/sukitauva.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Lanches/xbacon.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Lanches/xsalada.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/Imagens/Lanches/xsaladaFritas.png">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/index.html">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/js/CarrinhoCompraFunctions.js">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/spinner.gif">
+      <publishTime>05/15/2024 18:34:56</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Azure.Core.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Azure.Core.wasm.br">
+      <publishTime>05/08/2024 21:50:14</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Azure.Core.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Azure.Identity.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Azure.Identity.wasm.br">
+      <publishTime>05/08/2024 21:50:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Azure.Identity.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.boot.json">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.boot.json.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.boot.json.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.webassembly.js">
+      <publishTime>01/18/2024 11:30:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.webassembly.js.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.webassembly.js.gz">
+      <publishTime>05/08/2024 21:49:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Blazored.LocalStorage.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Blazored.LocalStorage.wasm.br">
+      <publishTime>05/08/2024 21:50:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Blazored.LocalStorage.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.js">
+      <publishTime>03/19/2024 16:36:52</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.js.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.js.gz">
+      <publishTime>05/08/2024 21:49:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.native.8.0.4.ebkft4c9ue.js">
+      <publishTime>03/19/2024 16:37:22</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.native.8.0.4.ebkft4c9ue.js.br">
+      <publishTime>05/08/2024 21:50:19</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.native.8.0.4.ebkft4c9ue.js.gz">
+      <publishTime>05/08/2024 21:49:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.native.wasm">
+      <publishTime>03/19/2024 16:37:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.native.wasm.br">
+      <publishTime>05/08/2024 21:50:45</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.native.wasm.gz">
+      <publishTime>05/08/2024 21:49:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.runtime.8.0.4.d7hh63nexf.js">
+      <publishTime>03/19/2024 16:37:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.runtime.8.0.4.d7hh63nexf.js.br">
+      <publishTime>05/08/2024 21:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.runtime.8.0.4.d7hh63nexf.js.gz">
+      <publishTime>05/08/2024 21:49:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Models.pdb.gz">
+      <publishTime>05/14/2024 19:03:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Models.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Models.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Models.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Web.pdb.gz">
+      <publishTime>05/14/2024 19:03:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Web.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Web.wasm.br">
+      <publishTime>05/14/2024 19:04:19</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/GestaoRestaurante.Web.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_CJK.dat">
+      <publishTime>10/23/2023 11:14:14</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_CJK.dat.br">
+      <publishTime>05/08/2024 21:50:53</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_CJK.dat.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_EFIGS.dat">
+      <publishTime>10/23/2023 11:14:14</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_EFIGS.dat.br">
+      <publishTime>05/08/2024 21:50:56</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_EFIGS.dat.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_no_CJK.dat">
+      <publishTime>10/23/2023 11:14:14</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_no_CJK.dat.br">
+      <publishTime>05/08/2024 21:50:20</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_no_CJK.dat.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.wasm.br">
+      <publishTime>05/14/2024 19:04:22</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Web.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Web.wasm.br">
+      <publishTime>05/08/2024 21:50:20</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Web.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm.br">
+      <publishTime>05/08/2024 21:50:20</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Bcl.AsyncInterfaces.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Bcl.AsyncInterfaces.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Bcl.AsyncInterfaces.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.CSharp.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.CSharp.wasm.br">
+      <publishTime>05/08/2024 21:50:21</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.CSharp.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Data.SqlClient.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Data.SqlClient.wasm.br">
+      <publishTime>05/08/2024 21:50:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Data.SqlClient.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.Abstractions.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.Abstractions.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.Abstractions.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.Relational.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.Relational.wasm.br">
+      <publishTime>05/08/2024 21:50:44</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.Relational.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.SqlServer.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.SqlServer.wasm.br">
+      <publishTime>05/08/2024 21:50:48</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.SqlServer.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.wasm.br">
+      <publishTime>05/08/2024 21:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.EntityFrameworkCore.wasm.gz">
+      <publishTime>05/08/2024 21:50:11</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Caching.Abstractions.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Caching.Abstractions.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Caching.Abstractions.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Caching.Memory.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Caching.Memory.wasm.br">
+      <publishTime>05/14/2024 19:04:19</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Caching.Memory.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.wasm.br">
+      <publishTime>05/08/2024 21:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Json.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Json.wasm.br">
+      <publishTime>05/08/2024 21:50:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Json.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.wasm.br">
+      <publishTime>05/08/2024 21:50:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.wasm.br">
+      <publishTime>05/08/2024 21:50:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.wasm.br">
+      <publishTime>05/08/2024 21:50:31</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.wasm.br">
+      <publishTime>05/14/2024 19:04:19</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.wasm.br">
+      <publishTime>05/08/2024 21:50:32</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Options.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Options.wasm.br">
+      <publishTime>05/08/2024 21:50:32</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Options.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Primitives.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Primitives.wasm.br">
+      <publishTime>05/08/2024 21:50:32</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Primitives.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Identity.Client.Extensions.Msal.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Identity.Client.Extensions.Msal.wasm.br">
+      <publishTime>05/08/2024 21:50:33</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Identity.Client.Extensions.Msal.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Identity.Client.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Identity.Client.wasm.br">
+      <publishTime>05/08/2024 21:50:39</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Identity.Client.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Abstractions.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Abstractions.wasm.br">
+      <publishTime>05/08/2024 21:50:39</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Abstractions.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.JsonWebTokens.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.JsonWebTokens.wasm.br">
+      <publishTime>05/08/2024 21:50:40</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.JsonWebTokens.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Logging.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Logging.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Logging.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Protocols.OpenIdConnect.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Protocols.OpenIdConnect.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Protocols.OpenIdConnect.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Protocols.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Protocols.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Protocols.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Tokens.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Tokens.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Tokens.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.WebAssembly.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.WebAssembly.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.WebAssembly.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.SqlServer.Server.wasm">
+      <publishTime>05/08/2024 21:50:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.SqlServer.Server.wasm.br">
+      <publishTime>05/08/2024 21:50:19</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.SqlServer.Server.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/netstandard.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/netstandard.wasm.br">
+      <publishTime>05/14/2024 19:04:19</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/netstandard.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Newtonsoft.Json.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Newtonsoft.Json.wasm.br">
+      <publishTime>05/08/2024 21:50:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Newtonsoft.Json.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Npgsql.EntityFrameworkCore.PostgreSQL.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Npgsql.EntityFrameworkCore.PostgreSQL.wasm.br">
+      <publishTime>05/14/2024 19:04:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Npgsql.EntityFrameworkCore.PostgreSQL.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Npgsql.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Npgsql.wasm.br">
+      <publishTime>05/14/2024 19:04:26</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Npgsql.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/SendGrid.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/SendGrid.wasm.br">
+      <publishTime>05/08/2024 21:50:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/SendGrid.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/StarkbankEcdsa.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/StarkbankEcdsa.wasm.br">
+      <publishTime>05/08/2024 21:50:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/StarkbankEcdsa.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Buffers.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Buffers.wasm.br">
+      <publishTime>05/08/2024 21:50:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Buffers.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Concurrent.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Concurrent.wasm.br">
+      <publishTime>05/14/2024 19:04:27</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Concurrent.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Immutable.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Immutable.wasm.br">
+      <publishTime>05/14/2024 19:04:27</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Immutable.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.NonGeneric.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.NonGeneric.wasm.br">
+      <publishTime>05/08/2024 21:50:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.NonGeneric.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Specialized.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Specialized.wasm.br">
+      <publishTime>05/14/2024 19:04:27</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Specialized.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.wasm.br">
+      <publishTime>05/14/2024 19:04:27</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Annotations.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Annotations.wasm.br">
+      <publishTime>05/08/2024 21:50:26</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Annotations.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Primitives.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Primitives.wasm.br">
+      <publishTime>05/14/2024 19:04:27</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Primitives.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.TypeConverter.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.TypeConverter.wasm.br">
+      <publishTime>05/08/2024 21:50:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.TypeConverter.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.wasm.br">
+      <publishTime>05/08/2024 21:50:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Configuration.ConfigurationManager.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Configuration.ConfigurationManager.wasm.br">
+      <publishTime>05/08/2024 21:50:33</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Configuration.ConfigurationManager.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Console.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Console.wasm.br">
+      <publishTime>05/08/2024 21:50:33</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Console.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Data.Common.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Data.Common.wasm.br">
+      <publishTime>05/14/2024 19:04:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Data.Common.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.DiagnosticSource.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.DiagnosticSource.wasm.br">
+      <publishTime>05/14/2024 19:04:30</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.DiagnosticSource.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.Process.wasm">
+      <publishTime>05/14/2024 19:04:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.Process.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.Process.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.TraceSource.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.TraceSource.wasm.br">
+      <publishTime>05/08/2024 21:50:40</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.TraceSource.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.Tracing.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.Tracing.wasm.br">
+      <publishTime>05/08/2024 21:50:40</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.Tracing.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.Primitives.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.Primitives.wasm.br">
+      <publishTime>05/08/2024 21:50:40</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.Primitives.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.wasm.br">
+      <publishTime>05/08/2024 21:50:41</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Formats.Asn1.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Formats.Asn1.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Formats.Asn1.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IdentityModel.Tokens.Jwt.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IdentityModel.Tokens.Jwt.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IdentityModel.Tokens.Jwt.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.Compression.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.Compression.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.Compression.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.FileSystem.AccessControl.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.FileSystem.AccessControl.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.FileSystem.AccessControl.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.FileSystem.Watcher.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.FileSystem.Watcher.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.FileSystem.Watcher.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Expressions.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Expressions.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Expressions.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Queryable.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Queryable.wasm.br">
+      <publishTime>05/08/2024 21:50:15</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Queryable.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.wasm.br">
+      <publishTime>05/08/2024 21:50:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.Data.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.Data.wasm.br">
+      <publishTime>05/08/2024 21:50:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.Data.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.wasm.br">
+      <publishTime>05/14/2024 19:04:22</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.Json.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.Json.wasm.br">
+      <publishTime>05/08/2024 21:50:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.Json.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.HttpListener.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.HttpListener.wasm.br">
+      <publishTime>05/08/2024 21:50:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.HttpListener.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.NameResolution.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.NameResolution.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.NameResolution.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.NetworkInformation.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.NetworkInformation.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.NetworkInformation.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Primitives.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Primitives.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Primitives.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Security.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Security.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Security.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Sockets.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Sockets.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Sockets.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.WebClient.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.WebClient.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.WebClient.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ObjectModel.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ObjectModel.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ObjectModel.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.CoreLib.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.CoreLib.wasm.br">
+      <publishTime>05/14/2024 19:04:33</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.CoreLib.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Uri.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Uri.wasm.br">
+      <publishTime>05/08/2024 21:50:40</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Uri.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.Linq.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.Linq.wasm.br">
+      <publishTime>05/08/2024 21:50:40</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.Linq.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.ILGeneration.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.ILGeneration.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.ILGeneration.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.Lightweight.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.Lightweight.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.Lightweight.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Primitives.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Primitives.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Primitives.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.JavaScript.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.JavaScript.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.JavaScript.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.RuntimeInformation.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.RuntimeInformation.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.RuntimeInformation.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.wasm.br">
+      <publishTime>05/14/2024 19:04:33</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Numerics.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Numerics.wasm.br">
+      <publishTime>05/14/2024 19:04:23</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Numerics.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Formatters.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Formatters.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Formatters.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Primitives.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Primitives.wasm.br">
+      <publishTime>05/08/2024 21:50:49</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Primitives.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.wasm.br">
+      <publishTime>05/14/2024 19:04:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.AccessControl.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.AccessControl.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.AccessControl.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Claims.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Claims.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Claims.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Algorithms.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Algorithms.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Algorithms.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Cng.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Cng.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Cng.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Csp.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Csp.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Csp.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Encoding.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Encoding.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Encoding.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Primitives.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Primitives.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Primitives.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.ProtectedData.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.ProtectedData.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.ProtectedData.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.wasm.br">
+      <publishTime>05/14/2024 19:04:24</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.X509Certificates.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.X509Certificates.wasm.br">
+      <publishTime>05/08/2024 21:50:12</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.X509Certificates.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Principal.Windows.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Principal.Windows.wasm.br">
+      <publishTime>05/08/2024 21:50:13</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Principal.Windows.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encoding.Extensions.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encoding.Extensions.wasm.br">
+      <publishTime>05/08/2024 21:50:13</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encoding.Extensions.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encodings.Web.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encodings.Web.wasm.br">
+      <publishTime>05/08/2024 21:50:13</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encodings.Web.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Json.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Json.wasm.br">
+      <publishTime>05/14/2024 19:04:26</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Json.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.RegularExpressions.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.RegularExpressions.wasm.br">
+      <publishTime>05/14/2024 19:04:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.RegularExpressions.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Channels.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Channels.wasm.br">
+      <publishTime>05/14/2024 19:04:28</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Channels.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Tasks.Extensions.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Tasks.Extensions.wasm.br">
+      <publishTime>05/08/2024 21:50:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Tasks.Extensions.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Thread.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Thread.wasm.br">
+      <publishTime>05/08/2024 21:50:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Thread.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.wasm.br">
+      <publishTime>05/08/2024 21:50:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Transactions.Local.wasm">
+      <publishTime>05/14/2024 19:04:16</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Transactions.Local.wasm.br">
+      <publishTime>05/14/2024 19:04:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Transactions.Local.wasm.gz">
+      <publishTime>05/14/2024 19:04:17</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.Linq.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.Linq.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.Linq.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.ReaderWriter.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.ReaderWriter.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.ReaderWriter.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XDocument.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XDocument.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XDocument.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XmlSerializer.wasm">
+      <publishTime>05/08/2024 21:50:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XmlSerializer.wasm.br">
+      <publishTime>05/08/2024 21:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XmlSerializer.wasm.gz">
+      <publishTime>05/08/2024 21:50:10</publishTime>
+    </File>
+  </ItemGroup>
 </Project>
