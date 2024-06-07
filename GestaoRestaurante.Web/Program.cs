@@ -6,11 +6,9 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using static System.Net.WebRequestMethods;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
 
 var port = Environment.GetEnvironmentVariable("PORT");
-var baseUrl = "https://localhost:7294";
+var baseUrl = "https://blazorsistemagestaorestaurante.azurewebsites.net/";
 
 builder.Services.AddScoped(sp => new HttpClient 
 {
