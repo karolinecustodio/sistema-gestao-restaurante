@@ -11,23 +11,34 @@ else if (MensagemErro is not null)
 }
 else
 {
-    <h3 class="mb-5">Detalhes do Produto</h3>
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <img class="img-fluid" src="@Produto.ImagemUrl">
+    <div class="container bg-light p-4">
+        <div class="row justify-content-center align-items-center mb-4">
+            <div class="col-md-6 text-center">
+                <h3><strong>Detalhes do Produto</strong></h3>
+            </div>
         </div>
-        <div class="col-md-6">
-            <h3>@Produto.Nome</h3>
-            <p class="mb-4">@Produto.Descricao</p>
-            <p class="mb-4">
-                <b>
-                    @Produto.ValorProd.ToString("C")&nbsp;
-                </b>
-            </p>
-            <div>
-                <button class="btn btn-success"
-                    @onclick="() => AdicionarAoCarrinho_Click()">
-                    Incluir no Carrinho
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img class="img-fluid" src="@Produto.ImagemUrl">
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-column align-items-start">
+                    <h3>@Produto.Nome</h3>
+                    <p class="mb-4">@Produto.Descricao</p>
+                    <p class="mb-4">
+                        <b>@Produto.ValorProd.ToString("C")&nbsp;</b>
+                    </p>
+                    <button class="btn btn-success" @onclick="() => AdicionarAoCarrinho_Click()">
+                        Incluir no Carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-end mt-3">
+            <div class="col-auto">
+                <button class="btn btn-primary ml-2" @onclick="()=>BotaoVoltar_Click()" title="Voltar">
+                    <i class="oi oi-chevron-left"></i>
                 </button>
             </div>
         </div>
@@ -133,5 +144,10 @@ else
             return produtosDto.SingleOrDefault(p => p.Id == id);
         }
         return null;
+    }
+
+    protected void BotaoVoltar_Click()
+    {
+        NavigationManager.NavigateTo("/produtos");
     }
 }
