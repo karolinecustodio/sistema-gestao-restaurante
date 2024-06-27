@@ -31,13 +31,11 @@ else
             <h4>Pedidos: @status.GetDescription()</h4>
             @foreach (var pedido in pedidosPorStatus)
             {
-                var usuarioNome = GetByUsuario(pedido.UsuarioId).Result;
-                var nomeEndereco = GetEndereco(pedido.UsuarioId).Result;
-
                 <div class="card mb-3">
+
                     <div class="card-header">
                         Pedido ID: @pedido.Id
-                        Cliente: @usuarioNome
+                        Cliente : @usuarioDto.NomeUsuario
                         Pedido feito em: @pedido.DataEmissao.ToString("dd 'de' MMMM 'de' yyyy")
                     </div>
 
@@ -64,7 +62,7 @@ else
                             </div>
                             <p class="mb-4"><strong>Valor do Pedido: R$ </strong> @(pedido.ValorPedido - @pedido.ValorTaxaEntrega)</p>
                             <p class="mb-4"><strong>Valor da Taxa de Entrega:</strong> @pedido.ValorTaxaEntrega.ToString("c") </p>
-                            <p class="mb-4"><strong>Endereço de Entrega:</strong> @nomeEndereco </p>
+                            <p class="mb-4"><strong>Endereço de Entrega:</strong> @enderecoDto.Complemento </p>
                             <p class="mb-4"><strong>Valor Total do Pedido:</strong> @pedido.ValorPedido.ToString("c")</p>
                             <p class="mb-4"><strong>Forma de Pagamento:</strong> @pedido.FormaPagamento</p>
                             <p class="mb-4"><strong>Status do Pedido:</strong> @pedido.StatusPedido.GetDescription()</p>
@@ -127,6 +125,9 @@ else
 
     public string? MensagemSucesso { get; set; }
 
+    public UsuarioDto usuarioDto { get; set; }
+    public EnderecoDto enderecoDto { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         await CarregarPedidos();
@@ -163,6 +164,9 @@ else
 
             pedido.ValorPedido = await CalcularValorPedido(pedido);
             pedido.ValorTaxaEntrega = valorEntrega;
+
+            await GetByUsuario(pedido.UsuarioId);
+            await GetEndereco(pedido.UsuarioId);
         }
     }
 
@@ -172,21 +176,28 @@ else
         return pedidoDb.ValorPedido;
     }
 
-    private async Task<string> GetByUsuario(int usuarioId)
+    private async Task GetByUsuario(int usuarioId)
     {
         var usuarioName = await UsuarioService.GetByIdUsuario(usuarioId);
-        return usuarioName.NomeUsuario;
+        if (usuarioDto == null)
+        {
+            usuarioDto = new UsuarioDto();
+        }
+
+        usuarioDto.NomeUsuario =  usuarioName.NomeUsuario;
     }
 
-    private async Task<string> GetEndereco(int usuarioId)
+    private async Task GetEndereco(int usuarioId)
     {
         var usuarioEnd = await UsuarioEnderecoService.GetUsuarioEnderecoByUsuarioId(usuarioId);
+        if (enderecoDto == null)
+        {
+            enderecoDto = new EnderecoDto();
+        }
         var endeId = usuarioEnd.EnderecoId;
 
         var end = await EnderecoService.GetByIdEndereco(endeId);
 
-        var nomeEndereco = $"{end.Rua}, {end.Numero}, {end.Bairro}, {end.Cidade}";
-
-        return nomeEndereco;
+        enderecoDto.Complemento = $"{end.Rua}, {end.Numero}, {end.Bairro}, {end.Cidade}";
     }
 }
