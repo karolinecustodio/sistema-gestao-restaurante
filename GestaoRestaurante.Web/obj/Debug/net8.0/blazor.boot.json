@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "GestaoRestaurante.Web",
   "resources": {
-    "hash": "sha256-Jjq8fH7q7EdsA9p9lRrg8kKpnNzpjbIhoR19CXsl1zg=",
+    "hash": "sha256-YvGLZWszeHrvSUg+06Mxpmmw0o4nv5+MuqJP9i34iy8=",
     "jsModuleNative": {
-      "dotnet.native.8.0.6.cv4oeg80wa.js": "sha256-YU6M9+jtDVnB8/wtrgIndOstzNh778Ls8g9XnbjorSk="
+      "dotnet.native.8.0.0.2upat90ah4.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.6.eo77tna1ln.js": "sha256-+E96dgYQl8OrHQb4yNZ7QwNr3SZzLSP8lwKRzwSiMsw="
+      "dotnet.runtime.8.0.0.pqztsmo5kr.js": "sha256-WdSX3HQvnBYF0KJLZoOyHvTzMHetaob6PV0Kn2K+QXw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-QvXWDxAxKcwrwr5J00t53OFtgShscemIYbvFu+ry5Ug="
+      "dotnet.native.wasm": "sha256-Vr6ZXKoP77zgabrMIxQ1GbOkrxfx5XGqHO0odLhUIMY="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -255,12 +255,12 @@
       "mscorlib.wasm": "sha256-masKveCdoRSahF99doEQk7H3YN2wHLVIE4M/Zu8OoD8=",
       "netstandard.wasm": "sha256-z1EJOmgVhSpTopn7Tek/0P//MKGF1I3NUD/sh4oLnwY=",
       "System.Private.CoreLib.wasm": "sha256-tuIWpR30u0OoEVtv4pXZ47mEpI2AmFBIyYFPnqDZZfw=",
-      "GestaoRestaurante.Models.wasm": "sha256-aYaSvOY+GKpsk3IleByWzvHlKi+IbpVs00CAE0nzqlg=",
-      "GestaoRestaurante.Web.wasm": "sha256-FyXjej5o4+93evhE+kSAfWKN3gk+Y5T0PN+Y+CHRhIY="
+      "GestaoRestaurante.Models.wasm": "sha256-s6OsEPVVuFVKYoNBB9FGoMToa49vszNL5rjVa7oKPVI=",
+      "GestaoRestaurante.Web.wasm": "sha256-DKw85mw9CzE+f7t0TYhxVVlIgTJG8FvDsvFNhr7toqQ="
     },
     "pdb": {
-      "GestaoRestaurante.Models.pdb": "sha256-MSVDv5z11nx4KJTIQKloLj71AMHjMg4hLWRfFirjC58=",
-      "GestaoRestaurante.Web.pdb": "sha256-biCrNwc/4W2JxSWAEgiVjtGUsKRkM6upkovit2E7Eaw="
+      "GestaoRestaurante.Models.pdb": "sha256-xlXlaNZC+s5RNvOXJF4TnJ0HRSx3BjcvU1wYzFF8V8k=",
+      "GestaoRestaurante.Web.pdb": "sha256-tXGUrVLF0K/zLUBKNQbicOA8jlr1ERUICbh3lGsOD7M="
     },
     "satelliteResources": {
       "cs": {
