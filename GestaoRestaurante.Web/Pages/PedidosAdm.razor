@@ -19,7 +19,7 @@ else
     </div>
 
     <hr class="mb-3" />
-    
+
     var pedidos = Pedidos.OrderByDescending(p => p.DataEmissao)
                      .GroupBy(p => p.StatusPedido);
 
@@ -30,11 +30,14 @@ else
         <div class="mb-5">
             <h4>Pedidos: @status.GetDescription()</h4>
             @foreach (var pedido in pedidosPorStatus)
-{
+            {
+                var usuarioNome = GetByUsuario(pedido.UsuarioId).Result;
+                var nomeEndereco = GetEndereco(pedido.UsuarioId).Result;
+
                 <div class="card mb-3">
                     <div class="card-header">
                         Pedido ID: @pedido.Id
-                        Cliente: usuarioNome
+                        Cliente: @usuarioNome
                         Pedido feito em: @pedido.DataEmissao.ToString("dd 'de' MMMM 'de' yyyy")
                     </div>
 
@@ -44,7 +47,7 @@ else
                             <h4 class="mb-4"><strong>Detalhes do Pedido</strong></h4>
                         </div>
 
-                        @foreach (var pedidoItem in pedido.PedidoItens) 
+                        @foreach (var pedidoItem in pedido.PedidoItens)
                         {
                             <div class="mb-4">
                                 <p>
@@ -61,34 +64,34 @@ else
                             </div>
                             <p class="mb-4"><strong>Valor do Pedido: R$ </strong> @(pedido.ValorPedido - @pedido.ValorTaxaEntrega)</p>
                             <p class="mb-4"><strong>Valor da Taxa de Entrega:</strong> @pedido.ValorTaxaEntrega.ToString("c") </p>
-                            <p class="mb-4"><strong>Endereço de Entrega:</strong> nomeEndereco </p>
+                            <p class="mb-4"><strong>Endereço de Entrega:</strong> @nomeEndereco </p>
                             <p class="mb-4"><strong>Valor Total do Pedido:</strong> @pedido.ValorPedido.ToString("c")</p>
                             <p class="mb-4"><strong>Forma de Pagamento:</strong> @pedido.FormaPagamento</p>
                             <p class="mb-4"><strong>Status do Pedido:</strong> @pedido.StatusPedido.GetDescription()</p>
                         </div>
 
                         <div class="form-group">
-                        <label for="statusPedido">Status do Pedido:</label>
-                        <select class="form-control" @bind="pedido.StatusPedido">
-                            <option value="Novo">Novo</option>
-                            <option value="EmPreparo">Em Preparo</option>
-                            <option value="AguardandoRetirada">Aguardando Retirada</option>
-                            <option value="Entregue">Entregue</option>
-                            <option value="Cancelado">Cancelado</option>
-                            <option value="ACaminho">A Caminho</option>
-                        </select>
+                            <label for="statusPedido">Status do Pedido:</label>
+                            <select class="form-control" @bind="pedido.StatusPedido">
+                                <option value="Novo">Novo</option>
+                                <option value="EmPreparo">Em Preparo</option>
+                                <option value="AguardandoRetirada">Aguardando Retirada</option>
+                                <option value="Entregue">Entregue</option>
+                                <option value="Cancelado">Cancelado</option>
+                                <option value="ACaminho">A Caminho</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="card-footer">
-                    <button class="btn btn-primary" @onclick="() => SalvarStatusPedido(pedido)">Salvar Status</button>
+
+                    <div class="card-footer">
+                        <button class="btn btn-primary" @onclick="() => SalvarStatusPedido(pedido)">Salvar Status</button>
                         @if (MensagemSucesso is not null && PedidoAtualizadoId == pedido.Id)
                         {
                             <div class="alert alert-success" role="alert">
                                 @MensagemSucesso
                             </div>
                         }
-                </div>
+                    </div>
                 </div>
             }
         </div>
@@ -100,9 +103,6 @@ else
     private int statusSelecionado;
     private int PedidoAtualizadoId;
     public TaxaEntregaDto taxaEntrega { get; set; }
-
-    public string usuarioNome { get; set; }
-    public string nomeEndereco { get; set; }
 
     [Inject]
     public IPedidoService PedidoService { get; set; }
@@ -130,7 +130,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         await CarregarPedidos();
-
     }
 
     private async Task CarregarPedidos()
@@ -164,10 +163,6 @@ else
 
             pedido.ValorPedido = await CalcularValorPedido(pedido);
             pedido.ValorTaxaEntrega = valorEntrega;
-
-            usuarioNome = await GetByUsuario(pedido.UsuarioId);
-
-            nomeEndereco = await GetEndereco(pedido.UsuarioId);
         }
     }
 
@@ -181,7 +176,6 @@ else
     {
         var usuarioName = await UsuarioService.GetByIdUsuario(usuarioId);
         return usuarioName.NomeUsuario;
-
     }
 
     private async Task<string> GetEndereco(int usuarioId)

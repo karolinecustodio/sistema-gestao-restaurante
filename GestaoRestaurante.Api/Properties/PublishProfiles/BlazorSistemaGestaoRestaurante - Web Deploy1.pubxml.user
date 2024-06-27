@@ -7,7 +7,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk3LV03oN+EmgybftMPsYnAAAAAACAAAAAAAQZgAAAAEAACAAAAArC/juRAzY8KRdZ8cd9qVCBMkSCWIGFyHYGRLa/lcbVAAAAAAOgAAAAAIAACAAAABwMLXJGufhdf10Iw1rZoC2n5TqnsuRHm4zQnY04xavIIAAAAAZhz9Vqa6qJbfrvR0fAJjHjoWQd+OBrhocHiKkIvqusZByWK2mjkLvDC0LsMb8XqmcIzle9c8Uloi1P+VW2h2aHxC8m7d43tyr9snVVaKuTSYxo3ZrA10k1iGkm4WKfYoVWRB+ssRtYrtEzaHKXzC/RkPYL4xgSAm6gOEz2NszwUAAAADxngoaGT8OXrm4PqTwvGw/BTSKMnZEw5TsiL4Rue9EarBPH2XlBpTCqcLewPdFKJAbMR8nGhaFUnj9+B/xMWdm</EncryptedPassword>
-    <History>True|2024-06-27T00:55:58.8037019Z;True|2024-06-26T21:52:18.8555381-03:00;</History>
+    <History>True|2024-06-27T16:30:53.3154027Z;True|2024-06-27T13:27:24.0036331-03:00;True|2024-06-26T22:29:16.5128763-03:00;True|2024-06-26T22:01:03.5443275-03:00;True|2024-06-26T21:55:58.8037019-03:00;True|2024-06-26T21:52:18.8555381-03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

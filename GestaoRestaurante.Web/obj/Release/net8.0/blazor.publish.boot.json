@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "GestaoRestaurante.Web",
   "resources": {
-    "hash": "sha256-MJp2DqjaFAnqAOtYuGyCScMjjadxlEuhd2d2pWmP/F4=",
+    "hash": "sha256-eLRS4oidPuziM8olbgfgX7/OLa/k78eR3eMua2p6PbU=",
     "jsModuleNative": {
       "dotnet.native.8.0.6.cv4oeg80wa.js": "sha256-YU6M9+jtDVnB8/wtrgIndOstzNh778Ls8g9XnbjorSk="
     },
@@ -20,8 +20,8 @@
       "Azure.Core.wasm": "sha256-cQyh2VXLObWcWT4DMebhILyvQTQYLQG0wN7/OwDJX5g=",
       "Azure.Identity.wasm": "sha256-Z4d2gC7rBBgpCvtxUFKuedytnRnWY92gC2dLlsuh+xQ=",
       "Blazored.LocalStorage.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
-      "GestaoRestaurante.Models.wasm": "sha256-upySTIY4WF5mwuBqYgFpovVHrIneAYh4d2yRibhH4TE=",
-      "GestaoRestaurante.Web.wasm": "sha256-hAUAgnQDp3juO/zgTOUNrUQpv4W9Akqusgw8jv5BRBs=",
+      "GestaoRestaurante.Models.wasm": "sha256-iKeTfdsMYZMHq+Dv25S1EA6eAbdJduf+dqKeAHNSUGQ=",
+      "GestaoRestaurante.Web.wasm": "sha256-cfG/lj9jC4xBdSWmN2tSHBv6oFcnTTkiWLbuxTNz8tc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-CMUuVnoftKhgfgia+2EWprVdGrK6yMJV390YAGGszSI=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-8ArNOxfDrw45oDhP76CyZd+WXt0QGJgesJeF/TKbU1s=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-BNqCMQBnjdrn/a3IWO5PE3EHvkag1Vrm3NqtVlEZ9OA=",
