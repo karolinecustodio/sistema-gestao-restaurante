@@ -6,7 +6,7 @@ namespace GestaoRestaurante.Api.Repositories
     public interface ICarrinhoRepository
     {
         Task<Carrinho> GetByIdCarrinho(int id);
-        Task<List<Carrinho>> GetCarrinhoByUsuarioId(int usuarioId);
+        Task<Carrinho> GetCarrinhoByUsuarioId(int usuarioId);
         Task<IEnumerable<Carrinho>> GetAllCarrinhos();
         Task<Carrinho> PostByCarrinho(Carrinho carrinho);
 

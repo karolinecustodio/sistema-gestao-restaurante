@@ -101,36 +101,55 @@ else
 
         try
         {
-            var carrinho = new CarrinhoDto
-                {
-                    UsuarioId = (int)userId
-                };
+            // Log para verificar o userId
+            Console.WriteLine($"UserId: {userId}");
 
             var carrinhoUsuario = await CarrinhoService.GetCarrinhoByUsuarioId(userId);
 
-            if (carrinhoUsuario == null) { 
-                await CarrinhoService.PostCarrinho(carrinho);
+            // Log para verificar se o carrinho foi encontrado
+            if (carrinhoUsuario == null)
+            {
+                Console.WriteLine("Carrinho não encontrado, criando novo carrinho...");
+                var novoCarrinho = new CarrinhoDto
+                    {
+                        UsuarioId = (int)userId
+                    };
+
+                carrinhoUsuario = await CarrinhoService.PostCarrinho(novoCarrinho);
             }
 
-            var carrinhoItemAdicionaDto = new CarrinhoItemAdicionaDto
+            // Verificação adicional para garantir que carrinhoUsuario não é nulo011
+            if (carrinhoUsuario != null)
             {
-                CarrinhoId = carrinhoUsuario.Id,
-                ProdutoId = Produto.Id,
-                Quantidade = 1
-            };
+                Console.WriteLine($"Carrinho encontrado ou criado com sucesso: {carrinhoUsuario.Id}");
+                var carrinhoItemAdicionaDto = new CarrinhoItemAdicionaDto
+                    {
+                        CarrinhoId = carrinhoUsuario.Id,
+                        ProdutoId = Produto.Id,
+                        Quantidade = 1
+                    };
 
-            var carrinhoItemDto = await CarrinhoCompraService.AdicionaItem(carrinhoItemAdicionaDto);
+                var carrinhoItemDto = await CarrinhoCompraService.AdicionaItem(carrinhoItemAdicionaDto);
 
-            if (carrinhoItemDto != null)
-            {
-                CarrinhoCompraItens.Add(carrinhoItemDto);
-                await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
+                if (carrinhoItemDto != null)
+                {
+                    CarrinhoCompraItens.Add(carrinhoItemDto);
+                    await GerenciaCarrinhoItensLocalStorageService.SaveCollection(CarrinhoCompraItens);
+                }
+
+                NavigationManager.NavigateTo("/CarrinhoCompra");
             }
-
-            NavigationManager.NavigateTo("/CarrinhoCompra");
+            else
+            {
+                // Log adicional para entender a falha
+                Console.WriteLine("Erro: Não foi possível criar ou obter o carrinho do usuário.");
+                throw new Exception("Erro ao criar ou obter o carrinho do usuário.");
+            }
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            // Adicione logging para entender melhor o erro
+            Console.WriteLine($"Erro ao adicionar item ao carrinho: {ex.Message}");
             throw;
         }
     }

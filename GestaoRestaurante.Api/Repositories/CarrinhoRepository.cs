@@ -20,11 +20,12 @@ namespace GestaoRestaurante.Api.Repositories
 
             return carrinho;
         }
-        public async Task<List<Carrinho>> GetCarrinhoByUsuarioId(int usuarioId)
+        public async Task<Carrinho> GetCarrinhoByUsuarioId(int usuarioId)
         {
-            return await _context.Carrinho
-                .Where(ue => ue.UsuarioId == usuarioId)
-                .ToListAsync();
+            var carrinho = await _context.Carrinho
+                .SingleOrDefaultAsync(ue => ue.UsuarioId == usuarioId);
+
+            return carrinho;
         }
 
         public async Task<IEnumerable<Carrinho>> GetAllCarrinhos()

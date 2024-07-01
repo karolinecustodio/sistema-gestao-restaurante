@@ -205,10 +205,8 @@ else
 
         var carrinho = await CarrinhoService.GetCarrinhoByUsuarioId(userId);
 
-        if(carrinho != null)
-        {
-            CarrinhoCompraItens = await CarrinhoCompraService.GetItens((int)userId);
-        }
+
+        CarrinhoCompraItens = await CarrinhoCompraService.GetItens((int)userId);
 
         usuarioEndereco = await UsuarioEnderecoService.GetUsuarioEnderecoByUsuarioId(userId);
 

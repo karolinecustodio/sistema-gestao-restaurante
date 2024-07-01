@@ -45,19 +45,19 @@ namespace GestaoRestaurante.Api.Controllers
         }
 
         [HttpGet("{usuarioId}")]
-        public async Task<ActionResult<List<CarrinhoDto>>> GetCarrinhoByUsuarioId(int usuarioId)
+        public async Task<ActionResult<IEnumerable<CarrinhoDto>>> GetCarrinhoByUsuarioId(int usuarioId)
         {
             try
             {
-                var carrinhos = await _carrinhoRepo.GetCarrinhoByUsuarioId(usuarioId);
-                if (carrinhos == null || !carrinhos.Any())
+                var carrinho = await _carrinhoRepo.GetCarrinhoByUsuarioId(usuarioId);
+                if (carrinho == null)
                 {
                     return NotFound();
                 }
 
-                var carrinhosDto = carrinhos.Select(c => c.ConverterCarrinhoParaDto()).ToList();
+                var carrinhoDto = carrinho.ConverterCarrinhoParaDto();
 
-                return Ok(carrinhosDto);
+                return Ok(carrinhoDto);
             }
             catch (Exception)
             {
